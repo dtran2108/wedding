@@ -18,7 +18,7 @@ export default function NavBar() {
             L&Y
           </motion.a>
           <div className='flex space-x-6 text-gray-900'>
-            <Link title='Our Story' href='/our-story' />
+            {/* <Link title='Our Story' href='/our-story' /> */}
             <Link title='Schedule' href='/schedule' />
             <Link title='Details' href='/details' />
             <Link title='Travel Info' href='/travel-info' />
