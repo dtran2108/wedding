@@ -21,7 +21,7 @@ export default function Home() {
         <div className='flex flex-col mt-40'>
           <AnimatedTextWord text="WE'RE GETTING MARRIED!" />
           <AnimatedTextWord
-            className={cn(windSong.className, 'text-[76px]')}
+            className={cn(windSong.className, 'text-[54px] lg:text-[76px]')}
             text='Luân + Yến'
           />
           <div className='flex items-center justify-end'>

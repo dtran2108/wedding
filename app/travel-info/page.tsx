@@ -9,7 +9,10 @@ export default function Page() {
     <main className='container py-16'>
       <div className='flex items-center justify-center'>
         <AnimatedTextWord
-          className={cn(windSong.className, 'text-[76px]')}
+          className={cn(
+            windSong.className,
+            'text-[54px] lg:text-[76px] justify-center'
+          )}
           text='Travel Info'
         />
       </div>

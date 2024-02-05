@@ -5,7 +5,7 @@ import Link from './Link'
 
 export default function NavBar() {
   return (
-    <nav className='sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 firefox:bg-opacity-90'>
+    <nav className='sticky top-0 z-10 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 firefox:bg-opacity-90 z-50'>
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex items-center justify-between h-16'>
           <motion.a
@@ -17,7 +17,7 @@ export default function NavBar() {
           >
             L&Y
           </motion.a>
-          <div className='flex space-x-6 text-gray-900'>
+          <div className='flex space-x-3 lg:space-x-6 text-gray-900'>
             {/* <Link title='Our Story' href='/our-story' /> */}
             <Link title='Schedule' href='/schedule' />
             <Link title='Details' href='/details' />

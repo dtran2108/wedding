@@ -47,13 +47,14 @@ const AnimatedTextWord = ({
   return (
     <motion.div
       className={className}
-      style={{ overflow: 'hidden', display: 'flex' }}
+      style={{ overflow: 'hidden', display: 'flex', flexWrap: 'wrap' }}
       variants={container}
       initial='hidden'
       animate='visible'
     >
       {words.map((word, index) => (
         <motion.span
+         className='text-center'
           variants={child}
           style={{ marginRight: '12px' }}
           key={index}
