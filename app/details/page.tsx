@@ -27,7 +27,7 @@ export default function Page() {
         </h1>
         <p className='mt-4 text-center'>
           <strong>Wedding Date and Time: </strong>Saturday, June 18, 2024 | 4:30
-          PM | Please arrive on time to ensure you don't miss any special
+          PM | Please arrive on time to ensure you don&apos;t miss any special
           moments!
         </p>
         <p className='text-center'>
