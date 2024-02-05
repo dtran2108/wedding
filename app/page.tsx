@@ -1,10 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import background from '@/public/images/background.jpeg'
 import { WindSong } from 'next/font/google'
 import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
 import AnimatedTextWord from '@/components/AnimatedTextWord'
 
 const windSong = WindSong({ subsets: ['latin'], weight: '400' })

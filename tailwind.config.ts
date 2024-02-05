@@ -21,6 +21,12 @@ const config = {
     },
     extend: {
       colors: {
+        gold: '#E6C994',
+        green: '#A2BAA3',
+        blue: '#001F3F',
+        cream: '#F5F5F5',
+        rose: '#D8A2AB',
+        gray: '#555555',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
