@@ -61,7 +61,7 @@ export default function Page() {
         <div>
           <h1 className='text-2xl'>Coffee Catastrophe (April 2010)</h1>
           <p className='mt-8'>
-            Sarah mistook Jack's brand new suit for a napkin holder,
+            Sarah mistook Jack&apos;s brand new suit for a napkin holder,
             accidentally spilling her coffee all over him at a bustling café.
             Their first encounter involved a dry cleaner, a lot of apologies,
             and an unexpected bond over stained garments.
@@ -70,7 +70,7 @@ export default function Page() {
         <div className='hidden lg:block'>
           <h1 className='text-2xl text-right'>Turbulent Ties (August 2012)</h1>
           <p className='mt-8'>
-            Sarah, prone to motion sickness, ended up in Jack's lap during a
+            Sarah, prone to motion sickness, ended up in Jack&apos;s lap during a
             bumpy flight to Paris. Jack, attempting to be suave, mistook her
             queasy grip for a gesture of affection, leading to an awkward yet
             oddly cozy journey across the Atlantic.
@@ -87,7 +87,7 @@ export default function Page() {
         <div className='block lg:hidden'>
           <h1 className='text-2xl text-right'>Turbulent Ties (August 2012)</h1>
           <p className='mt-8'>
-            Sarah, prone to motion sickness, ended up in Jack's lap during a
+            Sarah, prone to motion sickness, ended up in Jack&apos;s lap during a
             bumpy flight to Paris. Jack, attempting to be suave, mistook her
             queasy grip for a gesture of affection, leading to an awkward yet
             oddly cozy journey across the Atlantic.
@@ -96,7 +96,7 @@ export default function Page() {
         <div className='hidden lg:block'>
           <h1 className='text-2xl text-right'>Turbulent Ties (August 2012)</h1>
           <p className='mt-8'>
-            Sarah, prone to motion sickness, ended up in Jack's lap during a
+            Sarah, prone to motion sickness, ended up in Jack&apos;s lap during a
             bumpy flight to Paris. Jack, attempting to be suave, mistook her
             queasy grip for a gesture of affection, leading to an awkward yet
             oddly cozy journey across the Atlantic.
@@ -113,7 +113,7 @@ export default function Page() {
         <div className='block lg:hidden'>
           <h1 className='text-2xl text-right'>Turbulent Ties (August 2012)</h1>
           <p className='mt-8'>
-            Sarah, prone to motion sickness, ended up in Jack's lap during a
+            Sarah, prone to motion sickness, ended up in Jack&apos;s lap during a
             bumpy flight to Paris. Jack, attempting to be suave, mistook her
             queasy grip for a gesture of affection, leading to an awkward yet
             oddly cozy journey across the Atlantic.
