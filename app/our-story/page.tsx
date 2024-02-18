@@ -24,7 +24,7 @@ export default function Page() {
             Tom Hilton
           </h1>
           <h1>THE GROOM</h1>
-          <p className='text-center text-sm px-16 mt-4'>
+          <p className='text-center text-sm mt-4'>
             The charismatic and enigmatic best man. With charm and mystery in
             equal measure, he adds intrigue to every celebration. Join us as we
             uncover the secrets behind Marcus Kingsley, the best man with a
@@ -42,7 +42,7 @@ export default function Page() {
             Sarah Johnson
           </h1>
           <h1>THE BRIDE</h1>
-          <p className='text-center text-sm px-16 mt-4'>
+          <p className='text-center text-sm mt-4'>
             The epitome of elegance and intrigue as the ultimate maid of honor.
             Uncover her captivating story as she navigates the world of weddings
             with finesse and mystery.

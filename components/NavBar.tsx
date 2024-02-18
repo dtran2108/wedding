@@ -3,6 +3,14 @@
 import { motion } from 'framer-motion'
 import Link from './Link'
 import { usePathname } from 'next/navigation'
+import Menu from '@/icons/Menu'
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 
 const menus = [
   {
@@ -43,7 +51,7 @@ export default function NavBar() {
           >
             D&Đ
           </motion.a>
-          <div className='flex space-x-3 lg:space-x-6 text-gray-900'>
+          <div className='hidden lg:flex space-x-3 lg:space-x-6 text-gray-900'>
             {menus.map((item) => (
               <Link
                 key={item.title}
@@ -53,6 +61,37 @@ export default function NavBar() {
               />
             ))}
           </div>
+          <Sheet>
+            <SheetTrigger className='block lg:hidden'>
+              <Menu className='cursor-pointer' />
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>
+                  <motion.a
+                    whileHover={{
+                      color: '#E6C994',
+                    }}
+                    className='text-2xl text-gray-900 font-semibold'
+                    href='/'
+                  >
+                    D&Đ
+                  </motion.a>
+                </SheetTitle>
+              </SheetHeader>
+              <div className='py-4'>
+                {menus.map((item) => (
+                  <div key={item.title}>
+                    <Link
+                      title={item.title}
+                      href={item.link}
+                      isActive={pathname == item.link}
+                    />
+                  </div>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
