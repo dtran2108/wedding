@@ -6,6 +6,10 @@ import { usePathname } from 'next/navigation'
 
 const menus = [
   {
+    title: 'Gallery',
+    link: '/gallery',
+  },
+  {
     title: 'Schedule',
     link: '/schedule',
   },
