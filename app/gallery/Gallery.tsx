@@ -29,7 +29,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className='hidden container lg:flex justify-between mt-8'>
+      <div className='hidden container lg:flex justify-around mt-8'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 max-h-[600px] overflow-y-scroll'>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
             <div
@@ -41,7 +41,7 @@ export default function Gallery() {
             >
               <p>{item}</p>
               <div
-                className='w-[150px] h-[150px]'
+                className='w-[100px] h-[100px]'
                 style={{
                   backgroundImage: `url('/images/gallery/gallery-${item}.jpg')`,
                   backgroundSize: 'cover',
@@ -53,7 +53,7 @@ export default function Gallery() {
         </div>
         <div
           ref={previewContainer}
-          className='relative w-[250px] lg:w-[500px] lg:h-[600px] overflow-hidden'
+          className='relative w-[250px] lg:w-[500px] lg:h-[600px] overflow-hidden ml-8'
         >
           <div
             className='preview w-[250px] lg:w-[500px] lg:h-[600px] absolute'
