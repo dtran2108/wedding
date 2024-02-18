@@ -26,6 +26,10 @@
   stroke-dasharray: 0 1500;
 }
 
+.link.active path {
+  stroke-dasharray: 1500 1500;
+}
+
 .link:hover path {
   animation: draw 1s forwards;
 }

@@ -1,10 +1,19 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import './styles.css'
 
-export default function Link({ title, href }: { title: string; href: string }) {
+export default function Link({
+  title,
+  href,
+  isActive,
+}: {
+  title: string
+  href: string
+  isActive: boolean
+}) {
   return (
-    <a className='link' href={href}>
+    <a className={cn('link', isActive && 'active')} href={href}>
       <span>{title}</span>
       <svg viewBox='0 0 500 150' preserveAspectRatio='none'>
         <path

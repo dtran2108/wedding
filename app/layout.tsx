@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Oranienbaum } from 'next/font/google'
+import { Playfair } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/NavBar'
+import { cn } from '@/lib/utils'
 
-const oranienbaum = Oranienbaum({ subsets: ['latin'], weight: '400' })
+const playFair = Playfair({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Wedding',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={oranienbaum.className}>
+      <body className={cn(playFair.className, 'bg-white')}>
         <NavBar />
         {children}
       </body>

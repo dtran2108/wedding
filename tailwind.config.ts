@@ -27,6 +27,7 @@ const config = {
         cream: '#F5F5F5',
         rose: '#D8A2AB',
         gray: '#555555',
+        white: '#fdfdfd',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

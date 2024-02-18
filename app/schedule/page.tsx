@@ -1,18 +1,16 @@
-import AnimatedTextWord from '@/components/AnimatedTextWord'
 import { cn } from '@/lib/utils'
-import { WindSong } from 'next/font/google'
+import { Rouge_Script } from 'next/font/google'
 import TimelineItem from './TimelineItem'
 
-const windSong = WindSong({ subsets: ['latin'], weight: '400' })
+const rougeScript = Rouge_Script({ subsets: ['latin'], weight: '400' })
 
 export default function Page() {
   return (
     <main className='relative container py-16'>
       <div className='flex items-center justify-center'>
-        <AnimatedTextWord
-          className={cn(windSong.className, 'text-[54px] lg:text-[76px]')}
-          text='Schedule'
-        />
+        <h1 className={cn(rougeScript.className, 'text-[54px] lg:text-[76px]')}>
+          Schedule
+        </h1>
       </div>
       <div className='flex justify-around'>
         <div className='my-6'>
@@ -66,7 +64,7 @@ export default function Page() {
           <div
             className='rounded-lg w-[250px] h-[250px] shadow-lg border rotate-6'
             style={{
-              backgroundImage: `url('/images/schedule-1.JPG')`,
+              backgroundImage: `url('/images/schedule-1.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
             }}
@@ -74,7 +72,7 @@ export default function Page() {
           <div
             className='rounded-lg w-[250px] h-[250px] shadow-lg border -rotate-6'
             style={{
-              backgroundImage: `url('/images/schedule-2.JPG')`,
+              backgroundImage: `url('/images/schedule-2.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
             }}
@@ -82,7 +80,7 @@ export default function Page() {
           <div
             className='rounded-lg w-[250px] h-[250px] shadow-lg border'
             style={{
-              backgroundImage: `url('/images/schedule-3.JPG')`,
+              backgroundImage: `url('/images/schedule-3.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
             }}
@@ -90,7 +88,7 @@ export default function Page() {
           <div
             className='rounded-lg w-[250px] h-[250px] shadow-lg border rotate-12'
             style={{
-              backgroundImage: `url('/images/schedule-4.JPG')`,
+              backgroundImage: `url('/images/schedule-4.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
             }}

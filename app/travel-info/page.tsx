@@ -1,20 +1,15 @@
-import AnimatedTextWord from '@/components/AnimatedTextWord'
 import { cn } from '@/lib/utils'
-import { WindSong } from 'next/font/google'
+import { Rouge_Script } from 'next/font/google'
 
-const windSong = WindSong({ subsets: ['latin'], weight: '400' })
+const rougeScript = Rouge_Script({ subsets: ['latin'], weight: '400' })
 
 export default function Page() {
   return (
     <main className='container py-16'>
       <div className='flex items-center justify-center'>
-        <AnimatedTextWord
-          className={cn(
-            windSong.className,
-            'text-[54px] lg:text-[76px] justify-center'
-          )}
-          text='Travel Info'
-        />
+        <h1 className={cn(rougeScript.className, 'text-[54px] lg:text-[76px]')}>
+          Travel Info
+        </h1>
       </div>
 
       <div className='container mt-8'>

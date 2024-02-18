@@ -1,21 +1,19 @@
-import AnimatedTextWord from '@/components/AnimatedTextWord'
 import { cn } from '@/lib/utils'
-import { WindSong } from 'next/font/google'
+import { Rouge_Script } from 'next/font/google'
 
-const windSong = WindSong({ subsets: ['latin'], weight: '400' })
+const rougeScript = Rouge_Script({ subsets: ['latin'], weight: '400' })
 
 export default function Page() {
   return (
     <main className='relative container py-16'>
       <div className='flex items-center justify-center'>
-        <AnimatedTextWord
-          className={cn(windSong.className, 'text-[54px] lg:text-[76px]')}
-          text='Details'
-        />
+        <h1 className={cn(rougeScript.className, 'text-[54px] lg:text-[76px]')}>
+          Details
+        </h1>
         <div
           className='hidden lg:block absolute top-16 right-32 rounded-lg w-[150px] h-[150px] shadow-lg border rotate-6 z-5'
           style={{
-            backgroundImage: `url('/images/details-1.JPG')`,
+            backgroundImage: `url('/images/details-1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
           }}
@@ -47,7 +45,7 @@ export default function Page() {
       <div
         className='hidden lg:block absolute top-54 left-24 rounded-lg w-[150px] h-[150px] shadow-lg border rotate-6 z-5'
         style={{
-          backgroundImage: `url('/images/details-2.JPG')`,
+          backgroundImage: `url('/images/details-2.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
         }}

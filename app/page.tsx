@@ -1,6 +1,6 @@
 'use client'
 
-import background from '@/public/images/background.jpeg'
+import background from '@/public/images/background.jpg'
 import { WindSong } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import AnimatedTextWord from '@/components/AnimatedTextWord'
@@ -22,10 +22,10 @@ export default function Home() {
           <AnimatedTextWord text="WE'RE GETTING MARRIED!" />
           <AnimatedTextWord
             className={cn(windSong.className, 'text-[54px] lg:text-[76px]')}
-            text='Luân + Yến'
+            text='Duy + Điền'
           />
           <div className='flex items-center justify-end'>
-            <AnimatedTextWord text='02.04.2024' />
+            <AnimatedTextWord text='20.04.2024' />
           </div>
         </div>
       </div>
