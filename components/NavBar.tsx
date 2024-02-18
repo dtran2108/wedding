@@ -27,7 +27,7 @@ export default function NavBar() {
   const pathname = usePathname()
 
   return (
-    <nav className='sticky top-0 bg-white backdrop-filter backdrop-blur-md bg-opacity-40 border-b border-gray-200 firefox:bg-opacity-40 z-50'>
+    <nav className='sticky top-0 bg-white backdrop-filter backdrop-blur-sm bg-opacity-60 border-b border-gray-200 firefox:bg-opacity-60 z-50'>
       <div className='max-w-5xl mx-auto px-4'>
         <div className='flex items-center justify-between h-16'>
           <motion.a
