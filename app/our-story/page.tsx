@@ -1,9 +1,37 @@
+'use client'
+
 import { cn } from '@/lib/utils'
-import { Parisienne, Playball } from 'next/font/google'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import { Playball } from 'next/font/google'
+import { useEffect, useState } from 'react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const playball = Playball({ subsets: ['latin'], weight: '400' })
 
 export default function Page() {
+  const [sections, setSections] = useState<Element[]>([])
+
+  useEffect(() => {
+    const storySections = document.querySelectorAll('.story-section')
+    setSections(Array.from(storySections))
+  }, [])
+
+  useEffect(() => {
+    if (sections.length > 0) {
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.container',
+          pin: true,
+          scrub: 1,
+        },
+      })
+    }
+  }, [sections])
+
   const stories = [
     {
       key: 'story1',
@@ -58,10 +86,10 @@ export default function Page() {
 
   return (
     <div className='container py-4'>
-      <h1 className='mt-8 text-4xl font-bold'>Our Story</h1>
-      <div className='grid grid-cols-3 gap-8 mt-8'>
+      <h1 className='mt-8 text-4xl font-bold mb-8'>Our Story</h1>
+      <div className='flex space-x-8'>
         {stories.map((story) => (
-          <div key={story.key}>
+          <div key={story.key} className='story-section min-w-[370px]'>
             <div
               className='w-full h-[300px] rounded-lg'
               style={{
