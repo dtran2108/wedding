@@ -1,10 +1,12 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Bebas_Neue } from 'next/font/google'
+import { Bebas_Neue, Parisienne } from 'next/font/google'
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { Diamond } from 'lucide-react'
+
+const parisienne = Parisienne({ subsets: ['latin'], weight: '400' })
 
 export default function NavBar() {
   return (

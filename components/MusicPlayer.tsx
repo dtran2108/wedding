@@ -25,7 +25,6 @@ export default function MusicPlayer() {
         ref={audioRef}
         controls
         loop
-        autoPlay
         playsInline
         src='/audio/love-story-ts.mp3'
       ></audio>

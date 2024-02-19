@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import { Volume2 } from 'lucide-react'
 import { Parisienne, Playball } from 'next/font/google'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const parisienne = Parisienne({ subsets: ['latin'], weight: '400' })
 const playball = Playball({ subsets: ['latin'], weight: '400' })
@@ -12,21 +13,23 @@ export default function Home() {
     <div className='min-h-screen p-4'>
       <div className='grid grid-cols-1 md:grid-cols-5 gap-4'>
         <div className='col-span-5 md:col-span-3 flex flex-col w-full space-y-4'>
-          <div
-            className='rounded-lg w-full h-[500px] p-6 flex items-end flex-col'
-            style={{
-              backgroundImage: "url('/images/wedding-calls.png')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
-            <h2 className='text-2xl text-black/60'>Wedding Calls</h2>
-            <h1
-              className={cn(parisienne.className, 'text-6xl mt-2 text-right')}
+          <Link href='/our-story'>
+            <div
+              className='rounded-lg w-full h-[500px] p-6 flex items-end flex-col'
+              style={{
+                backgroundImage: "url('/images/wedding-calls.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             >
-              Mai & Tuan
-            </h1>
-          </div>
+              <h2 className='text-2xl text-black/60'>Wedding Calls</h2>
+              <h1
+                className={cn(parisienne.className, 'text-6xl mt-2 text-right')}
+              >
+                Mai & Tuan
+              </h1>
+            </div>
+          </Link>
           <div className='rounded-lg w-full h-[300px] md:h-[150px] bg-blue p-8 flex flex-col md:flex-row items-center justify-center'>
             <div className='mt-auto md:ml-auto md:mt-0 flex items-center justify-center flex-col'>
               <h2 className='text-xl text-black/60 text-center'>Romantic</h2>
