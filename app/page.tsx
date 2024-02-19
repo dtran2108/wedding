@@ -20,19 +20,20 @@ export default function Home() {
             }}
           >
             <h2 className='text-2xl text-black/60'>Wedding Calls</h2>
-            <h1 className={cn(parisienne.className, 'text-6xl mt-2')}>
+            <h1 className={cn(parisienne.className, 'text-6xl mt-2 text-right')}>
               Mai & Tuan
             </h1>
           </div>
-          <div className='rounded-lg w-full h-[150px] bg-blue p-8 flex items-center justify-center'>
-            <div className='ml-auto flex items-center justify-center flex-col'>
-              <h2 className='text-xl text-black/60'>Romantic</h2>
-              <h1 className='text-2xl text-black'>Activity Schedule</h1>
+          <div className='rounded-lg w-full h-[300px] md:h-[150px] bg-blue p-8 flex flex-col md:flex-row items-center justify-center'>
+            <div className='mt-auto md:ml-auto flex items-center justify-center flex-col'>
+              <h2 className='text-xl text-black/60 text-center'>Romantic</h2>
+              <h1 className='text-2xl text-black text-center'>Activity Schedule</h1>
             </div>
-            <div className='mx-auto w-[1px] h-[90px] bg-black'></div>
-            <div className='mr-auto  flex items-center justify-center flex-col'>
-              <h2 className='text-xl text-black/60'>5-star quality</h2>
-              <h1 className='text-2xl text-black'>Main Courses</h1>
+            <div className='hidden md:block mx-auto w-[1px] h-[90px] bg-black'></div>
+            <div className='block md:hidden my-auto w-[200px] h-[1px] bg-black'></div>
+            <div className='mb-auto md:mr-auto flex items-center justify-center flex-col'>
+              <h2 className='text-xl text-black/60 text-center'>5-star quality</h2>
+              <h1 className='text-2xl text-black text-center'>Main Courses</h1>
             </div>
           </div>
         </div>
@@ -67,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className='w-full h-full rounded-lg relative p-4'
+            className='w-full h-full min-h-[200px] rounded-lg relative p-4'
             style={{
               backgroundImage: "url('/images/mai-house.jpg')",
               backgroundSize: 'cover',
