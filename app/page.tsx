@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className={cn(playfair.className, 'text-7xl leading-normal')}>
             Quân - Hiền
           </h1>
-          <p className='text-[#baad9e] mt-4 w-9/12'>
+          <p className='text-secondary mt-4 w-9/12'>
             Get ready to witness a love story take center stage as two hearts
             become one in a joyous celebration of forever!
           </p>
