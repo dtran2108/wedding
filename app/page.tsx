@@ -1,3 +1,4 @@
+import MusicPlayer from '@/components/MusicPlayer'
 import { cn } from '@/lib/utils'
 import { Volume2 } from 'lucide-react'
 import { Parisienne, Playball } from 'next/font/google'
@@ -20,19 +21,25 @@ export default function Home() {
             }}
           >
             <h2 className='text-2xl text-black/60'>Wedding Calls</h2>
-            <h1 className={cn(parisienne.className, 'text-6xl mt-2 text-right')}>
+            <h1
+              className={cn(parisienne.className, 'text-6xl mt-2 text-right')}
+            >
               Mai & Tuan
             </h1>
           </div>
           <div className='rounded-lg w-full h-[300px] md:h-[150px] bg-blue p-8 flex flex-col md:flex-row items-center justify-center'>
-            <div className='mt-auto md:ml-auto flex items-center justify-center flex-col'>
+            <div className='mt-auto md:ml-auto md:mt-0 flex items-center justify-center flex-col'>
               <h2 className='text-xl text-black/60 text-center'>Romantic</h2>
-              <h1 className='text-2xl text-black text-center'>Activity Schedule</h1>
+              <h1 className='text-2xl text-black text-center'>
+                Activity Schedule
+              </h1>
             </div>
             <div className='hidden md:block mx-auto w-[1px] h-[90px] bg-black'></div>
             <div className='block md:hidden my-auto w-[200px] h-[1px] bg-black'></div>
-            <div className='mb-auto md:mr-auto flex items-center justify-center flex-col'>
-              <h2 className='text-xl text-black/60 text-center'>5-star quality</h2>
+            <div className='mb-auto md:mr-auto md:mb-0 flex items-center justify-center flex-col'>
+              <h2 className='text-xl text-black/60 text-center'>
+                5-star quality
+              </h2>
               <h1 className='text-2xl text-black text-center'>Main Courses</h1>
             </div>
           </div>
@@ -57,9 +64,7 @@ export default function Home() {
                 backgroundPosition: '-95px 0px',
               }}
             >
-              <div className='bg-white rounded-lg w-[40px] aspect-square flex items-center justify-center cursor-pointer'>
-                <Volume2 className='w-5 h-5' strokeWidth={1.25} />
-              </div>
+              <MusicPlayer />
               <div className={cn(playball.className, 'text-right p-2')}>
                 <p>Contact me</p>
                 <h1 className='text-xl'>Ngo Minh Tuan</h1>
