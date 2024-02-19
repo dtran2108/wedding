@@ -1,6 +1,5 @@
 import MusicPlayer from '@/components/MusicPlayer'
 import { cn } from '@/lib/utils'
-import { Volume2 } from 'lucide-react'
 import { Parisienne, Playball } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'

@@ -1,5 +1,6 @@
 'use client'
 
+import NavBar from '@/components/NavBar'
 import { cn } from '@/lib/utils'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
@@ -85,7 +86,8 @@ export default function Page() {
   ]
 
   return (
-    <div className='container py-4'>
+    <div className='container py-4 relative'>
+      <NavBar />
       <h1 className='mt-8 text-4xl font-bold mb-8'>Our Story</h1>
       <div className='flex space-x-8'>
         {stories.map((story) => (
