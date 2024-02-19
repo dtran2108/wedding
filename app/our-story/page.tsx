@@ -89,7 +89,10 @@ export default function Page() {
       <h1 className='mt-8 text-4xl font-bold mb-8'>Our Story</h1>
       <div className='flex space-x-8'>
         {stories.map((story) => (
-          <div key={story.key} className='story-section min-w-[370px]'>
+          <div
+            key={story.key}
+            className='story-section min-w-[300px] md:min-w-[370px]'
+          >
             <div
               className='w-full h-[300px] rounded-lg'
               style={{
@@ -98,14 +101,16 @@ export default function Page() {
                 backgroundPosition: 'center',
               }}
             ></div>
-            <div className='rounded-lg h-[5px] w-[60px] bg-yellow my-4'></div>
-            <h1 className={cn(playball.className, 'font-bold text-2xl')}>
-              {story.title.split(':')[0]}
-            </h1>
-            <p className={cn(playball.className, 'text-sm')}>
-              {story.title.split(':')[1]}
-            </p>
-            <p className={cn('mt-2 font-light text-sm')}>{story.content}</p>
+            <div className='border border-[#D7DFDE] rounded-lg p-4 mt-4'>
+              <h1 className={cn(playball.className, 'font-bold text-2xl')}>
+                {story.title.split(':')[0]}
+              </h1>
+              <p className={cn(playball.className, 'text-sm')}>
+                {story.title.split(':')[1]}
+              </p>
+              <div className='rounded-lg h-[3px] w-[100px] bg-yellow my-2'></div>
+              <p className={cn('mt-2 font-light text-sm')}>{story.content}</p>
+            </div>
           </div>
         ))}
       </div>
