@@ -1,30 +1,17 @@
 'use client'
 
-import { cn } from '@/lib/utils'
-import { Bebas_Neue } from 'next/font/google'
-import { Button } from './ui/button'
 import Link from 'next/link'
-import { Diamond } from 'lucide-react'
 
 export default function NavBar() {
   return (
-    <nav className='flex items-center justify-between py-4'>
-      <Link href='/'>
-        <div className={cn('text-center text-2xl font-bold flex items-center')}>
-          <Diamond className='w-4 h-4 mr-2' /> Q&H
-        </div>
-      </Link>
-      <div className='flex items-center space-x-12'>
-        <Link href='/our-story'>Our Story</Link>
-        <Link href='/gallery'>Gallery</Link>
-        <Link href='/schedule'>Schedule</Link>
-        <Link href='/details'>Details</Link>
-      </div>
-      <div>
-        <Button variant='outline' className='font-bold text-primary'>
-          RSVP
-        </Button>
-      </div>
+    <nav className='container flex items-center justify-evenly bg-black/70 py-3 sticky top-0 text-[#b2b2b2] z-30 text-sm'>
+      <Link href='#our-story'>OUR STORY</Link>
+      <Link href='#gallery'>GALLERY</Link>
+      <Link href='#bridal-party'>BRIDAL PARTY</Link>
+      <Link href='#festivities'>FESTIVITIES</Link>
+      <Link href='#registry'>TRAVEL</Link>
+      <Link href='#to-do'>TO DO/TO EAT</Link>
+      <Link href='#add-to-our-story'>ADD TO OUR STORY</Link>
     </nav>
   )
 }

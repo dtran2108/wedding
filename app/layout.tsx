@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { Noto_Sans, Raleway, Roboto_Condensed } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/NavBar'
 
-const roboto = Roboto_Condensed({ subsets: ['latin'] })
+const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,12 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={roboto.className}>
-        <div className='container'>
-          <NavBar />
-          {children}
-        </div>
-      </body>
+      <body className={raleway.className}>{children}</body>
     </html>
   )
 }
