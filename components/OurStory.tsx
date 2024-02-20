@@ -39,7 +39,7 @@ export default function OurStory() {
                 <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/50 z-10'></div>
                 <div className='flex flex-col items-center justify-center my-auto text-center w-9/12 relative z-20'>
                   <h1
-                    className={cn(fleur.className, 'leading-normal text-9xl')}
+                    className={cn(fleur.className, 'leading-normal text-7xl md:text-9xl')}
                   >
                     2012
                   </h1>
@@ -111,8 +111,8 @@ export default function OurStory() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className='left-8' />
-        <CarouselNext className='right-8' />
+        <CarouselPrevious className='left-2 md:left-8' />
+        <CarouselNext className='right-2 md:right-8' />
       </Carousel>
     </div>
   )

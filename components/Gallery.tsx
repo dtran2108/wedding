@@ -24,8 +24,8 @@ export default function Gallery() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className='left-8' />
-        <CarouselNext className='right-8' />
+        <CarouselPrevious className='left-2 md:left-8' />
+        <CarouselNext className='right-2 md:right-8' />
       </Carousel>
     </div>
   )

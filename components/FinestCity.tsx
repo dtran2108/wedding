@@ -17,7 +17,7 @@ export default function FinestCity() {
     >
       <div className='my-auto text-center w-9/12 relative z-20 flex flex-col items-center justify-center'>
         <h1
-          className={cn(allura.className, 'text-6xl leading-normal text-black')}
+          className={cn(allura.className, 'text-5xl md:text-6xl leading-normal text-black')}
         >
           Americas finest city
         </h1>
@@ -34,7 +34,7 @@ export default function FinestCity() {
           To do
         </h1>
         <div
-          className={cn(neuton.className, 'grid grid-cols-3 gap-8 max-w-lg')}
+          className={cn(neuton.className, 'grid grid-cols-1 md:grid-cols-3 gap-8 max-w-lg')}
         >
           <div className='text-center flex flex-col items-center justify-center'>
             <h1 className='text-black'>RECREATIONAL</h1>
@@ -68,7 +68,7 @@ export default function FinestCity() {
           To eat
         </h1>
         <div
-          className={cn(neuton.className, 'grid grid-cols-3 gap-8 max-w-lg')}
+          className={cn(neuton.className, 'grid grid-cols-1 md:grid-cols-3 gap-8 max-w-lg')}
         >
           <div className='text-center flex flex-col items-center justify-center'>
             <h1 className='text-black'>DOWNTOWN</h1>

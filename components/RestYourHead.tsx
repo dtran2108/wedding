@@ -17,7 +17,7 @@ export default function RestYourHead() {
     >
       <div className='my-auto text-center w-9/12 relative z-20 flex flex-col items-center justify-center'>
         <h1
-          className={cn(allura.className, 'text-6xl leading-normal text-gold')}
+          className={cn(allura.className, 'text-5xl md:text-6xl leading-normal text-gold')}
         >
           Rest your head
         </h1>

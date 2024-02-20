@@ -29,14 +29,14 @@ export default function Home() {
             D <span className={allura.className}>&</span> Đ
           </h1>
           <Divider>
-            <span className='text-2xl'>20.04.2024</span>
+            <span className='text-md md:text-2xl'>20.04.2024</span>
           </Divider>
-          <h1 className={cn(allura.className, 'text-8xl leading-normal my-8')}>
-            Duy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br /> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Điền
+          <h1 className={cn(allura.className, 'text-7xl md:text-8xl leading-normal my-8')}>
+            Duy
+            <br />& Điền
           </h1>
           <Divider>
-            <span className='text-2xl'>ARE GETTING MARRIED</span>
+            <span className='text-md md:text-2xl'>ARE GETTING MARRIED</span>
           </Divider>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function Home() {
           <h1
             className={cn(
               allura.className,
-              'text-6xl leading-normal text-gold'
+              'text-4xl md:text-6xl leading-normal text-gold'
             )}
           >
             Add to our story
