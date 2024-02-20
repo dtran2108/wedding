@@ -16,34 +16,48 @@ export default function Home() {
   return (
     <main className='min-h-screen'>
       <div
-        className='relative w-full min-h-[100vh] flex items-center flex-col justify-between'
+        className='relative w-full min-h-[100vh] flex items-center flex-col justify-between py-4'
         style={{
           backgroundImage: "url('/images/header.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}
       >
-        <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/40 z-10'></div>
-        <div className='my-auto text-center w-9/12 relative z-20'>
+        <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/60 z-10'></div>
+        <div className='my-auto text-center w-9/12 md:w-6/12 relative z-20'>
           <h1 className='text-4xl'>
             D <span className={allura.className}>&</span> Đ
           </h1>
-          <Divider>20.04.2024</Divider>
-          <h1 className={cn(allura.className, 'text-8xl leading-normal')}>
-            Duy <br /> & Điền
+          <Divider>
+            <span className='text-2xl'>20.04.2024</span>
+          </Divider>
+          <h1 className={cn(allura.className, 'text-8xl leading-normal my-8')}>
+            Duy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br /> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Điền
           </h1>
-          <Divider>ARE GETTING MARRIED</Divider>
+          <Divider>
+            <span className='text-2xl'>ARE GETTING MARRIED</span>
+          </Divider>
         </div>
       </div>
       <NavBar />
-      <OurStory />
-      <Gallery />
-      <Quote />
-      <Registry />
-      <RestYourHead />
-      <FinestCity />
+      <div id='our-story'>
+        <OurStory />
+      </div>
+      <div id='gallery'>
+        <Gallery />
+        <Quote />
+      </div>
+      <div id='registry'>
+        <Registry />
+        <RestYourHead />
+      </div>
+      <div id='to-do'>
+        <FinestCity />
+      </div>
       <div
-        className='relative w-full min-h-[700px] flex justify-center py-8'
+        id='add-to-our-story'
+        className='relative w-full min-h-[750px] flex justify-center py-8'
         style={{
           backgroundImage: "url('/images/add-to-our-story.jpg')",
           backgroundSize: 'cover',

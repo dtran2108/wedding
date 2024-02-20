@@ -6,7 +6,7 @@ const neuton = Neuton({ subsets: ['latin'], weight: '400' })
 export default function Quote() {
   return (
     <div
-      className='relative w-full min-h-[400px] flex items-center justify-center p-8'
+      className='relative w-full min-h-[500px] flex items-center justify-center p-8'
       style={{
         backgroundImage: "url('/images/quote.jpg')",
         backgroundSize: 'cover',
@@ -14,7 +14,7 @@ export default function Quote() {
       }}
     >
       <div className='bg-white/70 w-full md:w-7/12 flex items-center justify-center'>
-        <div className='bg-white m-8 flex flex-col items-center justify-center p-8'>
+        <div className='bg-white m-8 flex flex-col items-center justify-center p-8 w-full'>
           <h2
             className={cn(neuton.className, 'text-xl text-[#666] text-center')}
           >
