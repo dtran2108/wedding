@@ -18,9 +18,9 @@ export default function Quote() {
           <h2
             className={cn(neuton.className, 'text-xl text-[#666] text-center')}
           >
-            "THE PROBABILITY OF SEPARATE WORLDS MEETING IS VERY SMALL.
+            &quot;THE PROBABILITY OF SEPARATE WORLDS MEETING IS VERY SMALL.
             <br /> THE LURE OF IT IS IMMENSE.
-            <br /> WE SEND STARSHIPS. WE FALL IN LOVE."
+            <br /> WE SEND STARSHIPS. WE FALL IN LOVE.&quot;
           </h2>
           <p className={cn(neuton.className, 'text-gold')}>
             - Jeanette Winterson

@@ -82,7 +82,7 @@ export default function OurStory() {
                               champagne. While she was still trying to figure
                               out what was happening he took the opportunity to
                               ask her to marry him. He will never forget the way
-                              she looked confused and said, "I'm so sleepy,"
+                              she looked confused and said, &quot;I&apos;m so sleepy,&quot;
                               with her hands on her head or when he asked if
                               that meant yes, she responded that yes, it did.
                             </p>
