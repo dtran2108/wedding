@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import './globals.css'
+import MusicPlayer from '@/components/MusicPlayer'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={raleway.className}>{children}</body>
+      <body className={raleway.className}>
+        {children}
+        <div className='fixed top-16 right-12 z-50'>
+          <MusicPlayer />
+        </div>
+      </body>
     </html>
   )
 }
