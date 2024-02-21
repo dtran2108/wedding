@@ -8,6 +8,7 @@ import Quote from '@/components/Quote'
 import Registry from '@/components/Registry'
 import RestYourHead from '@/components/RestYourHead'
 import FinestCity from '@/components/FinestCity'
+import Festivities from '@/components/Festivities'
 
 const allura = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
@@ -31,7 +32,12 @@ export default function Home() {
           <Divider>
             <span className='text-md md:text-2xl'>20.04.2024</span>
           </Divider>
-          <h1 className={cn(allura.className, 'text-7xl md:text-8xl leading-normal my-8')}>
+          <h1
+            className={cn(
+              allura.className,
+              'text-7xl md:text-8xl leading-normal my-8'
+            )}
+          >
             Duy
             <br />& Điền
           </h1>
@@ -47,6 +53,9 @@ export default function Home() {
       <div id='gallery'>
         <Gallery />
         <Quote />
+      </div>
+      <div id='festivities'>
+        <Festivities />
       </div>
       <div id='registry'>
         <Registry />
