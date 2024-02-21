@@ -34,7 +34,7 @@ export default function BridalCurtain({
       variants={curtainVariants}
       animate={showCurtain ? 'show' : 'hide'}
       className={cn(
-        'w-full min-h-screen flex flex-col items-center justify-center space-y-4',
+        'w-full min-h-[90vh] flex flex-col items-center justify-center space-y-4 relative z-20',
         type == 'left' ? 'text-black' : 'text-white'
       )}
       style={{
@@ -49,7 +49,7 @@ export default function BridalCurtain({
       >
         <p>MEET THE</p>
         <h1 className={cn(allura.className, 'text-5xl md:text-7xl')}>
-          {type == 'left' ? 'brides maids' : 'grooms men'}
+          {type == 'left' ? 'bridesmaids' : 'groomsmen'}
         </h1>
         <div
           className={cn(

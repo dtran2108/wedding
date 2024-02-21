@@ -25,7 +25,7 @@ export default function BridalTag({
       variants={tagVariants}
       animate={showTag ? 'show' : 'hide'}
       className={cn(
-        'absolute left-[43%] w-[200px]',
+        'absolute left-[43%] w-[200px] z-20',
         type == 'bridal-party' ? '-bottom-12' : '-bottom-24 cursor-pointer'
       )}
       onClick={type == 'back' ? handleCloseMeet : () => {}}
