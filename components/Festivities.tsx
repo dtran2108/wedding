@@ -11,12 +11,25 @@ import {
   CarouselPrevious,
 } from './ui/carousel'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const allura = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
 
 export default function Festivities() {
   const [showMap, setShowMap] = useState(false)
+
+  const show = {
+    opacity: 1,
+    display: 'flex',
+  }
+
+  const hide = {
+    opacity: 0,
+    transitionEnd: {
+      display: 'none',
+    },
+  }
 
   return (
     <div className='w-full min-h-[800px] relative'>
@@ -30,10 +43,10 @@ export default function Festivities() {
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
         ></iframe>
-        <div
+        <motion.div
+          animate={showMap ? hide : show}
           className={cn(
-            'absolute w-full h-[800px] top-0 left-0 bg-black/80 z-20 flex flex-col items-center justify-center space-y-4',
-            showMap ? 'hidden' : 'flex'
+            'absolute w-full h-[800px] top-0 left-0 bg-black/80 z-20 flex flex-col items-center pt-8 space-y-4'
           )}
         >
           <h1 className={cn(allura.className, 'text-6xl text-center')}>
@@ -102,34 +115,34 @@ export default function Festivities() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <Button
-            className={cn(
-              'rounded-full w-[70px] h-[70px]',
-              showMap
-                ? 'bg-[#b3a192] text-black hover:bg-[#b3a192]'
-                : 'bg-black text-white hover:bg-black'
-            )}
-            onClick={() => setShowMap(!showMap)}
-          >
-            <span
-              className={cn(
-                'py-0.5 border-t border-b font-bold text-sm',
-                showMap
-                  ? 'border-t-black border-b-black'
-                  : 'border-t-white border-b-white'
-              )}
-            >
-              {showMap ? (
-                'CLOSE'
-              ) : (
-                <span>
-                  LIVE <br /> MAP
-                </span>
-              )}
-            </span>
-          </Button>
-        </div>
+        </motion.div>
       </div>
+      <Button
+        className={cn(
+          'absolute z-30 bottom-12 left-[47%] rounded-full w-[70px] h-[70px]',
+          showMap
+            ? 'bg-black text-white hover:bg-black'
+            : 'bg-[#b3a192] text-black hover:bg-[#b3a192]'
+        )}
+        onClick={() => setShowMap(!showMap)}
+      >
+        <span
+          className={cn(
+            'py-0.5 border-t border-b font-bold text-sm',
+            showMap
+              ? 'border-t-white border-b-white'
+              : 'border-t-black border-b-black'
+          )}
+        >
+          {showMap ? (
+            'CLOSE'
+          ) : (
+            <span>
+              LIVE <br /> MAP
+            </span>
+          )}
+        </span>
+      </Button>
     </div>
   )
 }

@@ -44,12 +44,12 @@ export default function BridalTag({
           width='71'
           height='52'
           fill='white'
-          fill-opacity='0.5'
+          fillOpacity='0.5'
         />
         <path
           d='M41 0L76.507 22.5H5.49296L41 0Z'
           fill='white'
-          fill-opacity='0.5'
+          fillOpacity='0.5'
         />
         <rect
           x='11.2181'
