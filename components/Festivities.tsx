@@ -72,7 +72,7 @@ export default function Festivities() {
                         <p
                           className={cn(
                             neuton.className,
-                            'text-black text-center'
+                            'text-black text-center px-4'
                           )}
                         >
                           The happy couple will say “I do” with their toes in
