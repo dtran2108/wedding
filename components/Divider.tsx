@@ -1,10 +1,17 @@
-export default function Divider() {
+import { cn } from '@/lib/utils'
+
+export default function Divider({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
   return (
-    <div className='inline-flex items-center justify-center w-full'>
-      <hr className='w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700' />
-      <span className='absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900'>
-        or
-      </span>
+    <div className={cn('relative flex py-2 items-center', className)}>
+      <div className='flex-grow border-t-2 border-primary'></div>
+      <span className='flex-shrink mx-4'>{children}</span>
+      <div className='flex-grow border-t-2 border-primary'></div>
     </div>
   )
 }
