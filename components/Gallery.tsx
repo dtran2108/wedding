@@ -29,7 +29,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-1.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -37,7 +37,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-2.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -45,7 +45,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-3.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -53,7 +53,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-4.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -61,7 +61,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-5.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -69,7 +69,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-6.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -77,7 +77,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-7.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -85,7 +85,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-8.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -93,7 +93,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-9.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -101,7 +101,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-10.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -109,7 +109,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-1.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -117,7 +117,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-2.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -125,7 +125,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-3.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -133,7 +133,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-4.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
@@ -141,7 +141,7 @@ export default function Gallery() {
             <div
               className='w-full aspect-square border-4 border-primary rounded-lg'
               style={{
-                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundImage: "url('/images/gallery-5.jpeg')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}

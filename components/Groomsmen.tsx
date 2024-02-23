@@ -29,7 +29,7 @@ export default function Groomsmen() {
               <div
                 className='rounded-full w-40 aspect-square border-4 border-primary'
                 style={{
-                  backgroundImage: "url('/images/1st-grid.jpeg')",
+                  backgroundImage: "url('/images/groom-1.jpeg')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -55,7 +55,7 @@ export default function Groomsmen() {
               <div
                 className='rounded-full w-40 aspect-square border-4 border-primary'
                 style={{
-                  backgroundImage: "url('/images/1st-grid.jpeg')",
+                  backgroundImage: "url('/images/groom-2.jpeg')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -83,7 +83,7 @@ export default function Groomsmen() {
               <div
                 className='rounded-full w-40 aspect-square border-4 border-primary'
                 style={{
-                  backgroundImage: "url('/images/1st-grid.jpeg')",
+                  backgroundImage: "url('/images/groom-3.jpeg')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
