@@ -57,52 +57,35 @@ export default function OurStory() {
   ]
 
   return (
-    <div
-      id='our-story'
-      className='min-h-screen w-screen'
-      style={{
-        backgroundImage: "url('/images/background.jpeg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className='w-full min-h-screen backdrop-blur-lg p-4'>
-        <div className='w-full h-full border-4 border-primary rounded-lg bg-white p-4'>
-          <h1
-            className={cn(
-              waterBrush.className,
-              'text-center text-5xl font-bold'
-            )}
+    <div>
+      <h1
+        className={cn(waterBrush.className, 'text-center text-5xl font-bold mt-2')}
+      >
+        Our Story
+      </h1>
+      <div className='mt-3 grid grid-cols-1 gap-2'>
+        {stories.map((story, i) => (
+          <div
+            key={i}
+            className='w-full h-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
+            style={{
+              backgroundImage: `url('${story.image}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
           >
-            Our Story
-          </h1>
-          <div className='mt-8 grid grid-cols-4 gap-4'>
-            {stories.map((story, i) => (
-              <div
-                key={i}
-                className='w-full h-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
-                style={{
-                  backgroundImage: `url('${story.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className='min-h-[250px]'></div>
-                <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
-                  <div>
-                    <p className='mb-2'>{story.date}</p>
-                    <h1
-                      className={cn(waterBrush.className, 'text-4xl font-bold')}
-                    >
-                      {story.title}
-                    </h1>
-                    <p className='mt-4 text-sm'>{story.content}</p>
-                  </div>
-                </div>
+            <div className='min-h-[250px]'></div>
+            <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
+              <div>
+                <p className='mb-2'>{story.date}</p>
+                <h1 className={cn(waterBrush.className, 'text-3xl font-bold')}>
+                  {story.title}
+                </h1>
+                <p className='mt-2 text-sm'>{story.content}</p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   )
