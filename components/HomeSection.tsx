@@ -1,12 +1,61 @@
+'use client'
+
 import { cn } from '@/lib/utils'
 import { Water_Brush } from 'next/font/google'
 import Image from 'next/image'
 import Divider from './Divider'
+import { useEffect, useState } from 'react'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
 export default function HomeSection() {
   const mainStyle = 'w-full h-full border-4 border-primary rounded-lg'
+
+  const scrollToHash = function (element_id: string) {
+    const element = document.getElementById(element_id)
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    })
+  }
+
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear()
+    let difference = +new Date(`04/20/${year}`) - +new Date()
+
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    }
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      }
+    }
+
+    return timeLeft
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft())
+    }, 1000)
+    return () => clearTimeout(timer)
+  })
+
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number
+    hours: number
+    minutes: number
+    seconds: number
+  }>(calculateTimeLeft())
 
   return (
     <div
@@ -75,20 +124,30 @@ export default function HomeSection() {
           </Divider>
           <div className='flex items-center justify-around w-full'>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>15</h1>
+              <h1 className='text-4xl font-bold'>{timeLeft.days}</h1>
               <p>Days</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>15</h1>
+              <h1 className='text-4xl font-bold'>{timeLeft.hours}</h1>
               <p>Hours</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>38</h1>
+              <h1 className='text-4xl font-bold'>{timeLeft.minutes}</h1>
               <p>Minutes</p>
+            </div>
+            <div className='flex items-center justify-center flex-col text-primary'>
+              <h1 className='text-4xl font-bold'>{timeLeft.seconds}</h1>
+              <p>Seconds</p>
             </div>
           </div>
         </div>
-        <div className={cn(mainStyle, 'col-span-2 row-span-2 overflow-hidden')}>
+        <div
+          className={cn(
+            mainStyle,
+            'col-span-2 row-span-2 overflow-hidden cursor-pointer'
+          )}
+          onClick={() => scrollToHash('our-story')}
+        >
           <div
             className='relative flex items-center justify-center flex-col p-4'
             style={{
