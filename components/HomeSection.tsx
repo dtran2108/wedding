@@ -69,7 +69,8 @@ export default function HomeSection() {
     >
       <div className='w-screen h-screen grid grid-cols-4 grid-rows-4 gap-4 grid-flow-col backdrop-blur-lg p-4'>
         <div
-          className={cn(mainStyle, 'col-span-1 row-span-2')}
+          onClick={() => scrollToHash('gallery')}
+          className={cn(mainStyle, 'col-span-1 row-span-2 cursor-pointer')}
           style={{
             backgroundImage: "url('/images/1st-grid.jpeg')",
             backgroundSize: 'cover',
@@ -218,9 +219,10 @@ export default function HomeSection() {
           </h1>
         </div>
         <div
+          onClick={() => scrollToHash('contact')}
           className={cn(
             mainStyle,
-            'col-span-1 row-span-2 border-none p-2 flex flex-col justify-between items-center'
+            'col-span-1 row-span-2 border-none p-2 flex flex-col justify-between items-center cursor-pointer'
           )}
           style={{
             backgroundImage: "url('/images/japanese-restaurant.jpeg')",
