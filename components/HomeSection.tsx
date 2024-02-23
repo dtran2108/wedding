@@ -112,7 +112,7 @@ export default function HomeSection() {
             'col-span-2 row-span-1 bg-white flex items-center justify-center flex-col px-8'
           )}
         >
-          <h1 className={cn(waterBrush.className, 'font-bold text-3xl')}>
+          <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
             Countdown
           </h1>
           <Divider
@@ -125,19 +125,19 @@ export default function HomeSection() {
           </Divider>
           <div className='flex items-center justify-around w-full'>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-2xl font-bold'>{timeLeft.days}</h1>
+              <h1 className='text-3xl font-bold'>{timeLeft.days}</h1>
               <p className='text-sm'>Days</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-2xl font-bold'>{timeLeft.hours}</h1>
+              <h1 className='text-3xl font-bold'>{timeLeft.hours}</h1>
               <p className='text-sm'>Hours</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-2xl font-bold'>{timeLeft.minutes}</h1>
+              <h1 className='text-3xl font-bold'>{timeLeft.minutes}</h1>
               <p className='text-sm'>Minutes</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-2xl font-bold'>{timeLeft.seconds}</h1>
+              <h1 className='text-3xl font-bold'>{timeLeft.seconds}</h1>
               <p className='text-sm'>Seconds</p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function HomeSection() {
                 <h1 className='text-center text-4xl font-bold'>Japan</h1>
               </div>
               <div
-                className='rounded-t-full w-[200px] h-[170px]'
+                className='rounded-t-full w-[200px] h-[210px]'
                 style={{
                   backgroundImage: "url('/images/wedding.jpeg')",
                   backgroundSize: 'cover',
