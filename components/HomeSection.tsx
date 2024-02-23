@@ -198,8 +198,9 @@ export default function HomeSection() {
         <div
           className={cn(
             mainStyle,
-            'col-span-1 row-span-1 p-4 flex items-center justify-center space-y-6 flex-col bg-white'
+            'col-span-1 row-span-1 p-4 flex items-center justify-center space-y-6 flex-col bg-white cursor-pointer'
           )}
+          onClick={() => scrollToHash('agenda')}
         >
           <div className='flex items-center justify-center space-x-4'>
             <span className='w-[40px] aspect-square rounded-full bg-[#ffecf5]'></span>
