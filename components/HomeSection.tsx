@@ -85,14 +85,14 @@ export default function HomeSection() {
         >
           <Image
             src='/images/registration.png'
-            width={100}
-            height={100}
+            width={90}
+            height={90}
             alt='registration QR'
           />
           <h1
             className={cn(
               waterBrush.className,
-              'font-bold text-primary text-2xl'
+              'font-bold text-primary text-xl'
             )}
           >
             REGISTRATION
@@ -112,7 +112,7 @@ export default function HomeSection() {
             'col-span-2 row-span-1 bg-white flex items-center justify-center flex-col px-8'
           )}
         >
-          <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
+          <h1 className={cn(waterBrush.className, 'font-bold text-3xl')}>
             Countdown
           </h1>
           <Divider
@@ -125,27 +125,27 @@ export default function HomeSection() {
           </Divider>
           <div className='flex items-center justify-around w-full'>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>{timeLeft.days}</h1>
-              <p>Days</p>
+              <h1 className='text-2xl font-bold'>{timeLeft.days}</h1>
+              <p className='text-sm'>Days</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>{timeLeft.hours}</h1>
-              <p>Hours</p>
+              <h1 className='text-2xl font-bold'>{timeLeft.hours}</h1>
+              <p className='text-sm'>Hours</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>{timeLeft.minutes}</h1>
-              <p>Minutes</p>
+              <h1 className='text-2xl font-bold'>{timeLeft.minutes}</h1>
+              <p className='text-sm'>Minutes</p>
             </div>
             <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-4xl font-bold'>{timeLeft.seconds}</h1>
-              <p>Seconds</p>
+              <h1 className='text-2xl font-bold'>{timeLeft.seconds}</h1>
+              <p className='text-sm'>Seconds</p>
             </div>
           </div>
         </div>
         <div
           className={cn(
             mainStyle,
-            'col-span-2 row-span-2 overflow-hidden cursor-pointer'
+            'col-span-2 row-span-2 overflow-hidden cursor-pointer flex flex-col'
           )}
           onClick={() => scrollToHash('our-story')}
         >
@@ -161,7 +161,7 @@ export default function HomeSection() {
             <h1
               className={cn(
                 waterBrush.className,
-                'font-bold text-5xl w-full text-center mb-4 relative z-20'
+                'font-bold text-4xl w-full text-center mb-4 relative z-20'
               )}
             >
               {' '}
@@ -173,7 +173,7 @@ export default function HomeSection() {
                 <h1 className='text-center text-4xl font-bold'>Japan</h1>
               </div>
               <div
-                className='rounded-t-full w-[200px] h-[215px]'
+                className='rounded-t-full w-[200px] h-[170px]'
                 style={{
                   backgroundImage: "url('/images/wedding.jpeg')",
                   backgroundSize: 'cover',
@@ -190,7 +190,7 @@ export default function HomeSection() {
           <div
             className={cn(
               waterBrush.className,
-              'bg-white py-4 text-primary text-2xl flex items-center justify-center'
+              'bg-white py-4 text-primary flex-1 text-2xl flex items-center justify-center'
             )}
           >
             Love you like a love song baby

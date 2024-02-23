@@ -8,7 +8,7 @@ export default function Divider({
   className?: string
 }) {
   return (
-    <div className={cn('relative flex py-2 items-center', className)}>
+    <div className={cn('relative flex py-1 items-center', className)}>
       <div className='flex-grow border-t-2 border-primary'></div>
       <span className='flex-shrink mx-4'>{children}</span>
       <div className='flex-grow border-t-2 border-primary'></div>
