@@ -9,6 +9,10 @@ import { Dialog, DialogHeader, DialogTrigger } from './ui/dialog'
 import { DialogContent, DialogDescription, DialogTitle } from './ui/dialog'
 import Gallery from './Gallery'
 import OurStory from './OurStory'
+import Bridesmaid from './Bridesmaid'
+import Groomsmen from './Groomsmen'
+import Contact from './Contact'
+import Agenda from './Agenda'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -217,78 +221,110 @@ export default function HomeSection() {
           </DialogContent>
         </Dialog>
 
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-1 p-4 flex items-center justify-center space-y-6 flex-col bg-white cursor-pointer'
-          )}
-          onClick={() => scrollToHash('bridesmaids')}
-        >
-          <div className='flex items-center justify-center space-x-4'>
-            <span className='w-[40px] aspect-square rounded-full bg-[#ffecf5]'></span>
-            <span className='w-[40px] aspect-square rounded-full bg-[#ffe7e9]'></span>
-            <span className='w-[40px] aspect-square rounded-full bg-[#fdcee0]'></span>
-            <span className='w-[40px] aspect-square rounded-full bg-[#f2bfd2]'></span>
-          </div>
-          <h1
-            className={cn(
-              waterBrush.className,
-              'text-primary font-bold text-3xl'
-            )}
-          >
-            DRESS CODE
-          </h1>
-        </div>
-        <div
-          onClick={() => scrollToHash('contact')}
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-2 border-none p-2 flex flex-col justify-between items-center cursor-pointer'
-          )}
-          style={{
-            backgroundImage: "url('/images/japanese-restaurant.jpeg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'top',
-          }}
-        >
-          <div></div>
-          <div className='bg-white rounded-b-lg h-32 w-full flex items-center justify-center'>
-            <div>
-              <p className='mb-2'>77 N 6th St, Brooklyn, NY 11249</p>
-              <h1 className={cn(waterBrush.className, 'text-4xl font-bold')}>
-                ZENKICHI
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-1 row-span-1 p-4 flex items-center justify-center space-y-6 flex-col bg-white cursor-pointer'
+              )}
+            >
+              <div className='flex items-center justify-center space-x-4'>
+                <span className='w-[40px] aspect-square rounded-full bg-[#ffecf5]'></span>
+                <span className='w-[40px] aspect-square rounded-full bg-[#ffe7e9]'></span>
+                <span className='w-[40px] aspect-square rounded-full bg-[#fdcee0]'></span>
+                <span className='w-[40px] aspect-square rounded-full bg-[#f2bfd2]'></span>
+              </div>
+              <h1
+                className={cn(
+                  waterBrush.className,
+                  'text-primary font-bold text-3xl'
+                )}
+              >
+                DRESS CODE
               </h1>
             </div>
-          </div>
-        </div>
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-2 bg-white p-4 flex flex-col items-center justify-center text-center cursor-pointer'
-          )}
-          onClick={() => scrollToHash('agenda')}
-        >
-          <h1
-            className={cn(
-              waterBrush.className,
-              'text-2xl text-primary font-bold mb-4'
-            )}
-          >
-            WEDDING MENU
-          </h1>
-          <h2 className={cn(waterBrush.className, 'text-2xl font-bold')}>
-            Main Course
-          </h2>
-          <p>Herb-Crusted Filet Mignon</p>
-          <p>Mushroom Risotto</p>
-          <p>Stuffed Bell Peppers</p>
-          <h2 className={cn(waterBrush.className, 'text-2xl font-bold mt-4')}>
-            Dessert
-          </h2>
-          <p>Wedding Cake</p>
-          <p>Assorted Miniature Desserts</p>
-          <p>Gourmet Ice Cream Bar</p>
-        </div>
+          </DialogTrigger>
+          <DialogContent>
+            <div className='max-h-[500px] overflow-y-scroll'>
+              <Bridesmaid />
+              <div className='w-full h-[2px] bg-primary my-2'></div>
+              <Groomsmen />
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-1 row-span-2 border-none p-2 flex flex-col justify-between items-center cursor-pointer'
+              )}
+              style={{
+                backgroundImage: "url('/images/japanese-restaurant.jpeg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'top',
+              }}
+            >
+              <div></div>
+              <div className='bg-white rounded-b-lg h-32 w-full flex items-center justify-center'>
+                <div>
+                  <p className='mb-2'>77 N 6th St, Brooklyn, NY 11249</p>
+                  <h1
+                    className={cn(waterBrush.className, 'text-4xl font-bold')}
+                  >
+                    ZENKICHI
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </DialogTrigger>
+          <DialogContent>
+            <div className='max-h-[500px] overflow-y-scroll'>
+              <Contact />
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-1 row-span-2 bg-white p-4 flex flex-col items-center justify-center text-center cursor-pointer'
+              )}
+            >
+              <h1
+                className={cn(
+                  waterBrush.className,
+                  'text-2xl text-primary font-bold mb-4'
+                )}
+              >
+                WEDDING MENU
+              </h1>
+              <h2 className={cn(waterBrush.className, 'text-2xl font-bold')}>
+                Main Course
+              </h2>
+              <p>Herb-Crusted Filet Mignon</p>
+              <p>Mushroom Risotto</p>
+              <p>Stuffed Bell Peppers</p>
+              <h2
+                className={cn(waterBrush.className, 'text-2xl font-bold mt-4')}
+              >
+                Dessert
+              </h2>
+              <p>Wedding Cake</p>
+              <p>Assorted Miniature Desserts</p>
+              <p>Gourmet Ice Cream Bar</p>
+            </div>
+          </DialogTrigger>
+          <DialogContent>
+            <div className='max-h-[500px] overflow-y-scroll'>
+              <Agenda />
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   )

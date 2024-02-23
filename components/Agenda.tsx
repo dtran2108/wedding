@@ -40,52 +40,40 @@ export default function Agenda() {
   ]
 
   return (
-    <div
-      id='agenda'
-      className='min-h-screen w-screen'
-      style={{
-        backgroundImage: "url('/images/background.jpeg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className='w-full min-h-screen backdrop-blur-lg p-4'>
-        <div className='w-full h-full border-4 border-primary rounded-lg bg-white p-4'>
-          <h1
-            className={cn(
-              waterBrush.className,
-              'text-center text-5xl font-bold'
-            )}
+    <div>
+      <h1
+        className={cn(
+          waterBrush.className,
+          'text-center text-5xl font-bold mt-2'
+        )}
+      >
+        Agenda
+      </h1>
+      <div className='mt-8 grid grid-cols-1 gap-2'>
+        {timeline.map((item, i) => (
+          <div
+            key={i}
+            className='w-full aspect-square border-4 border-primary rounded-lg bg-white p-4 flex flex-col justify-center items-center'
           >
-            Agenda
-          </h1>
-          <div className='mt-8 grid grid-cols-3 gap-4'>
-            {timeline.map((item, i) => (
-              <div
-                key={i}
-                className='w-full aspect-square border-4 border-primary rounded-lg bg-white p-4 flex flex-col justify-center items-center'
-              >
-                <h1
-                  className={cn(
-                    waterBrush.className,
-                    'text-3xl font-bold text-center'
-                  )}
-                >
-                  {item.time}
-                </h1>
-                <p className='text-center'>{item.content}</p>
-                <div
-                  className='flex-1 h-full w-full rounded-lg mt-4'
-                  style={{
-                    backgroundImage: `url('${item.image}')`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                  }}
-                ></div>
-              </div>
-            ))}
+            <h1
+              className={cn(
+                waterBrush.className,
+                'text-3xl font-bold text-center'
+              )}
+            >
+              {item.time}
+            </h1>
+            <p className='text-center'>{item.content}</p>
+            <div
+              className='flex-1 h-full w-full rounded-lg mt-4'
+              style={{
+                backgroundImage: `url('${item.image}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            ></div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   )
