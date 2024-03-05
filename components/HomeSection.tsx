@@ -6,13 +6,14 @@ import Image from 'next/image'
 import Divider from './Divider'
 import { useEffect, useState } from 'react'
 import { Dialog, DialogHeader, DialogTrigger } from './ui/dialog'
-import { DialogContent, DialogDescription, DialogTitle } from './ui/dialog'
+import { DialogContent } from './ui/dialog'
 import Gallery from './Gallery'
 import OurStory from './OurStory'
 import Bridesmaid from './Bridesmaid'
 import Groomsmen from './Groomsmen'
 import Contact from './Contact'
 import Agenda from './Agenda'
+import RSVPForm from './RSVPForm'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -88,31 +89,34 @@ export default function HomeSection() {
               }}
             ></div>
           </DialogTrigger>
-          <DialogContent className='w-[700px]'>
+          <DialogContent>
             <Gallery />
           </DialogContent>
         </Dialog>
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-1 bg-white flex items-center justify-center flex-col space-y-3'
-          )}
-        >
-          <Image
-            src='/images/registration.png'
-            width={90}
-            height={90}
-            alt='registration QR'
-          />
-          <h1
-            className={cn(
-              waterBrush.className,
-              'font-bold text-primary text-xl'
-            )}
-          >
-            REGISTRATION
-          </h1>
-        </div>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-1 row-span-1 bg-white flex items-center justify-center flex-col space-y-3 cursor-pointer'
+              )}
+            >
+              <h1
+                className={cn(
+                  waterBrush.className,
+                  'font-bold text-primary text-4xl'
+                )}
+              >
+                RSVP
+              </h1>
+            </div>
+          </DialogTrigger>
+          <DialogContent>
+            <RSVPForm />
+          </DialogContent>
+        </Dialog>
+
         <div
           className={cn(mainStyle, 'col-span-2 row-span-1')}
           style={{
