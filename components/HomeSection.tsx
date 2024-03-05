@@ -81,7 +81,6 @@ export default function HomeSection() {
         <Dialog>
           <DialogTrigger asChild>
             <div
-              onClick={() => scrollToHash('gallery')}
               className={cn(mainStyle, 'col-span-1 row-span-2 cursor-pointer')}
               style={{
                 backgroundImage: "url('/images/1st-grid.jpeg')",
@@ -90,7 +89,7 @@ export default function HomeSection() {
               }}
             ></div>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
             <Gallery />
           </DialogContent>
         </Dialog>
