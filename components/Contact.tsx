@@ -12,7 +12,7 @@ export default function Contact() {
           'text-center text-5xl font-bold mt-4'
         )}
       >
-        Contact Information
+        Venue
       </h1>
       <div className='mt-8 grid grid-cols-1 gap-2'>
         <iframe
@@ -31,10 +31,6 @@ export default function Contact() {
             <p className='text-black font-bold'>
               77 N 6th St, Brooklyn, NY 11249
             </p>
-          </div>
-          <div className='mt-8'>
-            <p className='text-gray-500'>Email</p>
-            <p className='text-black font-bold'>jaiden@gmail.com</p>
           </div>
           <div className='mt-8'>
             <p className='text-gray-500'>Phone Number</p>

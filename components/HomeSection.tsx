@@ -5,7 +5,8 @@ import { Water_Brush } from 'next/font/google'
 import Image from 'next/image'
 import Divider from './Divider'
 import { useEffect, useState } from 'react'
-import { Dialog, DialogHeader, DialogTrigger } from './ui/dialog'
+import { Dialog, DialogTrigger } from './ui/dialog'
+import { AnimatePresence, motion } from 'framer-motion'
 import { DialogContent } from './ui/dialog'
 import Gallery from './Gallery'
 import OurStory from './OurStory'
@@ -15,6 +16,7 @@ import Contact from './Contact'
 import Agenda from './Agenda'
 import RSVPForm from './RSVPForm'
 import Menu from './Menu'
+import DressCode from './DressCode'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -112,55 +114,71 @@ export default function HomeSection() {
               </h1>
             </div>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
             <RSVPForm />
           </DialogContent>
         </Dialog>
 
-        <div
-          className={cn(mainStyle, 'col-span-2 row-span-1')}
-          style={{
-            backgroundImage: "url('/images/3rd-grid.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        ></div>
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-2 row-span-1 bg-white flex items-center justify-center flex-col px-8'
-          )}
-        >
-          <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
-            Countdown
-          </h1>
-          <Divider
-            className={cn(
-              waterBrush.className,
-              'font-bold text-3xl text-primary w-full'
-            )}
-          >
-            &
-          </Divider>
-          <div className='flex items-center justify-around w-full'>
-            <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-3xl font-bold'>{timeLeft.days}</h1>
-              <p className='text-sm'>Days</p>
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(mainStyle, 'col-span-2 row-span-1 cursor-pointer')}
+              style={{
+                backgroundImage: "url('/images/3rd-grid.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            ></div>
+          </DialogTrigger>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
+            <OurStory />
+          </DialogContent>
+        </Dialog>
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-2 row-span-1 bg-white flex items-center justify-center flex-col px-8 cursor-pointer'
+              )}
+            >
+              <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
+                Countdown
+              </h1>
+              <Divider
+                className={cn(
+                  waterBrush.className,
+                  'font-bold text-3xl text-primary w-full'
+                )}
+              >
+                &
+              </Divider>
+              <div className='flex items-center justify-around w-full'>
+                <div className='flex items-center justify-center flex-col text-primary'>
+                  <h1 className='text-3xl font-bold'>{timeLeft.days}</h1>
+                  <p className='text-sm'>Days</p>
+                </div>
+                <div className='flex items-center justify-center flex-col text-primary'>
+                  <h1 className='text-3xl font-bold'>{timeLeft.hours}</h1>
+                  <p className='text-sm'>Hours</p>
+                </div>
+                <div className='flex items-center justify-center flex-col text-primary'>
+                  <h1 className='text-3xl font-bold'>{timeLeft.minutes}</h1>
+                  <p className='text-sm'>Minutes</p>
+                </div>
+                <div className='flex items-center justify-center flex-col text-primary relative'>
+                  <h1 className='text-3xl font-bold'>{timeLeft.seconds}</h1>
+                  <p className='text-sm'>Seconds</p>
+                </div>
+              </div>
             </div>
-            <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-3xl font-bold'>{timeLeft.hours}</h1>
-              <p className='text-sm'>Hours</p>
-            </div>
-            <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-3xl font-bold'>{timeLeft.minutes}</h1>
-              <p className='text-sm'>Minutes</p>
-            </div>
-            <div className='flex items-center justify-center flex-col text-primary'>
-              <h1 className='text-3xl font-bold'>{timeLeft.seconds}</h1>
-              <p className='text-sm'>Seconds</p>
-            </div>
-          </div>
-        </div>
+          </DialogTrigger>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
+            <Agenda />
+          </DialogContent>
+        </Dialog>
+
         <Dialog>
           <DialogTrigger asChild>
             <div
@@ -249,12 +267,13 @@ export default function HomeSection() {
               </h1>
             </div>
           </DialogTrigger>
-          <DialogContent>
-            <div className='max-h-[500px] overflow-y-scroll'>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
+            <DressCode />
+            {/* <div className='max-h-[500px] overflow-y-scroll'>
               <Bridesmaid />
               <div className='w-full h-[2px] bg-primary my-2'></div>
               <Groomsmen />
-            </div>
+            </div> */}
           </DialogContent>
         </Dialog>
 

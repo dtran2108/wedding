@@ -1,47 +1,23 @@
-'use client'
-
 import { cn } from '@/lib/utils'
 import { Water_Brush } from 'next/font/google'
-import { Dialog, DialogTrigger, DialogContent } from './ui/dialog'
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
-export default function Gallery() {
-  const imageList = [
-    '/images/gallery-1.jpeg',
-    '/images/gallery-2.jpeg',
-    '/images/gallery-3.jpeg',
-    '/images/gallery-4.jpeg',
-    '/images/gallery-5.jpeg',
-    '/images/gallery-6.jpeg',
-    '/images/gallery-7.jpeg',
-    '/images/gallery-8.jpeg',
-    '/images/gallery-9.jpeg',
-    '/images/gallery-10.jpeg',
-    '/images/gallery-1.jpeg',
-    '/images/gallery-2.jpeg',
-    '/images/gallery-3.jpeg',
-    '/images/gallery-4.jpeg',
-    '/images/gallery-5.jpeg',
-    '/images/gallery-3.jpeg',
-    '/images/gallery-4.jpeg',
-    '/images/gallery-5.jpeg',
-    '/images/gallery-3.jpeg',
-    '/images/gallery-4.jpeg',
-    '/images/gallery-5.jpeg',
-    '/images/gallery-3.jpeg',
-    '/images/gallery-4.jpeg',
-    '/images/gallery-5.jpeg',
-  ]
+export default function DressCode() {
+  const imageList = ['/images/gallery-1.jpeg', '/images/gallery-2.jpeg']
 
   return (
     <div>
       <h1
-        className={cn(waterBrush.className, 'text-center text-5xl font-bold')}
+        className={cn(
+          waterBrush.className,
+          'text-center text-5xl font-bold mt-4'
+        )}
       >
-        Gallery
+        Dress Code Suggestion
       </h1>
-      <div className='grid grid-cols-4 gap-2 mt-8'>
+      <div className='grid grid-cols-2 gap-2 mt-8'>
         {imageList.map((imageUrl, i) => (
           <Dialog key={imageUrl + 't' + i}>
             <DialogTrigger asChild>
