@@ -11,8 +11,8 @@ export default function Home() {
     <>
       <HomeSection />
       <OurStory />
-      <Bridesmaid />
-      <Groomsmen />
+      {/* <Bridesmaid />
+      <Groomsmen /> */}
       <Agenda />
       <Gallery />
       <Contact />

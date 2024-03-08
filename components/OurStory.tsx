@@ -84,7 +84,7 @@ export default function OurStory() {
             Our Story
           </h1>
           <div className='mt-8 flex items-center justify-center flex-1'>
-            <Carousel className='w-full max-w-lg md:max-w-[80%] h-full flex items-center justify-center'>
+            <Carousel className='w-full max-w-lg md:max-w-[70%] h-full flex items-center justify-center'>
               <CarouselContent>
                 {stories.map((story, index) => (
                   <CarouselItem key={index} className='h-[90%]'>
