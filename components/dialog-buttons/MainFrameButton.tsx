@@ -17,7 +17,7 @@ export default function MainFrameButton({ className }: { className?: string }) {
         <div
           className={cn(
             mainStyle,
-            'col-span-2 row-span-2 overflow-hidden cursor-pointer flex flex-col'
+            'overflow-hidden cursor-pointer flex flex-col'
           )}
         >
           <div
@@ -40,11 +40,11 @@ export default function MainFrameButton({ className }: { className?: string }) {
             </h1>
             <div className='flex items-center justify-evenly w-full relative z-20'>
               <div className={cn(waterBrush.className)}>
-                <h1 className='text-center text-4xl font-bold'>Tokyo</h1>
-                <h1 className='text-center text-4xl font-bold'>Japan</h1>
+                <h1 className='text-center text-2xl md:text-4xl font-bold'>Tokyo</h1>
+                <h1 className='text-center text-2xl md:text-4xl font-bold'>Japan</h1>
               </div>
               <div
-                className='rounded-t-full w-[200px] h-[210px]'
+                className='rounded-t-full w-[150px] md:w-[200px] lg:h-[210px] md:h-[195px] h-[190px]'
                 style={{
                   backgroundImage: "url('/images/wedding.jpeg')",
                   backgroundSize: 'cover',
@@ -52,9 +52,9 @@ export default function MainFrameButton({ className }: { className?: string }) {
                 }}
               ></div>
               <div className={cn(waterBrush.className)}>
-                <h1 className='text-center text-4xl font-bold'>25</h1>
-                <h1 className='text-center text-4xl font-bold'>03</h1>
-                <h1 className='text-center text-4xl font-bold'>28</h1>
+                <h1 className='text-center text-2xl md:text-4xl font-bold'>25</h1>
+                <h1 className='text-center text-2xl md:text-4xl font-bold'>03</h1>
+                <h1 className='text-center text-2xl md:text-4xl font-bold'>28</h1>
               </div>
             </div>
           </div>

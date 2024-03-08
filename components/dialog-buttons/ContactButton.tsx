@@ -17,7 +17,7 @@ export default function ContactButton({ className }: { className?: string }) {
         <div
           className={cn(
             mainStyle,
-            'col-span-1 row-span-2 border-none p-2 flex flex-col justify-between items-center cursor-pointer'
+            'col-span-1 row-span-2 border-none p-1 md:p-2 flex flex-col justify-between items-center cursor-pointer'
           )}
           style={{
             backgroundImage: "url('/images/japanese-restaurant.jpeg')",
@@ -26,11 +26,11 @@ export default function ContactButton({ className }: { className?: string }) {
           }}
         >
           <div></div>
-          <div className='bg-white rounded-b-lg h-32 w-full flex items-center justify-center'>
-            <div>
-              <p className='mb-2'>77 N 6th St, Brooklyn, NY 11249</p>
-              <h1 className={cn(waterBrush.className, 'text-4xl font-bold')}>
-                ZENKICHI
+          <div className='bg-white rounded-b-lg rounded-t-lg md:rounded-t-none h-full md:h-32 w-full flex items-center justify-center'>
+            <div className='p-1'>
+              <p className='mb-2 text-sm md:text-md'>77 N 6th St, Brooklyn, NY 11249</p>
+              <h1 className={cn(waterBrush.className, 'text-lg md:text-4xl font-bold')}>
+                ZENICHI
               </h1>
             </div>
           </div>

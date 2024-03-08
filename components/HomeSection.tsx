@@ -25,9 +25,9 @@ export default function HomeSection() {
         backgroundPosition: 'center',
       }}
     >
-      <div className='w-screen h-screen grid grid-cols-4 grid-rows-4 gap-4 grid-flow-col backdrop-blur-lg p-4'>
+      <div className='w-screen h-screen grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col lg:gap-4 grid-cols-3 grid-rows-4 grid-flow-row gap-2 backdrop-blur-lg p-2 lg:p-4'>
         <Dialog>
-          <DialogTrigger asChild>
+          <DialogTrigger asChild className='hidden lg:block'>
             <div
               className={cn(mainStyle, 'col-span-1 row-span-2 cursor-pointer')}
               style={{
@@ -41,9 +41,9 @@ export default function HomeSection() {
             <Gallery />
           </DialogContent>
         </Dialog>
-        <RSVPButton />
+        <RSVPButton className='hidden lg:flex' />
         <Dialog>
-          <DialogTrigger asChild>
+          <DialogTrigger asChild className='hidden lg:block'>
             <div
               className={cn(mainStyle, 'col-span-2 row-span-1 cursor-pointer')}
               style={{
@@ -57,11 +57,27 @@ export default function HomeSection() {
             <OurStory />
           </DialogContent>
         </Dialog>
-        <AgendaButton />
-        <MainFrameButton />
-        <DressCodeButton />
+        <AgendaButton className='lg:col-span-2 lg:row-span-1 col-span-3' />
+        <MainFrameButton className='lg:col-span-2 lg:row-span-2 col-span-3 row-span-2' />
+        <Dialog>
+          <DialogTrigger asChild className='block lg:hidden'>
+            <div
+              className={cn(mainStyle, 'col-span-1 row-span-2 cursor-pointer')}
+              style={{
+                backgroundImage: "url('/images/1st-grid.jpeg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            ></div>
+          </DialogTrigger>
+          <DialogContent className='max-h-[500px] overflow-y-scroll'>
+            <Gallery />
+          </DialogContent>
+        </Dialog>
+        <DressCodeButton className='hidden lg:flex' />
         <ContactButton />
-        <MenuButton />
+        <RSVPButton className='flex lg:hidden' />
+        <MenuButton className='hidden lg:block' />
       </div>
     </div>
   )

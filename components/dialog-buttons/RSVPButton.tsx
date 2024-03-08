@@ -23,7 +23,7 @@ export default function RSVPButton({ className }: { className?: string }) {
           <h1
             className={cn(
               waterBrush.className,
-              'font-bold text-primary text-4xl'
+              'font-bold text-primary text-2xl md:text-4xl'
             )}
           >
             RSVP

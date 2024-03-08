@@ -56,7 +56,7 @@ export default function AgendaButton({ className }: { className?: string }) {
         <div
           className={cn(
             mainStyle,
-            'col-span-2 row-span-1 bg-white flex items-center justify-center flex-col px-8 cursor-pointer'
+            'bg-white flex items-center justify-center flex-col px-8 cursor-pointer'
           )}
         >
           <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
