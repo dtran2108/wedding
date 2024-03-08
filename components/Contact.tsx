@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div
       id='contact'
-      className='w-screen'
+      className='w-screen h-screen'
       style={{
         backgroundImage: "url('/images/background.jpeg')",
         backgroundSize: 'cover',
@@ -28,8 +28,7 @@ export default function Contact() {
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.380393166596!2d106.68680248025244!3d10.782149931693272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9c4935f865%3A0xa2c53d4836a0780e!2sKh%C3%A1ch%20s%E1%BA%A1n%20Mai%20House%20Saigon!5e0!3m2!1svi!2s!4v1708671078905!5m2!1svi!2s'
               width='100%'
-              className='rounded-lg col-span-2'
-              height='450'
+              className='rounded-lg col-span-2 h-[calc(100vh-10rem)]'
               style={{ border: '0' }}
               allowFullScreen
               loading='lazy'
