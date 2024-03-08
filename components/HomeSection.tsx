@@ -5,6 +5,7 @@ import { Water_Brush } from 'next/font/google'
 import Image from 'next/image'
 import Divider from './Divider'
 import { useEffect, useState } from 'react'
+import RSVPButton from './RSVPButton'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -77,27 +78,9 @@ export default function HomeSection() {
             backgroundPosition: 'center',
           }}
         ></div>
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-1 bg-white flex items-center justify-center flex-col space-y-3'
-          )}
-        >
-          <Image
-            src='/images/registration.png'
-            width={90}
-            height={90}
-            alt='registration QR'
-          />
-          <h1
-            className={cn(
-              waterBrush.className,
-              'font-bold text-primary text-xl'
-            )}
-          >
-            REGISTRATION
-          </h1>
-        </div>
+
+        <RSVPButton />
+
         <div
           className={cn(mainStyle, 'col-span-2 row-span-1')}
           style={{
