@@ -238,18 +238,19 @@ export default function HomeSection() {
           >
             WEDDING MENU
           </h1>
-          <h2 className={cn(waterBrush.className, 'text-2xl font-bold')}>
-            Main Course
-          </h2>
-          <p>Herb-Crusted Filet Mignon</p>
-          <p>Mushroom Risotto</p>
-          <p>Stuffed Bell Peppers</p>
-          <h2 className={cn(waterBrush.className, 'text-2xl font-bold mt-4')}>
-            Dessert
-          </h2>
-          <p>Wedding Cake</p>
-          <p>Assorted Miniature Desserts</p>
-          <p>Gourmet Ice Cream Bar</p>
+          <div className='flex-1 w-full grid grid-cols-2 gap-2'>
+            {[1, 2, 3, 4].map((item) => (
+              <div
+                key={item}
+                className='rounded-lg border-2 border-primary w-full aspect-square'
+                style={{
+                  backgroundImage: `url('/images/menu-${item}.jpeg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
