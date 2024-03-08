@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Jomolhari } from 'next/font/google'
+import { Playfair } from 'next/font/google'
 import './globals.css'
 
-const jomolhari = Jomolhari({ subsets: ['latin'], weight: '400' })
+const playfair = Playfair({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Modern Minimalism',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={jomolhari.className}>
+      <body className={playfair.className}>
         <main>{children}</main>
       </body>
     </html>

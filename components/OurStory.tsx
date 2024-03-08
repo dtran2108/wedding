@@ -1,5 +1,12 @@
 import { cn } from '@/lib/utils'
 import { Water_Brush } from 'next/font/google'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -66,8 +73,8 @@ export default function OurStory() {
         backgroundPosition: 'center',
       }}
     >
-      <div className='w-full min-h-screen backdrop-blur-lg p-4'>
-        <div className='w-full h-full border-4 border-primary rounded-lg bg-white p-4'>
+      <div className='w-full min-h-screen backdrop-blur-lg p-4 flex'>
+        <div className='w-full min-h-full flex-1 border-4 border-primary rounded-lg bg-white p-4 flex flex-col'>
           <h1
             className={cn(
               waterBrush.className,
@@ -76,31 +83,42 @@ export default function OurStory() {
           >
             Our Story
           </h1>
-          <div className='mt-8 grid grid-cols-4 gap-4'>
-            {stories.map((story, i) => (
-              <div
-                key={i}
-                className='w-full h-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
-                style={{
-                  backgroundImage: `url('${story.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className='min-h-[250px]'></div>
-                <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
-                  <div>
-                    <p className='mb-2'>{story.date}</p>
-                    <h1
-                      className={cn(waterBrush.className, 'text-4xl font-bold')}
+          <div className='mt-8 flex items-center justify-center flex-1'>
+            <Carousel className='w-full max-w-lg md:max-w-[80%] h-full flex items-center justify-center'>
+              <CarouselContent>
+                {stories.map((story, index) => (
+                  <CarouselItem key={index} className='h-[90%]'>
+                    <div
+                      key={index}
+                      className='w-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
+                      style={{
+                        backgroundImage: `url('${story.image}')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'top',
+                      }}
                     >
-                      {story.title}
-                    </h1>
-                    <p className='mt-4 text-sm'>{story.content}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+                      <div className='min-h-[400px]'></div>
+                      <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
+                        <div>
+                          <p className='mb-2'>{story.date}</p>
+                          <h1
+                            className={cn(
+                              waterBrush.className,
+                              'text-4xl font-bold'
+                            )}
+                          >
+                            {story.title}
+                          </h1>
+                          <p className='mt-4'>{story.content}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </div>
