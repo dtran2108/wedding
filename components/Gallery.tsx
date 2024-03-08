@@ -73,7 +73,7 @@ export default function Gallery() {
                     <Dialog key={imageUrl + 't' + i}>
                       <DialogTrigger asChild>
                         <div
-                          className='w-full aspect-square border-4 border-primary rounded-lg cursor-pointer'
+                          className='md:w-full aspect-square border-4 border-primary rounded-lg cursor-pointer'
                           style={{
                             backgroundImage: `url('${imageUrl}')`,
                             backgroundSize: 'cover',
@@ -95,8 +95,8 @@ export default function Gallery() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className='hidden md:flex' />
+              <CarouselNext className='hidden md:flex' />
             </Carousel>
           </div>
         </div>

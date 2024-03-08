@@ -84,40 +84,42 @@ export default function OurStory() {
             Our Story
           </h1>
           <div className='mt-8 flex items-center justify-center flex-1'>
-            <Carousel className='w-full max-w-lg md:max-w-[70%] h-full flex items-center justify-center'>
+            <Carousel className='w-full max-w-xs md:max-w-[70%] h-full flex items-center justify-center'>
               <CarouselContent>
                 {stories.map((story, index) => (
-                  <CarouselItem key={index} className='h-[90%]'>
+                  <CarouselItem key={index}>
                     <div
                       key={index}
-                      className='w-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
+                      className='w-[250px] md:w-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
                       style={{
                         backgroundImage: `url('${story.image}')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
                       }}
                     >
-                      <div className='min-h-[400px]'></div>
+                      <div className='min-h-[300px] md:min-h-[400px]'></div>
                       <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
                         <div>
                           <p className='mb-2'>{story.date}</p>
                           <h1
                             className={cn(
                               waterBrush.className,
-                              'text-4xl font-bold'
+                              'text-2xl md:text-4xl font-bold'
                             )}
                           >
                             {story.title}
                           </h1>
-                          <p className='mt-4'>{story.content}</p>
+                          <p className='mt-4 text-sm md:text-md'>
+                            {story.content}
+                          </p>
                         </div>
                       </div>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className='hidden md:flex' />
+              <CarouselNext className='hidden md:flex' />
             </Carousel>
           </div>
         </div>

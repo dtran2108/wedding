@@ -73,7 +73,7 @@ export default function Agenda() {
                   <CarouselItem key={index}>
                     <div
                       key={index}
-                      className='w-full h-[calc(100vh-10rem)] border-4 border-primary rounded-lg bg-white p-4 flex flex-col justify-center items-center'
+                      className='w-[250px] md:w-full h-[calc(100vh-10rem)] border-4 border-primary rounded-lg bg-white p-4 flex flex-col justify-center items-center'
                     >
                       <h1
                         className={cn(
@@ -96,8 +96,8 @@ export default function Agenda() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className='hidden md:flex' />
+              <CarouselNext className='hidden md:flex' />
             </Carousel>
           </div>
         </div>
