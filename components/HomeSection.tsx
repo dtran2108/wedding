@@ -91,7 +91,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 md:col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4 aspect-square'
+          'col-span-2 md:col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4 aspect-square md:aspect-auto'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -103,7 +103,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 md:col-span-1 row-span-1 aspect-square'
+          'col-span-2 md:col-span-1 row-span-1 aspect-square md:aspect-auto'
         )}
         style={{
           boxShadow: boxShadow,
