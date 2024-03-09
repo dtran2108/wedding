@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import RSVPButton from './RSVPButton'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import DressCode from './DressCode'
+import Menu from './Menu'
 
 const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
 
@@ -101,7 +102,7 @@ export default function HomeSection() {
         <div
           className={cn(
             mainStyle,
-            'lg:col-span-2 lg:row-span-1 col-span-3 bg-white flex items-center justify-center flex-col px-8'
+            'lg:col-span-2 lg:row-span-1 col-span-3 bg-white flex items-center justify-center flex-col px-8 cursor-pointer'
           )}
           onClick={() => scrollToHash('agenda')}
         >
@@ -277,36 +278,65 @@ export default function HomeSection() {
 
         <RSVPButton className='flex lg:hidden' />
 
-        <div
-          className={cn(
-            mainStyle,
-            'col-span-1 row-span-2 bg-white p-4 text-center cursor-pointer',
-            'hidden lg:block'
-          )}
-          onClick={() => scrollToHash('agenda')}
-        >
-          <h1
-            className={cn(
-              waterBrush.className,
-              'text-2xl text-primary font-bold mb-4'
-            )}
-          >
-            WEDDING MENU
-          </h1>
-          <div className='flex-1 w-full grid grid-cols-2 gap-2'>
-            {[1, 2, 3, 4].map((item) => (
-              <div
-                key={item}
-                className='rounded-lg border-2 border-primary w-full aspect-square'
-                style={{
-                  backgroundImage: `url('/images/menu-${item}.jpeg')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
-            ))}
-          </div>
-        </div>
+        <Dialog>
+          <DialogTrigger asChild>
+            <div
+              className={cn(
+                mainStyle,
+                'col-span-1 row-span-2 bg-white p-4 flex-col items-center justify-center text-center cursor-pointer',
+                'hidden lg:flex'
+              )}
+            >
+              <h1
+                className={cn(
+                  waterBrush.className,
+                  'text-2xl text-primary font-bold mb-2'
+                )}
+              >
+                WEDDING MENU
+              </h1>
+              <div className='flex-1 w-full grid grid-cols-2 gap-2'>
+                <div
+                  className='rounded-lg border-2 border-primary w-full aspect-square'
+                  style={{
+                    backgroundImage: "url('/images/menu-1.jpeg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <div
+                  className='rounded-lg border-2 border-primary w-full aspect-square'
+                  style={{
+                    backgroundImage: "url('/images/menu-2.jpeg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <div
+                  className='rounded-lg border-2 border-primary w-full aspect-square'
+                  style={{
+                    backgroundImage: "url('/images/menu-3.jpeg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+                <div
+                  className='rounded-lg border-2 border-primary w-full aspect-square'
+                  style={{
+                    backgroundImage: "url('/images/menu-4.jpeg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                ></div>
+              </div>
+            </div>
+          </DialogTrigger>
+          <DialogContent>
+            <div className='max-h-[500px] overflow-y-scroll'>
+              <Menu />
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   )
