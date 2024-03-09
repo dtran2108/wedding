@@ -5,8 +5,8 @@ import './globals.css'
 const playfair = Playfair({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
-  title: 'Modern Minimalism',
-  description: 'Modern Minimalism',
+  title: 'Sakura',
+  description: 'Sakura',
 }
 
 export default function RootLayout({
