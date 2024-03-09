@@ -40,9 +40,13 @@ export default function HomeSection() {
           boxShadow: boxShadow,
         }}
       >
-        <h2 className={'uppercase text-white text-xl text-right'}>
-          Laura & <br /> Keith
-        </h2>
+        <div className='flex items-center justify-end'>
+          <span className='border border-white rounded-[50%] p-6'>
+            <h2 className={'text-white text-xl text-center'}>
+              Laura & <br /> Keith
+            </h2>
+          </span>
+        </div>
         <h1
           className={
             (cn(dreamAvenue.className), 'uppercase text-white text-3xl')
@@ -100,7 +104,7 @@ export default function HomeSection() {
           Our Journey
         </h1>
         <Image
-         className='relative top-6'
+          className='relative top-6'
           src={'/images/journey-decoration.svg'}
           alt='decoration'
           width={100}
