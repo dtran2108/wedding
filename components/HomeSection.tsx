@@ -70,7 +70,7 @@ export default function HomeSection() {
         backgroundPosition: 'center',
       }}
     >
-      <div className='w-screen h-screen grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col lg:gap-4 grid-cols-3 grid-rows-4 grid-flow-row gap-2 backdrop-blur-lg p-2 lg:p-4'>
+      <div className='w-screen min-h-screen grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col lg:gap-4 grid-cols-3 grid-rows-4 grid-flow-row gap-2 backdrop-blur-lg p-2 lg:p-4'>
         <div
           onClick={() => scrollToHash('gallery')}
           className={cn(
@@ -250,7 +250,7 @@ export default function HomeSection() {
           onClick={() => scrollToHash('contact')}
           className={cn(
             mainStyle,
-            'col-span-1 row-span-2 border-none p-1 md:p-2 flex flex-col justify-between items-center cursor-pointer'
+            'col-span-1 row-span-2 border-none p-2 md:p-2 flex flex-col justify-between items-center cursor-pointer'
           )}
           style={{
             backgroundImage: "url('/images/japanese-restaurant.jpeg')",
@@ -260,14 +260,14 @@ export default function HomeSection() {
         >
           <div></div>
           <div className='bg-white rounded-b-lg rounded-t-lg md:rounded-t-none h-full md:h-32 w-full flex items-center justify-center'>
-            <div className='p-1'>
+            <div className='p-2'>
               <p className='mb-2 text-sm md:text-md'>
                 77 N 6th St, Brooklyn, NY 11249
               </p>
               <h1
                 className={cn(
                   dosis.className,
-                  'text-lg md:text-4xl font-bold'
+                  'text-5xl md:text-6xl font-bold'
                 )}
               >
                 ZENICHI
