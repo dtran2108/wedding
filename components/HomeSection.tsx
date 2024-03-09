@@ -116,7 +116,23 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex flex-col p-6 justify-between'
+          'flex md:hidden col-span-4 md:col-span-2 row-span-1 bg-white text-primary flex-col items-center p-6 space-y-4'
+        )}
+        style={{ boxShadow: boxShadow }}
+      >
+        <h1 className='text-xl uppercase'>Your Sub-Header Goes Here</h1>
+        <p className='text-center'>
+          This is prime space! Use it to elaborate on your attention-grabbing
+          section title. Explain what this section is about, share some details,
+          and give just the right amount of information to get the audience
+          hooked.
+        </p>
+      </div>
+
+      <div
+        className={cn(
+          mainStyle,
+          'hidden md:flex col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -133,7 +149,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-4 md:col-span-2 row-span-1 bg-white text-primary flex flex-col items-center p-6 space-y-4'
+          'hidden md:flex col-span-4 md:col-span-2 row-span-1 bg-white text-primary flex-col items-center p-6 space-y-4'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -144,6 +160,23 @@ export default function HomeSection() {
           and give just the right amount of information to get the audience
           hooked.
         </p>
+      </div>
+
+      <div
+        className={cn(
+          mainStyle,
+          'flex md:hidden col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between'
+        )}
+        style={{ boxShadow: boxShadow }}
+      >
+        <h1 className={cn(dreamAvenue.className, 'text-xl')}>
+          “If I know what love is, it is because of you.”
+        </h1>
+        <h2>
+          Let your audience know where to find you. <br />
+          123 Anywhere St., Any City <br />
+          ST 12345
+        </h2>
       </div>
     </div>
   )
