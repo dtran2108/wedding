@@ -92,13 +92,20 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 md:col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4 aspect-square md:aspect-auto'
+          'col-span-2 md:col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4 aspect-square md:aspect-auto flex flex-col items-center justify-center'
         )}
         style={{ boxShadow: boxShadow }}
       >
         <h1 className={cn(dreamAvenue.className, 'text-3xl text-center')}>
           Our Journey
         </h1>
+        <Image
+         className='relative top-6'
+          src={'/images/journey-decoration.svg'}
+          alt='decoration'
+          width={100}
+          height={70}
+        />
       </div>
 
       <div
