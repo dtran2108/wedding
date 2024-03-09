@@ -48,7 +48,7 @@ export default function HomeSection() {
           }
         >
           For the two of us, <br />
-          home isn't a place.
+          home isn&apos;t a place.
         </h1>
       </div>
 
