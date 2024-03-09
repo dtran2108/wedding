@@ -25,7 +25,7 @@ export default function HomeSection() {
         backgroundPosition: 'center',
       }}
     >
-      <div className='w-screen h-screen grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col lg:gap-4 grid-cols-3 grid-rows-4 grid-flow-row gap-2 backdrop-blur-lg p-2 lg:p-4'>
+      <div className='w-screen min-h-screen grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col lg:gap-4 grid-cols-3 grid-rows-4 grid-flow-row gap-2 backdrop-blur-lg p-2 lg:p-4'>
         <Dialog>
           <DialogTrigger asChild className='hidden lg:block'>
             <div
