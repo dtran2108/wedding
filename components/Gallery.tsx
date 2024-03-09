@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import Image from 'next/image'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import {
@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from './ui/carousel'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Gallery() {
   const imageList = [
@@ -54,7 +54,7 @@ export default function Gallery() {
         <div className='w-full min-h-[calc(100vh-2rem)] border-4 border-primary rounded-lg bg-white p-4 flex flex-col  justify-center'>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-5xl font-bold'
             )}
           >

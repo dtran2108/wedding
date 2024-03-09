@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import Divider from './Divider'
 import { useEffect, useState } from 'react'
 import RSVPButton from './RSVPButton'
@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import DressCode from './DressCode'
 import Menu from './Menu'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function HomeSection() {
   const mainStyle = 'w-full h-full border-4 border-primary rounded-lg'
@@ -106,12 +106,12 @@ export default function HomeSection() {
           )}
           onClick={() => scrollToHash('agenda')}
         >
-          <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
+          <h1 className={cn(dosis.className, 'font-bold text-4xl')}>
             Countdown
           </h1>
           <Divider
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'font-bold text-3xl text-primary w-full'
             )}
           >
@@ -155,7 +155,7 @@ export default function HomeSection() {
             <div className='absolute bg-white/80 left-0 top-0 w-full h-full z-10'></div>
             <h1
               className={cn(
-                waterBrush.className,
+                dosis.className,
                 'font-bold text-4xl w-full text-center mb-4 relative z-20'
               )}
             >
@@ -163,7 +163,7 @@ export default function HomeSection() {
               Evelyn & Jaiden
             </h1>
             <div className='flex items-center justify-evenly w-full relative z-20'>
-              <div className={cn(waterBrush.className)}>
+              <div className={cn(dosis.className)}>
                 <h1 className='text-center text-2xl md:text-4xl font-bold'>
                   Tokyo
                 </h1>
@@ -179,7 +179,7 @@ export default function HomeSection() {
                   backgroundPosition: 'top',
                 }}
               ></div>
-              <div className={cn(waterBrush.className)}>
+              <div className={cn(dosis.className)}>
                 <h1 className='text-center text-2xl md:text-4xl font-bold'>
                   25
                 </h1>
@@ -194,7 +194,7 @@ export default function HomeSection() {
           </div>
           <div
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'bg-white py-4 text-primary flex-1 text-2xl flex items-center justify-center'
             )}
           >
@@ -233,7 +233,7 @@ export default function HomeSection() {
               </div>
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-primary font-bold text-3xl text-center'
                 )}
               >
@@ -266,7 +266,7 @@ export default function HomeSection() {
               </p>
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-lg md:text-4xl font-bold'
                 )}
               >
@@ -289,7 +289,7 @@ export default function HomeSection() {
             >
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-2xl text-primary font-bold mb-2'
                 )}
               >

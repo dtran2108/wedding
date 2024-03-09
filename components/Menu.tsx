@@ -1,14 +1,14 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Menu() {
   return (
     <div>
       <h1
         className={cn(
-          waterBrush.className,
+          dosis.className,
           'text-center text-5xl font-bold mt-4'
         )}
       >
@@ -17,7 +17,7 @@ export default function Menu() {
       <div className='mt-8 flex flex-col items-center justify-center'>
         <h2
           className={cn(
-            waterBrush.className,
+            dosis.className,
             'text-2xl font-bold text-primary'
           )}
         >
@@ -28,7 +28,7 @@ export default function Menu() {
         <p>Stuffed Bell Peppers</p>
         <h2
           className={cn(
-            waterBrush.className,
+            dosis.className,
             'text-2xl font-bold mt-4 text-primary'
           )}
         >

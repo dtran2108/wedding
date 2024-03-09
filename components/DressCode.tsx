@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function DressCode() {
   const imageList = ['/images/gallery-1.jpeg', '/images/gallery-2.jpeg']
@@ -11,7 +11,7 @@ export default function DressCode() {
     <div>
       <h1
         className={cn(
-          waterBrush.className,
+          dosis.className,
           'text-center text-5xl font-bold mt-4'
         )}
       >

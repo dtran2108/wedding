@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Groomsmen() {
   return (
@@ -18,7 +18,7 @@ export default function Groomsmen() {
         <div className='w-full h-full border-4 border-primary rounded-lg bg-white p-4'>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-5xl font-bold mt-4'
             )}
           >
@@ -36,7 +36,7 @@ export default function Groomsmen() {
               ></div>
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-center text-primary text-3xl font-bold'
                 )}
               >
@@ -62,7 +62,7 @@ export default function Groomsmen() {
               ></div>
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-center text-primary text-3xl font-bold'
                 )}
               >
@@ -90,7 +90,7 @@ export default function Groomsmen() {
               ></div>
               <h1
                 className={cn(
-                  waterBrush.className,
+                  dosis.className,
                   'text-center text-primary text-3xl font-bold'
                 )}
               >

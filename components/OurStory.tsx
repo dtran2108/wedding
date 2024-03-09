@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import {
   Carousel,
   CarouselContent,
@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function OurStory() {
   const stories = [
@@ -77,7 +77,7 @@ export default function OurStory() {
         <div className='w-full min-h-full flex-1 border-4 border-primary rounded-lg bg-white p-4 flex flex-col'>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-5xl font-bold'
             )}
           >
@@ -103,7 +103,7 @@ export default function OurStory() {
                           <p className='mb-2'>{story.date}</p>
                           <h1
                             className={cn(
-                              waterBrush.className,
+                              dosis.className,
                               'text-2xl md:text-4xl font-bold'
                             )}
                           >
