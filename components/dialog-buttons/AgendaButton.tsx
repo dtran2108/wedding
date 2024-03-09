@@ -6,11 +6,11 @@ import { Dialog, DialogTrigger } from '../ui/dialog'
 import { DialogContent } from '../ui/dialog'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import Agenda from '../Agenda'
 
 const mainStyle = 'w-full h-full border-4 border-primary rounded-lg'
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function AgendaButton({ className }: { className?: string }) {
   const calculateTimeLeft = () => {
@@ -59,12 +59,12 @@ export default function AgendaButton({ className }: { className?: string }) {
             'bg-white flex items-center justify-center flex-col px-8 cursor-pointer'
           )}
         >
-          <h1 className={cn(waterBrush.className, 'font-bold text-4xl')}>
+          <h1 className={cn(dosis.className, 'font-bold text-4xl')}>
             Countdown
           </h1>
           <Divider
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'font-bold text-3xl text-primary w-full'
             )}
           >

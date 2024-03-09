@@ -1,16 +1,13 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Bridesmaid() {
   return (
     <div>
       <h1
-        className={cn(
-          waterBrush.className,
-          'text-center text-5xl font-bold mt-4'
-        )}
+        className={cn(dosis.className, 'text-center text-5xl font-bold mt-4')}
       >
         Bridesmaids
       </h1>
@@ -26,7 +23,7 @@ export default function Bridesmaid() {
           ></div>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-primary text-3xl font-bold'
             )}
           >
@@ -52,7 +49,7 @@ export default function Bridesmaid() {
           ></div>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-primary text-3xl font-bold'
             )}
           >
@@ -79,7 +76,7 @@ export default function Bridesmaid() {
           ></div>
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'text-center text-primary text-3xl font-bold'
             )}
           >

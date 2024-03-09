@@ -5,10 +5,10 @@ import { Dialog, DialogTrigger } from '../ui/dialog'
 import { DialogContent } from '../ui/dialog'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
 const mainStyle = 'w-full h-full border-4 border-primary rounded-lg'
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function RSVPButton({ className }: { className?: string }) {
   return (
@@ -22,7 +22,7 @@ export default function RSVPButton({ className }: { className?: string }) {
         >
           <h1
             className={cn(
-              waterBrush.className,
+              dosis.className,
               'font-bold text-primary text-2xl md:text-4xl'
             )}
           >

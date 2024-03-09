@@ -5,10 +5,10 @@ import { Dialog, DialogTrigger } from '../ui/dialog'
 import { DialogContent } from '../ui/dialog'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
 const mainStyle = 'w-full h-full border-4 border-primary rounded-lg'
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function ContactButton({ className }: { className?: string }) {
   return (
@@ -29,7 +29,7 @@ export default function ContactButton({ className }: { className?: string }) {
           <div className='bg-white rounded-b-lg rounded-t-lg md:rounded-t-none h-full md:h-32 w-full flex items-center justify-center'>
             <div className='p-1'>
               <p className='mb-2 text-sm md:text-md'>77 N 6th St, Brooklyn, NY 11249</p>
-              <h1 className={cn(waterBrush.className, 'text-lg md:text-4xl font-bold')}>
+              <h1 className={cn(dosis.className, 'text-lg md:text-4xl font-bold')}>
                 ZENICHI
               </h1>
             </div>

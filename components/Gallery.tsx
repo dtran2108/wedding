@@ -1,10 +1,10 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import { Dialog, DialogTrigger, DialogContent } from './ui/dialog'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Gallery() {
   const imageList = [
@@ -36,9 +36,7 @@ export default function Gallery() {
 
   return (
     <div>
-      <h1
-        className={cn(waterBrush.className, 'text-center text-5xl font-bold')}
-      >
+      <h1 className={cn(dosis.className, 'text-center text-5xl font-bold')}>
         Gallery
       </h1>
       <div className='grid grid-cols-4 gap-2 mt-8'>

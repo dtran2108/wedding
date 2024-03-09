@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function OurStory() {
   const stories = [
@@ -59,7 +59,7 @@ export default function OurStory() {
   return (
     <div>
       <h1
-        className={cn(waterBrush.className, 'text-center text-5xl font-bold mt-2')}
+        className={cn(dosis.className, 'text-center text-5xl font-bold mt-2')}
       >
         Our Story
       </h1>
@@ -78,7 +78,7 @@ export default function OurStory() {
             <div className='bg-white rounded-b-lg p-2 w-full flex items-center justify-center'>
               <div>
                 <p className='mb-2'>{story.date}</p>
-                <h1 className={cn(waterBrush.className, 'text-3xl font-bold')}>
+                <h1 className={cn(dosis.className, 'text-3xl font-bold')}>
                   {story.title}
                 </h1>
                 <p className='mt-2 text-sm'>{story.content}</p>

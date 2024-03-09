@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function Agenda() {
   const timeline = [
@@ -43,7 +43,7 @@ export default function Agenda() {
     <div>
       <h1
         className={cn(
-          waterBrush.className,
+          dosis.className,
           'text-center text-5xl font-bold mt-2'
         )}
       >
@@ -57,7 +57,7 @@ export default function Agenda() {
           >
             <h1
               className={cn(
-                waterBrush.className,
+                dosis.className,
                 'text-3xl font-bold text-center'
               )}
             >

@@ -1,20 +1,20 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Water_Brush } from 'next/font/google'
+import { Dosis } from 'next/font/google'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
 
-const waterBrush = Water_Brush({ subsets: ['latin'], weight: '400' })
+const dosis = Dosis({ subsets: ['latin'], weight: '400' })
 
 export default function RSVPForm() {
   return (
     <div className='py-4'>
       <h1
-        className={cn(waterBrush.className, 'text-center text-5xl font-bold')}
+        className={cn(dosis.className, 'text-center text-5xl font-bold')}
       >
         RSVP
       </h1>
