@@ -29,7 +29,7 @@ export default function HomeSection() {
         onClick={() => scrollToHash('gallery')}
         className={cn(
           mainStyle,
-          'col-span-2 row-span-2 cursor-pointer',
+          'col-span-4 row-span-2 md:col-span-2 md:row-span-2 cursor-pointer',
           'flex flex-col items-between justify-between p-8'
         )}
         style={{
@@ -55,7 +55,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 row-span-1 bg-primary text-primary-foreground flex flex-col p-8 items-center justify-center space-y-6'
+          'col-span-4 md:col-span-2 row-span-1 bg-primary text-primary-foreground flex flex-col p-8 items-center justify-center space-y-6'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -91,7 +91,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4'
+          'col-span-2 md:col-span-1 row-span-1 bg-secondary text-secondary-foreground p-4 aspect-square'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -101,7 +101,10 @@ export default function HomeSection() {
       </div>
 
       <div
-        className={cn(mainStyle, 'col-span-1 row-span-1')}
+        className={cn(
+          mainStyle,
+          'col-span-2 md:col-span-1 row-span-1 aspect-square'
+        )}
         style={{
           boxShadow: boxShadow,
           backgroundImage: "url('/images/gallery-cover.jpeg')",
@@ -113,7 +116,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 row-span-1 bg-primary text-primary-foreground relative flex flex-col p-6 justify-between'
+          'col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex flex-col p-6 justify-between'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -130,7 +133,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'col-span-2 row-span-1 bg-white text-primary flex flex-col items-center p-6 space-y-4'
+          'col-span-4 md:col-span-2 row-span-1 bg-white text-primary flex flex-col items-center p-6 space-y-4'
         )}
         style={{ boxShadow: boxShadow }}
       >
