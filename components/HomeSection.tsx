@@ -128,12 +128,20 @@ export default function HomeSection() {
           and give just the right amount of information to get the audience
           hooked.
         </p>
+        <div className='mt-8 flex flex-col items-center justify-center'>
+          <div className='flex items-center space-x-2'>
+            <div className='bg-primary h-[1px] w-[70px]'></div>
+            <div className='h-[16px] aspect-square rounded-full border border-primary'></div>
+            <div className='bg-primary h-[1px] w-[70px]'></div>
+          </div>
+          <div className='bg-primary h-[1px] w-[300px] mt-2'></div>
+        </div>
       </div>
 
       <div
         className={cn(
           mainStyle,
-          'hidden md:flex col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between relative'
+          'hidden md:flex col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -168,6 +176,14 @@ export default function HomeSection() {
           and give just the right amount of information to get the audience
           hooked.
         </p>
+        <div className='mt-8 flex flex-col items-center justify-center'>
+          <div className='flex items-center space-x-2'>
+            <div className='bg-primary h-[1px] w-[100px]'></div>
+            <div className='h-[24px] aspect-square rounded-full border border-primary'></div>
+            <div className='bg-primary h-[1px] w-[100px]'></div>
+          </div>
+          <div className='bg-primary h-[1px] w-[500px] mt-2'></div>
+        </div>
       </div>
 
       <div
