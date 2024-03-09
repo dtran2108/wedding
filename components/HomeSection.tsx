@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils'
 import localFont from 'next/font/local'
+import Image from 'next/image'
 
 const dreamAvenue = localFont({
   src: './fonts/DreamAvenue/Dream-Avenue.otf',
@@ -132,7 +133,7 @@ export default function HomeSection() {
       <div
         className={cn(
           mainStyle,
-          'hidden md:flex col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between'
+          'hidden md:flex col-span-4 row-span-2 md:col-span-2 md:row-span-1 bg-primary text-primary-foreground relative flex-col p-6 justify-between relative'
         )}
         style={{ boxShadow: boxShadow }}
       >
@@ -144,6 +145,13 @@ export default function HomeSection() {
           123 Anywhere St., Any City <br />
           ST 12345
         </h2>
+        <Image
+          className='absolute right-0 top-1'
+          alt='cover'
+          src={'/images/quote-img.svg'}
+          width={100}
+          height={200}
+        />
       </div>
 
       <div
