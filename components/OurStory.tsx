@@ -84,13 +84,13 @@ export default function OurStory() {
             Our Story
           </h1>
           <div className='mt-8 flex items-center justify-center flex-1'>
-            <Carousel className='w-full max-w-xs md:max-w-[70%] h-full flex items-center justify-center'>
+            <Carousel className='w-full max-w-xs sm:max-w-[400px] md:max-w-[70%] h-full flex items-center justify-center'>
               <CarouselContent>
                 {stories.map((story, index) => (
                   <CarouselItem key={index}>
                     <div
                       key={index}
-                      className='w-[250px] md:w-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
+                      className='w-[250px] sm:w-[400px] md:w-full border-4 border-primary rounded-lg bg-white p-2 flex flex-col items-center justify-between'
                       style={{
                         backgroundImage: `url('${story.image}')`,
                         backgroundSize: 'cover',

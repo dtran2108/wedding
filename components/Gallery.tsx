@@ -65,15 +65,18 @@ export default function Gallery() {
               opts={{
                 align: 'start',
               }}
-              className='w-full max-w-[calc(100vw-15rem)]'
+              className='w-full max-w-lg md:max-w-[70%] h-full flex items-center justify-center'
             >
-              <CarouselContent>
+              <CarouselContent className='w-full'>
                 {imageList.map((imageUrl, i) => (
-                  <CarouselItem key={i} className='md:basis-1/2 lg:basis-1/3'>
-                    <Dialog key={imageUrl + 't' + i}>
+                  <CarouselItem
+                    key={i}
+                    className='md:basis-1/2'
+                  >
+                    <Dialog>
                       <DialogTrigger asChild>
                         <div
-                          className='md:w-full aspect-square border-4 border-primary rounded-lg cursor-pointer'
+                          className='w-full aspect-square border-4 border-primary rounded-lg cursor-pointer'
                           style={{
                             backgroundImage: `url('${imageUrl}')`,
                             backgroundSize: 'cover',
