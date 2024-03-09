@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Playfair } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const playfair = Playfair({ subsets: ['latin'], weight: '400' })
+const lovelace = localFont({ src: '../components/fonts/Lovelace/Lovelace-Text-Regular.otf' })
 
 export const metadata: Metadata = {
-  title: 'Modern Minimalism',
-  description: 'Modern Minimalism',
+  title: 'Laura & Keith',
+  description: 'Laura & Keith',
 }
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={playfair.className}>
+      <body className={lovelace.className}>
         <main>{children}</main>
       </body>
     </html>

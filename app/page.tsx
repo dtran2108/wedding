@@ -12,7 +12,7 @@ export default function Home() {
       <div className='snap-start min-h-screen'>
         <HomeSection />
       </div>
-      <div className='snap-start min-h-screen'>
+      {/* <div className='snap-start min-h-screen'>
         <OurStory />
       </div>
       <div className='snap-start min-h-screen'>
@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <div className='snap-start min-h-screen'>
         <Contact />
-      </div>
+      </div> */}
     </main>
   )
 }
