@@ -1,4 +1,5 @@
 import HomeSection from '@/components/HomeSection'
+import OurStory from '@/components/OurStory'
 
 export default function Page() {
   return (
@@ -6,10 +7,10 @@ export default function Page() {
       <div className='snap-start min-h-screen'>
         <HomeSection />
       </div>
-      {/* <div className='snap-start min-h-screen'>
+      <div className='snap-start min-h-screen' id='our-story'>
         <OurStory />
       </div>
-      <div className='snap-start min-h-screen'>
+      {/* <div className='snap-start min-h-screen'>
         <Agenda />
       </div>
       <div className='snap-start min-h-screen'>

@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 export default function MainGrid() {
   return (
     <div
-      onClick={() => scrollToHash('gallery')}
+      onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
         'cursor-pointer flex flex-col items-between justify-between p-8'
@@ -24,7 +24,7 @@ export default function MainGrid() {
       }}
     >
       <div className='flex items-center justify-end'>
-        <span className='border border-white border-double rounded-[50%] p-6'>
+        <span className='border-[4px] border-white border-double rounded-[50%] p-6'>
           <h2 className={'text-white text-xl text-center'}>
             Laura & <br /> Keith
           </h2>
