@@ -1,4 +1,5 @@
 import Agenda from '@/components/Agenda'
+import Gallery from '@/components/Gallery'
 import HomeSection from '@/components/HomeSection'
 import OurStory from '@/components/OurStory'
 
@@ -14,10 +15,10 @@ export default function Page() {
       <div className='snap-start min-h-screen' id='agenda'>
         <Agenda />
       </div>
-      {/* <div className='snap-start min-h-screen'>
+      <div className='snap-start min-h-screen' id='gallery'>
         <Gallery />
       </div>
-      <div className='snap-start min-h-screen'>
+      {/* <div className='snap-start min-h-screen'>
         <Contact />
       </div> */}
     </main>

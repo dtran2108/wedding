@@ -9,7 +9,7 @@ export default function QuoteGrid() {
       onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
-        'flex bg-white text-primary flex-col items-center p-6 space-y-4'
+        'flex bg-white text-primary flex-col items-center p-6 space-y-4 cursor-pointer'
       )}
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >
