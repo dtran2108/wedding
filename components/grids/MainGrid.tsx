@@ -24,7 +24,7 @@ export default function MainGrid() {
       }}
     >
       <div className='flex items-center justify-end'>
-        <span className='border border-white rounded-[50%] p-6'>
+        <span className='border border-white border-double rounded-[50%] p-6'>
           <h2 className={'text-white text-xl text-center'}>
             Laura & <br /> Keith
           </h2>
