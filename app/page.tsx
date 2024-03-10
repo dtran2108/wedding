@@ -1,29 +1,22 @@
-import Agenda from '@/components/Agenda'
-import Bridesmaid from '@/components/Bridesmaid'
-import Contact from '@/components/Contact'
-import Gallery from '@/components/Gallery'
-import Groomsmen from '@/components/Groomsmen'
-import HomeSection from '@/components/HomeSection'
-import OurStory from '@/components/OurStory'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className='snap-y snap-mandatory h-screen overflow-scroll'>
-      <div className='snap-start min-h-screen'>
-        <HomeSection />
+    <main className='min-h-screen w-screen flex items-center justify-center flex-col space-y-3'>
+      <h1 className='text-4xl'>
+        Please navigate to one of the following pages
+      </h1>
+      <div className='flex items-center justify-center space-x-4'>
+        <Link href='/scroll'>
+          <Button size='lg'>Scroll</Button>
+        </Link>
+        <Link href='/pop-up'>
+          <Button size='lg' variant='secondary'>
+            Pop up
+          </Button>
+        </Link>
       </div>
-      {/* <div className='snap-start min-h-screen'>
-        <OurStory />
-      </div>
-      <div className='snap-start min-h-screen'>
-        <Agenda />
-      </div>
-      <div className='snap-start min-h-screen'>
-        <Gallery />
-      </div>
-      <div className='snap-start min-h-screen'>
-        <Contact />
-      </div> */}
     </main>
   )
 }
