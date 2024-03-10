@@ -71,3 +71,38 @@ export const storiesContent = [
       "From wrestling with stubborn florists to accidentally sending out invitations with the wrong date, Sarah and Jack's wedding planning journey resembled a sitcom script. Each mishap only brought them closer together amidst the chaos.",
   },
 ]
+
+export const agendaContent = [
+  {
+    time: '4:30 PM - 7:00 PM',
+    content:
+      'Reception begins. Dinner is served, toasts, first dance, cake cutting, and bouquet toss.',
+    image: '/images/agenda-1.jpeg',
+  },
+  {
+    time: '7:00 PM - 7:30 PM',
+    content: 'Bride and groom thank guests and make rounds to each table.',
+    image: '/images/agenda-2.jpeg',
+  },
+  {
+    time: '7:30 PM - 9:00 PM',
+    content:
+      'Dancing and mingling continue. Photo booth and late-night snacks available.',
+    image: '/images/agenda-3.jpeg',
+  },
+  {
+    time: '9:00 PM',
+    content: 'Last call for alcohol.',
+    image: '/images/agenda-4.jpeg',
+  },
+  {
+    time: '9:30 PM',
+    content: 'Final dance and farewell.',
+    image: '/images/agenda-5.png',
+  },
+  {
+    time: '9:30 PM onwards',
+    content: 'Newlyweds depart for honeymoon suite or after-party.',
+    image: '/images/agenda-6.jpeg',
+  },
+]

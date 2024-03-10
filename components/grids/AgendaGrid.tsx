@@ -1,12 +1,20 @@
-import { DEFAULT_BOX_SHADOW, SECTION_STYLE, dreamAvenue } from '@/const'
+'use client'
+
+import {
+  DEFAULT_BOX_SHADOW,
+  SECTION_STYLE,
+  dreamAvenue,
+  scrollToHash,
+} from '@/const'
 import { cn } from '@/lib/utils'
 
 export default function AgendaGrid() {
   return (
     <div
+      onClick={() => scrollToHash('agenda')}
       className={cn(
         SECTION_STYLE,
-        'bg-primary text-primary-foreground flex flex-col p-2 py-4 md:p-8 items-center justify-center space-y-6'
+        'bg-primary text-primary-foreground flex flex-col p-2 py-4 md:p-8 items-center justify-center space-y-6 cursor-pointer'
       )}
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >

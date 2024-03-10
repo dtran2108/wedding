@@ -1,16 +1,21 @@
-import { DEFAULT_BOX_SHADOW, SECTION_STYLE } from '@/const'
+'use client'
+
+import { DEFAULT_BOX_SHADOW, SECTION_STYLE, scrollToHash } from '@/const'
 import { cn } from '@/lib/utils'
 
 export default function QuoteGrid() {
   return (
     <div
+      onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
         'flex bg-white text-primary flex-col items-center p-6 space-y-4'
       )}
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >
-      <h1 className='text-lg md:text-xl uppercase text-center'>Your Sub-Header Goes Here</h1>
+      <h1 className='text-lg md:text-xl uppercase text-center'>
+        Your Sub-Header Goes Here
+      </h1>
       <p className='text-center text-sm md:tex-md'>
         This is prime space! Use it to elaborate on your attention-grabbing
         section title. Explain what this section is about, share some details,
