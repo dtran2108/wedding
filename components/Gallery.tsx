@@ -2,12 +2,22 @@ import { DEFAULT_BOX_SHADOW, dreamAvenue } from '@/const'
 import { cn } from '@/lib/utils'
 import { MoveRight } from 'lucide-react'
 
-export default function Gallery() {
+export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
   return (
-    <div className='p-4 py-8 md:p-8 min-h-screen flex flex-col'>
+    <div
+      className={cn(
+        'p-4 py-8 md:p-8 min-h-screen flex flex-col',
+        isPopUp && 'p-4 md:p-4'
+      )}
+    >
       <div className='flex items-center flex-wrap'>
         <h1 className={cn(dreamAvenue.className, 'text-5xl')}>GALLERY</h1>
-        <span className='ml-0 mt-4 md:mt-0 md:ml-12 flex items-center'>
+        <span
+          className={cn(
+            'ml-0 mt-4 md:mt-0 md:ml-12 flex items-center',
+            isPopUp && 'ml-0 mt-4 md:mt-4 md:ml-0'
+          )}
+        >
           <p className='mr-2'>Scroll for more</p>
           <MoveRight strokeWidth={1} />
         </span>
@@ -19,7 +29,10 @@ export default function Gallery() {
             className='snap-start border border-primary p-2 rounded-lg'
           >
             <div
-              className='min-w-[270px] md:min-w-[500px] h-[500px] rounded-lg'
+              className={cn(
+                'min-w-[270px] md:min-w-[500px] h-[500px] rounded-lg',
+                isPopUp && 'min-w-[270px] md:min-w-[270px]'
+              )}
               style={{
                 boxShadow: DEFAULT_BOX_SHADOW,
                 backgroundImage: `url('/images/gallery-${i + 1}.jpeg')`,

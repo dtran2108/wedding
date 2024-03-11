@@ -9,6 +9,7 @@ import AvenueGrid from './grids/AvenueGrid'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import OurStory from './OurStory'
 import Agenda from './Agenda'
+import Gallery from './Gallery'
 
 const Grid = ({
   isPopUp,
@@ -22,7 +23,7 @@ const Grid = ({
   return isPopUp ? (
     <Dialog>
       <DialogTrigger asChild>{popUpTrigger}</DialogTrigger>
-      <DialogContent className='max-h-[80vh] overflow-scroll rounded-lg'>
+      <DialogContent className='max-h-[80vh] overflow-y-scroll rounded-lg'>
         {popUpContent}
       </DialogContent>
     </Dialog>
@@ -74,7 +75,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <GalleryGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<Gallery isPopUp={isPopUp} />}
       />
 
       <Grid

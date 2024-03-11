@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { Button } from './ui/button'
 
-export default function Agenda({ isPopUp }: { isPopUp: boolean }) {
+export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
   const [currentAgenda, setCurrentAgenda] = useState(agendaContent[0])
 
   return (
