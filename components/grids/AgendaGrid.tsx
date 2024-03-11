@@ -19,9 +19,9 @@ export default function AgendaGrid() {
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >
       <h1 className={(cn(dreamAvenue.className), 'text-3xl')}>Agenda</h1>
-      <div className='flex items-center justify-evenly w-full'>
+      <div className='flex items-center justify-evenly w-full relative'>
         {Array.from({ length: 3 }).map((item, i) => (
-          <div key={i} className='rounded-full border border-white p-1'>
+          <div className='relative rounded-full border border-white p-1 z-20 bg-primary'>
             <div
               className='w-[72px] md:w-[96px] aspect-square rounded-full'
               style={{
@@ -32,6 +32,7 @@ export default function AgendaGrid() {
             ></div>
           </div>
         ))}
+        <div className='absolute top-[50%] z-10 h-[1px] w-full bg-white'></div>
       </div>
     </div>
   )
