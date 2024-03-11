@@ -1,13 +1,21 @@
-import { DEFAULT_BOX_SHADOW, SECTION_STYLE, dreamAvenue } from '@/const'
+'use client'
+
+import {
+  DEFAULT_BOX_SHADOW,
+  SECTION_STYLE,
+  dreamAvenue,
+  scrollToHash,
+} from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
 export default function AvenueGrid() {
   return (
     <div
+      onClick={() => scrollToHash('avenue')}
       className={cn(
         SECTION_STYLE,
-        'flex bg-primary text-primary-foreground relative flex-col p-6 justify-between space-y-8 overflow-hidden'
+        'flex bg-primary text-primary-foreground relative flex-col p-6 justify-between space-y-8 overflow-hidden cursor-pointer'
       )}
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >

@@ -9,7 +9,7 @@ export default function Gallery() {
         <h1 className={cn(dreamAvenue.className, 'text-5xl')}>GALLERY</h1>
         <span className='ml-0 mt-4 md:mt-0 md:ml-12 flex items-center'>
           <p className='mr-2'>Scroll for more</p>
-          <MoveRight />
+          <MoveRight strokeWidth={1} />
         </span>
       </div>
       <div className='snap-x snap-mandatory flex-1 flex items-center space-x-8 min-w-full overflow-scroll'>
