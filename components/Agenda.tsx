@@ -6,14 +6,22 @@ import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { Button } from './ui/button'
 
-export default function Agenda() {
+export default function Agenda({ isPopUp }: { isPopUp: boolean }) {
   const [currentAgenda, setCurrentAgenda] = useState(agendaContent[0])
 
   return (
-    <div className='min-h-screen grid grid-cols-4 gap-4 p-4 md:p-8'>
+    <div
+      className={cn(
+        'min-h-screen grid grid-cols-4 gap-4 p-4 md:p-8',
+        isPopUp && 'p-4 md:p-4'
+      )}
+    >
       <motion.div
         initial={{ opacity: 1 }}
-        className='hidden md:block col-span-1 py-8 px-6 text-secondary rounded-lg'
+        className={cn(
+          'hidden md:block col-span-1 py-8 px-6 text-secondary rounded-lg',
+          isPopUp && 'hidden md:hidden'
+        )}
         style={{ boxShadow: DEFAULT_BOX_SHADOW }}
       >
         <h1 className={cn(dreamAvenue.className, 'text-2xl text-primary')}>
@@ -37,9 +45,17 @@ export default function Agenda() {
           ))}
         </div>
       </motion.div>
-      <div className='col-span-4 md:col-span-3 flex flex-col space-y-4'>
+      <div
+        className={cn(
+          'col-span-4 md:col-span-3 flex flex-col space-y-4',
+          isPopUp && 'col-span-4 md:col-span-4'
+        )}
+      >
         <div
-          className='block md:hidden p-6 rounded-lg'
+          className={cn(
+            'block md:hidden p-6 rounded-lg',
+            isPopUp && 'block md:block'
+          )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
           <h1 className={cn(dreamAvenue.className, 'text-2xl text-secondary')}>
@@ -84,7 +100,10 @@ export default function Agenda() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className='col-span-5 sm:col-span-3 rounded-lg h-full w-full min-h-[200px]'
+              className={cn(
+                'col-span-5 sm:col-span-3 rounded-lg h-full w-full min-h-[200px]',
+                isPopUp && 'col-span-5 sm:col-span-5'
+              )}
               style={{
                 backgroundImage: `url('${currentAgenda.image}')`,
                 backgroundSize: 'cover',
@@ -94,7 +113,10 @@ export default function Agenda() {
             ></motion.div>
           </AnimatePresence>
           <div
-            className='col-span-5 sm:col-span-2 rounded-lg w-full py-8 px-6'
+            className={cn(
+              'col-span-5 sm:col-span-2 rounded-lg w-full py-8 px-6',
+              isPopUp && 'col-span-5 sm:col-span-5'
+            )}
             style={{ boxShadow: DEFAULT_BOX_SHADOW }}
           >
             <AnimatePresence mode='wait'>

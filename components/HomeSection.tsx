@@ -8,6 +8,7 @@ import QuoteGrid from './grids/QuoteGrid'
 import AvenueGrid from './grids/AvenueGrid'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import OurStory from './OurStory'
+import Agenda from './Agenda'
 
 const Grid = ({
   isPopUp,
@@ -53,7 +54,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <AgendaGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<Agenda isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -63,7 +64,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <OurJourneyGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<OurStory isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -83,7 +84,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <QuoteGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<OurStory isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -103,7 +104,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <QuoteGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<OurStory isPopUp={isPopUp} />}
       />
 
       <Grid
