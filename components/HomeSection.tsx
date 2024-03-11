@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import OurStory from './OurStory'
 import Agenda from './Agenda'
 import Gallery from './Gallery'
+import Avenue from './Avenue'
 
 const Grid = ({
   isPopUp,
@@ -95,7 +96,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <AvenueGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<Avenue isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -115,7 +116,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <AvenueGrid />
           </div>
         }
-        popUpContent='hello'
+        popUpContent={<Avenue isPopUp={isPopUp} />}
       />
     </div>
   )

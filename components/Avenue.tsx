@@ -2,13 +2,16 @@ import { DEFAULT_BOX_SHADOW, dreamAvenue } from '@/const'
 import { cn } from '@/lib/utils'
 import { Home, PhoneCall } from 'lucide-react'
 
-export default function Avenue() {
+export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
   return (
     <div className='min-h-screen p-8 flex flex-col'>
       <h1 className={cn(dreamAvenue.className, 'text-5xl mb-4')}>AVENUE</h1>
       <div className='flex-1 grid grid-cols-3 gap-4'>
         <div
-          className='w-full rounded-lg col-span-3 md:col-span-2 p-2 border border-secondary'
+          className={cn(
+            'w-full rounded-lg col-span-3 md:col-span-2 p-2 border border-secondary',
+            isPopUp && 'col-span-3 md:col-span-3'
+          )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
           <iframe
@@ -21,7 +24,12 @@ export default function Avenue() {
             referrerPolicy='no-referrer-when-downgrade'
           ></iframe>
         </div>
-        <div className='flex flex-col space-y-4 col-span-3 md:col-span-1'>
+        <div
+          className={cn(
+            'flex flex-col space-y-4 col-span-3 md:col-span-1',
+            isPopUp && 'col-span-3 md:col-span-3'
+          )}
+        >
           <div
             className='rounded-lg p-4 flex flex-col space-y-2'
             style={{ boxShadow: DEFAULT_BOX_SHADOW }}
@@ -48,7 +56,7 @@ export default function Avenue() {
             </div>
           </div>
           <div
-            className='flex-1 w-full h-full rounded-lg'
+            className='flex-1 w-full min-h-[300px] h-full rounded-lg'
             style={{
               boxShadow: DEFAULT_BOX_SHADOW,
               backgroundImage: "url('/images/avenue.jpg')",
