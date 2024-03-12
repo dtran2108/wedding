@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className='min-h-screen w-screen flex items-center justify-center flex-col space-y-3 p-3'>
       <h1 className='text-4xl text-center'>
-        Please navigate to one of the following pages
+        Vui lòng điều hướng đến một trong các trang sau
       </h1>
       <div className='flex items-center justify-center space-x-4'>
         <Link href='/scroll'>
