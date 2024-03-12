@@ -3,7 +3,7 @@
 import {
   DEFAULT_BOX_SHADOW,
   SECTION_STYLE,
-  dreamAvenue,
+  titleFont,
   scrollToHash,
 } from '@/const'
 import { cn } from '@/lib/utils'
@@ -26,15 +26,13 @@ export default function MainGrid() {
       <div className='flex items-center justify-end'>
         <span className='border-[4px] border-white border-double rounded-[50%] p-6'>
           <h2 className={'text-white text-xl text-center'}>
-            Laura & <br /> Keith
+            Mai & <br /> Tuấn
           </h2>
         </span>
       </div>
-      <h1
-        className={(cn(dreamAvenue.className), 'uppercase text-white text-3xl')}
-      >
-        For the two of us, <br />
-        home isn&apos;t a place.
+      <h1 className={cn(titleFont.className, 'uppercase text-white text-3xl')}>
+        Đối với chúng tôi, <br />
+        nhà không phải là một nơi
       </h1>
     </div>
   )

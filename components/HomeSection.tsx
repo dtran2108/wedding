@@ -37,7 +37,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
   return (
     <div
       id='home'
-      className='min-h-screen w-screen grid grid-cols-4 grid-rows-3 gap-4 md:gap-8 p-4 md:p-12'
+      className='min-h-screen md:h-screen w-screen grid grid-cols-4 grid-rows-3 gap-4 md:gap-8 p-4 md:p-8'
     >
       <Grid
         isPopUp={isPopUp}

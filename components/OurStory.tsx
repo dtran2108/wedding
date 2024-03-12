@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { DEFAULT_BOX_SHADOW, dreamAvenue, storiesContent } from '@/const'
+import { DEFAULT_BOX_SHADOW, titleFont, storiesContent } from '@/const'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { Button } from './ui/button'
@@ -24,8 +24,8 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
           )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
-          <h1 className={cn(dreamAvenue.className, 'text-2xl text-primary')}>
-            OUR STORY
+          <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+            CÂU CHUYỆN
           </h1>
           <div className='flex items-center space-x-3 mt-4 w-full overflow-scroll'>
             {storiesContent.map((story, i) => (
@@ -52,7 +52,7 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className={cn(dreamAvenue.className, 'text-4xl')}
+              className={cn(titleFont.className, 'text-4xl')}
             >
               {currentStory?.title}
             </motion.h1>
@@ -65,7 +65,7 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
               exit={{ x: 10, opacity: 0 }}
               transition={{ duration: 0.2 }}
               className={cn(
-                dreamAvenue.className,
+                titleFont.className,
                 'text-xl text-primary-foreground/80'
               )}
             >
@@ -122,8 +122,8 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
         )}
         style={{ boxShadow: DEFAULT_BOX_SHADOW }}
       >
-        <h1 className={cn(dreamAvenue.className, 'text-2xl text-primary')}>
-          OUR STORY
+        <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+          CÂU CHUYỆN
         </h1>
         <div className='ml-2'>
           {storiesContent.map((story, i) => (
@@ -138,7 +138,7 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
               )}
               onClick={() => setCurrentStory(story)}
             >
-              {i + 1}. {story.title}
+              {i}. {story.title}
             </motion.p>
           ))}
         </div>

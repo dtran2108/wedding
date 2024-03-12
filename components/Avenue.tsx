@@ -1,11 +1,11 @@
-import { DEFAULT_BOX_SHADOW, dreamAvenue } from '@/const'
+import { DEFAULT_BOX_SHADOW, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import { Home, PhoneCall } from 'lucide-react'
 
 export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
   return (
     <div className='min-h-screen p-8 flex flex-col'>
-      <h1 className={cn(dreamAvenue.className, 'text-5xl mb-4')}>AVENUE</h1>
+      <h1 className={cn(titleFont.className, 'text-5xl mb-4')}>ĐỊA ĐIỂM</h1>
       <div className='flex-1 grid grid-cols-3 gap-4'>
         <div
           className={cn(
@@ -39,9 +39,10 @@ export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
                 <Home strokeWidth={1} className='w-5 h-5' />
               </span>
               <div>
-                <p className='text-secondary/70'>Address</p>
+                <p className='text-secondary/70'>Địa chỉ</p>
                 <h1 className='text-secondary'>
-                  77 N 6th St, Brooklyn, NY 11249
+                  1-3-5, Ngô Thời Nhiệm, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí
+                  Minh, Việt Nam
                 </h1>
               </div>
             </div>
@@ -50,7 +51,7 @@ export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
                 <PhoneCall strokeWidth={1} className='w-5 h-5' />
               </span>
               <div>
-                <p className='text-secondary/70'>Phone Number</p>
+                <p className='text-secondary/70'>Số điện thoại</p>
                 <h1 className='text-secondary'>0912368712</h1>
               </div>
             </div>

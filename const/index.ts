@@ -1,15 +1,13 @@
-import localFont from 'next/font/local'
+import { Brygada_1918, Playfair_Display } from 'next/font/google'
 
 export const DEFAULT_BOX_SHADOW = '0px 8px 24px 0px #AE585240'
 export const SECTION_STYLE = 'w-full h-full rounded-lg'
 
-export const lovelace = localFont({
-  src: '../components/fonts/Lovelace/Lovelace-Text-Regular.otf',
+export const contentFont = Playfair_Display({
+  subsets: ['latin', 'vietnamese'],
 })
 
-export const dreamAvenue = localFont({
-  src: '../components/fonts/DreamAvenue/Dream-Avenue.otf',
-})
+export const titleFont = Brygada_1918({ subsets: ['latin', 'vietnamese'] })
 
 export const scrollToHash = function (element_id: string) {
   const element = document.getElementById(element_id)
@@ -22,53 +20,60 @@ export const scrollToHash = function (element_id: string) {
 
 export const storiesContent = [
   {
-    image: '/images/story-1.jpeg',
-    date: 'April 2010',
-    title: 'Coffee Catastrophe',
+    image: '/images/story-0.jpeg',
+    date: '',
+    title: 'Giới thiệu cô dâu chú rể',
     content:
-      "Sarah mistook Jaiden's brand new suit for a napkin holder, accidentally spilling her coffee all over him at a bustling café. Their first encounter involved a dry cleaner, a lot of apologies, and an unexpected bond over stained garments.",
+      'Ngày hôm nay, chúng ta hân hạnh chứng kiến sự kết hợp đẹp đẽ giữa cô dâu Mai và chú rể Tuấn. Mai là cô con gái xinh đẹp, tài năng của một gia đình nổi tiếng tại Hà Nội. Cô sắp hoàn thành bằng Thạc sĩ Kinh doanh tại một trường danh tiếng và đang làm việc cho một công ty lớn. Tuấn là chàng trai thông minh, năng động đến từ Đà Nẵng. Anh đã tốt nghiệp loại ưu từ ngành Kỹ sư Cơ khí và hiện đang điều hành một doanh nghiệp khởi nghiệp thành công trong lĩnh vực công nghệ. Cả hai gặp nhau trong một chuyến đi du lịch và nhanh chóng bị hấp dẫn bởi con người của nhau. Sau nhiều năm hẹn hò, hôm nay họ chính thức quyết định gắn kết đời mình.',
+  },
+  {
+    image: '/images/story-1.jpeg',
+    date: 'Tháng Tư 2010',
+    title: 'Thảm họa cà phê',
+    content:
+      'Mai nhầm bộ đồ mới của Tuấn cho một người giữ khăn ăn, vô tình làm đổ cà phê của cô lên khắp anh ta tại một quán cà phê nhộn nhịp.Cuộc gặp gỡ đầu tiên của họ liên quan đến một máy giặt khô, rất nhiều lời xin lỗi và một trái phiếu bất ngờ đối với các sản phẩm may mặc màu.',
   },
   {
     image: '/images/story-2.jpeg',
-    date: 'August 2012',
-    title: 'Turbulent Ties',
+    date: 'Tháng Tám 2012',
+    title: 'Mối quan hệ hỗn loạn',
     content:
-      "Sarah, prone to motion sickness, ended up in Jack's lap during a bumpy flight to Paris. Jack, attempting to be suave, mistook her queasy grip for a gesture of affection, leading to an awkward yet oddly cozy journey across the Atlantic.",
+      'Mai, dễ bị say tàu xe, kết thúc trong lòng Tuấn trong một chuyến bay gập ghềnh đến Paris.Tuấn, cố gắng trở thành người đàn ông, nhầm lẫn nắm bắt sự kìm kẹp của cô ấy về một cử chỉ tình cảm, dẫn đến một hành trình ấm cúng nhưng lúng túng trên Đại Tây Dương.',
   },
   {
     image: '/images/story-3.jpeg',
-    date: 'May 2013',
-    title: 'Culinary Comedy',
+    date: 'Tháng Năm 2013',
+    title: 'Hài kịch ẩm thực',
     content:
-      "Jack's attempt at a romantic dinner ended with a fire alarm, a burnt lasagna, and a vow to never touch a stove again. Their first date became an impromptu kitchen dance party, complete with takeout pizza and laughter.",
+      'Nỗ lực của Tuấn trong một bữa tối lãng mạn kết thúc bằng một chuông báo cháy, một lasagna bị cháy và lời thề sẽ không bao giờ chạm vào bếp lò nữa.Cuộc hẹn đầu tiên của họ đã trở thành một bữa tiệc khiêu vũ nhà bếp đầy ngẫu hứng, hoàn thành với pizza và tiếng cười.',
   },
   {
     image: '/images/story-4.jpeg',
-    date: 'July 2014 - September 2016',
-    title: 'Globetrotting Goofs',
+    date: 'Tháng Bảy 2014 - Tháng Chín 2016',
+    title: 'Những kẻ nghịch ngợm đi khắp thế gian',
     content:
-      "Sarah and Jack's travel adventures included getting lost in translation in Tokyo, accidentally joining a salsa competition in Cuba, and narrowly escaping a flock of determined seagulls in Venice.",
+      'Những cuộc phiêu lưu du lịch của Mai và Tuấn bao gồm bị lạc trong bản dịch ở Tokyo, vô tình tham gia một cuộc thi salsa ở Cuba và thoát khỏi một đàn hải âu quyết tâm ở Venice.',
   },
   {
     image: '/images/story-5.jpeg',
-    date: 'February 2017',
-    title: 'The Cat Ultimatum',
+    date: 'Tháng Hai 2017',
+    title: 'Tối hậu thư của mèo',
     content:
-      'Sarah jokingly threatened Jack with a lifetime of cat-themed decor unless he proposed. Jack, fearing the wrath of ceramic felines, took the hint and began plotting a proposal that would make even the most cynical cat lady swoon.',
+      'Mai nói đùa Tuấn với cả đời trang trí theo chủ đề mèo trừ khi anh ta cầu hôn.Tuấn, sợ cơn thịnh nộ của những con mèo gốm, đã đưa ra gợi ý và bắt đầu âm mưu một đề xuất sẽ khiến ngay cả người phụ nữ mèo hoài nghi nhất ngất ngây.',
   },
   {
     image: '/images/story-6.jpeg',
-    date: 'April 2019',
-    title: 'The Proposal Prank',
+    date: 'Tháng Tư 2019',
+    title: 'Đề xuất chơi khăm',
     content:
-      "Jack staged an elaborate prank proposal involving a fake ring and a surprise flash mob. Sarah's initial shock turned into laughter when Jack revealed the real ring hidden inside a giant inflatable unicorn.",
+      'Tuấn đã tổ chức một đề xuất chơi khăm công phu liên quan đến một chiếc nhẫn giả và một mob flash bất ngờ.Cú sốc ban đầu của Mai biến thành tiếng cười khi Tuấn tiết lộ chiếc nhẫn thực sự ẩn giấu bên trong một con kỳ lân bơm hơi khổng lồ.',
   },
   {
     image: '/images/story-7.jpeg',
-    date: 'January 2020 - March 2022',
-    title: 'Wedding Woes',
+    date: 'Tháng Một 2020 - Tháng Ba 2022',
+    title: 'Tai ương đám cưới',
     content:
-      "From wrestling with stubborn florists to accidentally sending out invitations with the wrong date, Sarah and Jack's wedding planning journey resembled a sitcom script. Each mishap only brought them closer together amidst the chaos.",
+      'Từ vật lộn với những người bán hoa bướng bỉnh đến vô tình gửi lời mời với ngày sai, hành trình lập kế hoạch đám cưới của Mai và Tuấn giống như một kịch bản sitcom.Mỗi tai nạn chỉ đưa họ lại gần nhau hơn giữa sự hỗn loạn.',
   },
 ]
 
@@ -76,33 +81,34 @@ export const agendaContent = [
   {
     time: '4:30 PM - 7:00 PM',
     content:
-      'Reception begins. Dinner is served, toasts, first dance, cake cutting, and bouquet toss.',
+      'Lễ tân bắt đầu.Bữa tối được phục vụ, bánh mì nướng, khiêu vũ đầu tiên, cắt bánh và quăng bó hoa.',
     image: '/images/agenda-1.jpeg',
   },
   {
     time: '7:00 PM - 7:30 PM',
-    content: 'Bride and groom thank guests and make rounds to each table.',
+    content: 'Cô dâu và chú rể cảm ơn khách và làm tròn cho mỗi bàn.',
     image: '/images/agenda-2.jpeg',
   },
   {
     time: '7:30 PM - 9:00 PM',
     content:
-      'Dancing and mingling continue. Photo booth and late-night snacks available.',
+      'Khiêu vũ và Mingling tiếp tục.Gian hàng hình ảnh và đồ ăn nhẹ đêm khuya có sẵn.',
     image: '/images/agenda-3.jpeg',
   },
   {
     time: '9:00 PM',
-    content: 'Last call for alcohol.',
+    content: 'Cuộc gọi cuối cùng cho rượu.',
     image: '/images/agenda-4.jpeg',
   },
   {
     time: '9:30 PM',
-    content: 'Final dance and farewell.',
+    content: 'Khiêu vũ và chia tay cuối cùng.',
     image: '/images/agenda-5.png',
   },
   {
-    time: '9:30 PM onwards',
-    content: 'Newlyweds depart for honeymoon suite or after-party.',
+    time: '9:30 PM trở đi',
+    content:
+      'Cặp vợ chồng mới cưới khởi hành cho bộ tuần trăng mật hoặc sau bữa tiệc.',
     image: '/images/agenda-6.jpeg',
   },
 ]

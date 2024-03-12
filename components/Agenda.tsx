@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { DEFAULT_BOX_SHADOW, agendaContent, dreamAvenue } from '@/const'
+import { DEFAULT_BOX_SHADOW, agendaContent, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { Button } from './ui/button'
@@ -24,8 +24,8 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
         )}
         style={{ boxShadow: DEFAULT_BOX_SHADOW }}
       >
-        <h1 className={cn(dreamAvenue.className, 'text-2xl text-primary')}>
-          AGENDA
+        <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+          LỊCH TRÌNH
         </h1>
         <div className='ml-2'>
           {agendaContent.map((event, i) => (
@@ -58,8 +58,8 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
           )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
-          <h1 className={cn(dreamAvenue.className, 'text-2xl text-secondary')}>
-            AGENDA
+          <h1 className={cn(titleFont.className, 'text-2xl text-secondary')}>
+            LỊCH TRÌNH
           </h1>
           <div className='flex items-center space-x-3 mt-4 w-full overflow-scroll'>
             {agendaContent.map((event, i) => (
@@ -86,7 +86,7 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -10, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className={cn(dreamAvenue.className, 'text-4xl')}
+              className={cn(titleFont.className, 'text-4xl')}
             >
               {currentAgenda?.time}
             </motion.h1>

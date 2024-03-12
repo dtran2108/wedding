@@ -1,6 +1,11 @@
 'use client'
 
-import { DEFAULT_BOX_SHADOW, SECTION_STYLE, scrollToHash } from '@/const'
+import {
+  DEFAULT_BOX_SHADOW,
+  SECTION_STYLE,
+  scrollToHash,
+  titleFont,
+} from '@/const'
 import { cn } from '@/lib/utils'
 
 export default function QuoteGrid() {
@@ -13,14 +18,19 @@ export default function QuoteGrid() {
       )}
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >
-      <h1 className='text-lg md:text-xl uppercase text-center'>
-        Your Sub-Header Goes Here
+      <h1
+        className={cn(
+          'text-lg md:text-xl uppercase text-center',
+          titleFont.className
+        )}
+      >
+        Câu nói yêu thích
       </h1>
       <p className='text-center text-sm md:tex-md'>
-        This is prime space! Use it to elaborate on your attention-grabbing
-        section title. Explain what this section is about, share some details,
-        and give just the right amount of information to get the audience
-        hooked.
+        Trong tim em, chỉ có một ngôi nhà, một nơi mà anh luôn được chào đón,
+        một nơi mà tình yêu chúng ta chắp cánh. Hôm nay, chúng ta hợp thành một,
+        để xây dựng tổ ấm này bằng tất cả những yêu thương và hy vọng của chúng
+        ta.
       </p>
       <div className='mt-8 flex flex-col items-center justify-center flex-1'>
         <div className='flex items-center space-x-2'>

@@ -3,7 +3,7 @@
 import {
   DEFAULT_BOX_SHADOW,
   SECTION_STYLE,
-  dreamAvenue,
+  titleFont,
   scrollToHash,
 } from '@/const'
 import { cn } from '@/lib/utils'
@@ -20,9 +20,9 @@ export default function OurJourneyGrid() {
       style={{ boxShadow: DEFAULT_BOX_SHADOW }}
     >
       <h1
-        className={cn(dreamAvenue.className, 'text-xl md:text-3xl text-center')}
+        className={cn(titleFont.className, 'text-xl md:text-3xl text-center')}
       >
-        Our Journey
+        Hành trình
       </h1>
       <Image
         className='absolute top-12 md:top-16'

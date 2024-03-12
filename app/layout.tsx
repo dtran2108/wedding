@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import './globals.css'
-
-const lovelace = localFont({ src: '../components/fonts/Lovelace/Lovelace-Text-Regular.otf' })
+import { contentFont } from '@/const'
 
 export const metadata: Metadata = {
-  title: 'Laura & Keith',
-  description: 'Laura & Keith',
+  title: 'Mai & Tuấn',
+  description: 'Mai & Tuấn',
 }
 
 export default function RootLayout({
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={lovelace.className}>
+      <body className={contentFont.className}>
         <main>{children}</main>
       </body>
     </html>

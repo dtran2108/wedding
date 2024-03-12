@@ -1,4 +1,4 @@
-import { DEFAULT_BOX_SHADOW, dreamAvenue } from '@/const'
+import { DEFAULT_BOX_SHADOW, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import { MoveRight } from 'lucide-react'
 
@@ -11,14 +11,14 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
       )}
     >
       <div className='flex items-center flex-wrap'>
-        <h1 className={cn(dreamAvenue.className, 'text-5xl')}>GALLERY</h1>
+        <h1 className={cn(titleFont.className, 'text-5xl')}>KHO ẢNH</h1>
         <span
           className={cn(
             'ml-0 mt-4 md:mt-0 md:ml-12 flex items-center',
             isPopUp && 'ml-0 mt-4 md:mt-4 md:ml-0'
           )}
         >
-          <p className='mr-2'>Scroll for more</p>
+          <p className='mr-2'>Cuộn để xem thêm</p>
           <MoveRight strokeWidth={1} />
         </span>
       </div>
