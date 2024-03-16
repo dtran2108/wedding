@@ -20,22 +20,23 @@ export default function Home() {
       <div
         className='relative w-full min-h-[100vh] flex items-center flex-col justify-between py-4'
         style={{
-          backgroundImage: "url('/images/header.jpg')",
+          backgroundImage: "url('/images/NAU_1700.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
         }}
       >
         <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/60 z-10'></div>
-        <div className='my-auto text-center w-9/12 md:w-6/12 relative z-20'>
+        <div className='my-auto text-center w-9/12 md:w-6/12 relative z-20' style={{top: -50}}>
           <h1 className='text-4xl'>
-            D <span className={allura.className}>&</span> Đ
+            TD <span className={allura.className}>&</span> LĐ
           </h1>
           <Divider>
             <span className='text-md md:text-2xl'>20.04.2024</span>
           </Divider>
-          <h1 className={cn(allura.className, 'text-7xl md:text-8xl my-8')}>
-            Duy
-            <br />& Điền
+          <h1 className={cn(allura.className, 'text-6xl md:text-7xl my-8')}>
+            Thanh Duy
+            <br />& 
+            <br /> Lam Điền
           </h1>
           <Divider>
             <span className='text-md md:text-2xl'>ARE GETTING MARRIED</span>
