@@ -37,13 +37,6 @@ export default function NavBar() {
         FESTIVITIES
       </motion.span>
       <motion.span
-        onClick={() => scrollToHash('registry')}
-        whileHover={{ scale: 1.1 }}
-        className='cursor-pointer whitespace-nowrap'
-      >
-        TRAVEL
-      </motion.span>
-      <motion.span
         onClick={() => scrollToHash('to-do')}
         whileHover={{ scale: 1.1 }}
         className='cursor-pointer whitespace-nowrap'

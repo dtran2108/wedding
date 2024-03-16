@@ -11,7 +11,7 @@ export default function Gallery() {
     <div className='w-full min-h-[100vh] flex justify-center'>
       <Carousel className='w-full'>
         <CarouselContent>
-          {Array.from({ length: 6 }).map((_, index) => (
+          {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem key={index}>
               <div
                 className='relative w-full min-h-[100vh] flex items-center flex-col justify-between'

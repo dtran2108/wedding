@@ -54,10 +54,6 @@ export default function Home() {
       <div id='festivities'>
         <Festivities />
       </div>
-      <div id='registry'>
-        <Registry />
-        <RestYourHead />
-      </div>
       <div id='to-do'>
         <FinestCity />
       </div>
