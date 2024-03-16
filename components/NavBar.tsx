@@ -30,13 +30,6 @@ export default function NavBar() {
         GALLERY
       </motion.span>
       <motion.span
-        onClick={() => scrollToHash('bridal-party')}
-        whileHover={{ scale: 1.1 }}
-        className='cursor-pointer whitespace-nowrap'
-      >
-        BRIDAL PARTY
-      </motion.span>
-      <motion.span
         onClick={() => scrollToHash('festivities')}
         whileHover={{ scale: 1.1 }}
         className='cursor-pointer whitespace-nowrap'
