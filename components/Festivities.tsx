@@ -35,7 +35,7 @@ export default function Festivities() {
     <div className='w-full min-h-[800px] relative'>
       <div className='absolute z-10 top-0 left-0 w-full'>
         <iframe
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109269.67252053325!2d106.81252837818198!3d10.545142192032152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31754061b083f329%3A0x912801646ee59f4b!2zS2h1IER1IEzhu4tjaCBTaW5oIFRow6FpIEThuqduIFjDonk!5e0!3m2!1svi!2s!4v1708483786680!5m2!1svi!2s'
+          src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=en&amp;q=The%20Myst%20Dong%20Khoi,%20hotel,%20Ho%20Chi%20Minh%20City,%20Vietnam+(Duy%20&amp;%20Dien's%20Wedding)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           width='100%'
           height='800px'
           style={{ border: 0 }}
@@ -54,7 +54,7 @@ export default function Festivities() {
           </h1>
           <p className='text-center'>
             SATURDAY <br />
-            JUNE 22, 2013
+            APRIL 20, 2024
           </p>
           <Carousel className='w-9/12'>
             <CarouselContent>
