@@ -46,16 +46,13 @@ export default function Home() {
       <NavBar />
       <div id='our-story'>
         <OurStory />
+        <Quote />
       </div>
       <div id='gallery'>
         <Gallery />
-        <Quote />
       </div>
       <div id='festivities'>
         <Festivities />
-      </div>
-      <div id='to-do'>
-        <FinestCity />
       </div>
       <div
         id='add-to-our-story'

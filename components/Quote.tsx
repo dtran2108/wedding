@@ -8,9 +8,9 @@ export default function Quote() {
     <div
       className='relative w-full min-h-[500px] flex items-center justify-center p-8'
       style={{
-        backgroundImage: "url('/images/quote.jpg')",
+        backgroundImage: "url('/images/NAU_1755.jpeg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'center'
       }}
     >
       <div className='bg-white/70 w-full md:w-7/12 flex items-center justify-center'>
@@ -18,12 +18,12 @@ export default function Quote() {
           <h2
             className={cn(neuton.className, 'text-xl text-[#666] text-center')}
           >
-            &quot;THE PROBABILITY OF SEPARATE WORLDS MEETING IS VERY SMALL.
-            <br /> THE LURE OF IT IS IMMENSE.
-            <br /> WE SEND STARSHIPS. WE FALL IN LOVE.&quot;
+            &quot;INDIVIDUALLY WE ARE WHOLE,
+            <br /> BUT
+            <br /> TOGETHER WE ARE MORE.&quot;
           </h2>
           <p className={cn(neuton.className, 'text-gold')}>
-            - Jeanette Winterson
+            - Anne Hathaway
           </p>
         </div>
       </div>

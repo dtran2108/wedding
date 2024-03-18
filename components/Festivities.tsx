@@ -50,7 +50,7 @@ export default function Festivities() {
           )}
         >
           <h1 className={cn(allura.className, 'text-6xl text-center')}>
-            Festivities
+            Celebration
           </h1>
           <p className='text-center'>
             SATURDAY <br />
@@ -58,7 +58,7 @@ export default function Festivities() {
           </p>
           <Carousel className='w-9/12'>
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {Array.from({ length: 1 }).map((_, index) => (
                 <CarouselItem key={index}>
                   <div className='w-full flex items-center justify-center'>
                     <div className='relative left-8 z-30 w-[500px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
