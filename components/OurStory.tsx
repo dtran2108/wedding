@@ -20,18 +20,67 @@ import {
 
 const fleur = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
+const stories = [
+  {
+    year: 2011,
+    title: 'Duy and Dien\'s journey started',
+    place: '',
+    content: 'Duy and Dien\'s journey started in high school as classmates. Although they didn\'t date back then, their friendship laid the foundation for a beautiful love story to unfold later in life.',
+    image: '/images/stories/Story1.jpg'
+  },
+  {
+    year: 2014,
+    title: '',
+    place: '',
+    content: 'As fate would have it, Duy and Dien found themselves attending the same university after high school. This new chapter in their lives brought them closer and sparked a romantic connection between them. '
+    + 'Their shared experience marked the start of a heartfelt love story filled with growth, companionship and mutual support.',
+    image: '/images/header.jpg'
+  },
+  {
+    year: 2017,
+    title: '',
+    place: '',
+    content: 'When Duy embarked on a year-long study abroad adventure, they faced the test of distance the first time in their relationship. Despite the challenges of being apart, their love and commitment transcended borders, ' 
+    + 'strengthening their bond and deepening their connection.',
+    image: '/images/header.jpg'
+  },
+  {
+    year: 2018,
+    title: '',
+    place: '',
+    content: 'As Duy returned, it was now Dien\'s turn to venture into her own journey abroad for further studies, presenting new tests and adventures for the couple. ' 
+    + 'As they navigated the challenges of being apart together, their support and dedication to each other remained unwavering, and their relationship preserved and strengthened.',
+    image: '/images/header.jpg'
+  },
+  {
+    year: 2022,
+    title: '',
+    place: '',
+    content: 'After realizing that they are the one in each other\'s lives, in a romantic gesture, Duy traveled to Paris to surprise Dien with a heartfelt proposal, and she said yes. In the City of Love, he put a ring on her ' 
+    + 'finger, marking a beautiful milestone in their relationship filled with love, adventure, and a promising future together.',
+    image: '/images/header.jpg'
+  },
+  {
+    year: 2024,
+    title: '',
+    place: '',
+    content: 'Now, after thirteen years since their first encounter and a decade of love, they choose forever, knowing their love was meant to last a lifetime. ' 
+    + 'Join Dien and Duy as they take you on their journey of everlasting love and true companionship!',
+    image: '/images/header.jpg'
+  }
+]
 
 export default function OurStory() {
   return (
     <div className='w-full min-h-[100vh] flex justify-center'>
       <Carousel className='w-full'>
         <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
+          {Array.from({ length: stories.length }).map((_, index) => (
             <CarouselItem key={index}>
               <div
                 className='relative w-full min-h-[100vh] flex items-center flex-col justify-between'
                 style={{
-                  backgroundImage: "url('/images/header.jpg')",
+                  backgroundImage: "url('" + stories[index].image + "')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'bottom',
                 }}
@@ -41,11 +90,11 @@ export default function OurStory() {
                   <h1
                     className={cn(fleur.className, 'leading-normal text-7xl md:text-9xl')}
                   >
-                    2012
+                    {stories[index].year}
                   </h1>
                   <div className='w-[150px] h-[1px] bg-white mt-4 mb-8'></div>
                   <h2 className='text-xl text-[#b3a192] mb-4'>
-                    HE PUT A RING ON IT
+                    {stories[index].title.toUpperCase()}
                   </h2>
                   <Drawer>
                     <DrawerTrigger asChild>
@@ -65,10 +114,10 @@ export default function OurStory() {
                                 'leading-normal text-8xl text-[#b3a192]'
                               )}
                             >
-                              2012
+                              {stories[index].year}
                             </h1>
                             <h2 className='text-xl text-black my-4'>
-                              WINTER WONDERLAND
+                              {stories[index].place.toUpperCase()}
                             </h2>
                             <div className='w-[150px] h-[1px] bg-black mt-4 '></div>
                             <p
@@ -77,20 +126,7 @@ export default function OurStory() {
                                 'text-black my-8'
                               )}
                             >
-                              At some point while all this had been happening
-                              over the last couple of years, Z. realized that he
-                              wanted it all to keep happening, forever. He found
-                              the perfect ring and waited until a day after
-                              Valentines Day to ask the question, because he
-                              just has to be different. He picked up Judie from
-                              school and brought her home to candles and
-                              champagne. While she was still trying to figure
-                              out what was happening he took the opportunity to
-                              ask her to marry him. He will never forget the way
-                              she looked confused and said, &quot;I&apos;m so
-                              sleepy,&quot; with her hands on her head or when
-                              he asked if that meant yes, she responded that
-                              yes, it did.
+                              {stories[index].content}
                             </p>
                           </div>
                         </div>

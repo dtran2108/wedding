@@ -50,7 +50,7 @@ export default function Festivities() {
           )}
         >
           <h1 className={cn(allura.className, 'text-6xl text-center')}>
-            Celebration
+          Wedding reception 
           </h1>
           <p className='text-center'>
             SATURDAY <br />
@@ -65,7 +65,7 @@ export default function Festivities() {
                       <div
                         className='w-[450px] aspect-square rounded-full'
                         style={{
-                          backgroundImage: "url('/images/header.jpg')",
+                          backgroundImage: "url('/images/hotel.png')",
                           backgroundSize: 'cover',
                           backgroundPosition: 'bottom',
                         }}
@@ -73,14 +73,14 @@ export default function Festivities() {
                     </div>
                     <div className='relative right-8 w-[500px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20'>
                       <div className='w-[450px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
-                        <p className='text-gold'>CEREMONY, 5PM</p>
+                        <p className='text-gold'>RECEPTION, 6PM</p>
                         <h3
                           className={cn(
                             allura.className,
                             'text-2xl text-black'
                           )}
                         >
-                          Central Beach, coronado
+                          The Myst Dong Khoi
                         </h3>
                         <p
                           className={cn(
@@ -88,13 +88,9 @@ export default function Festivities() {
                             'text-black text-center px-4'
                           )}
                         >
-                          The happy couple will say “I do” with their toes in
-                          the sand at 5pm at Central Beach in Coronado, CA.
-                          Facing the ocean, the ceremony will be held where RH
-                          Dana Place meets Ocean Boulevard (to the right of the
-                          Hotel Del Coronado villas), where there is a line of
-                          palm trees in the sand heading towards the water.
-                          Guests may park at any available street parking.
+                          You are invited to join their intimate wedding celebration at 6pm at Ery Hall, the Myst Dong Khoi hotel. 
+<br />Guests are invited to come as they are. You are welcomed to dress either comfortably or fancily at the celebration. Your presence is what truly matters!
+<br />Guests may park at the parking lot available at the hotel. However, you are encouraged to embrace the party spirit by utilizing public transportation for a night of festivities and drinks. Cheers!
                         </p>
                         <p
                           className={cn(

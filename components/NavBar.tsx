@@ -34,14 +34,14 @@ export default function NavBar() {
         whileHover={{ scale: 1.1 }}
         className='cursor-pointer whitespace-nowrap'
       >
-        FESTIVITIES
+        RECEPTION
       </motion.span>
       <motion.span
         onClick={() => scrollToHash('add-to-our-story')}
         whileHover={{ scale: 1.1 }}
         className='cursor-pointer whitespace-nowrap'
       >
-        ADD TO OUR STORY
+        THANK YOU
       </motion.span>
     </nav>
   )
