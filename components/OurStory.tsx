@@ -22,50 +22,48 @@ const fleur = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
 const stories = [
   {
-    year: 2011,
-    title: 'Duy and Dien\'s journey started',
-    place: '',
-    content: 'Duy and Dien\'s journey started in high school as classmates. Although they didn\'t date back then, their friendship laid the foundation for a beautiful love story to unfold later in life.',
+    year: 'Chapter 1',
+    title: 'The first encounter',
+    content: 'It was 2011 when Duy and Dien first crossed paths as high school classmates. It would be nice to label them as high school ' 
+    + 'sweethearts, however, they unfortunately didn’t hit it off right away. He didn’t find her particularly remarkable while she also didn’t ' 
+    + 'take a liking to him at first. Nonetheless, as they shared the same classroom, they gradually developed a friendly bond, ' 
+    + 'and that friendship laid the foundation for a beautiful love story to unfold later in life.',
     image: '/images/stories/Story1.jpg'
   },
   {
-    year: 2014,
-    title: '',
-    place: '',
-    content: 'As fate would have it, Duy and Dien found themselves attending the same university after high school. This new chapter in their lives brought them closer and sparked a romantic connection between them. '
-    + 'Their shared experience marked the start of a heartfelt love story filled with growth, companionship and mutual support.',
+    year: 'Chapter 2',
+    title: 'Friends to Lovers',
+    content: 'As fate would have it, Duy and Dien found themselves attending the same university after high school. This new chapter ' 
+    + 'in their lives brought them closer and sparked a romantic connection between them. He was captivated by her through a song, and she found herself ' 
+    + 'drawn to him because of an umbrella. As people always say - the rest is history. They navigated college life, studying and enjoying parties together. ' 
+    + 'Their bond strengthened with each passing day, culminating in a heartfelt love story filled with growth, companionship and mutual support.',
     image: '/images/header.jpg'
   },
   {
-    year: 2017,
-    title: '',
-    place: '',
-    content: 'When Duy embarked on a year-long study abroad adventure, they faced the test of distance the first time in their relationship. Despite the challenges of being apart, their love and commitment transcended borders, ' 
-    + 'strengthening their bond and deepening their connection.',
+    year: 'Chapter 3',
+    title: 'Love across continents',
+    content: 'In 2017, when Duy embarked on a study abroad adventure, they faced the test of distance the first time in their relationship. It was a ' 
+    + 'stressful and emotional time - the timezone difference, the lack of physical contact, and the yearning made them struggle, ' 
+    + 'but those problems also make them stronger and taught them the importance of communication, empathy and understanding. ',
+    content2: 'Duy returned after a year, but it was now Dien’s turn to venture into her own journey abroad for further studies. The second time didn’t ' 
+    + 'make it easier for them, especially due to its extended duration and the added complication of the pandemic. Despite all the challenges of being ' 
+    + 'separated, their dedication and commitment transcended borders, strengthening their bond and deepening their connection. It was a love that ' 
+    + 'distance defied. And they clearly saw that they should never be apart again.',
     image: '/images/header.jpg'
   },
   {
-    year: 2018,
-    title: '',
-    place: '',
-    content: 'As Duy returned, it was now Dien\'s turn to venture into her own journey abroad for further studies, presenting new tests and adventures for the couple. ' 
-    + 'As they navigated the challenges of being apart together, their support and dedication to each other remained unwavering, and their relationship preserved and strengthened.',
+    year: 'Chapter 4',
+    title: 'The promise of forever',
+    content: 'After realizing that they are the one in each other’s lives, in a blissful summer day in 2022, Duy traveled to Paris to surprise Dien with a heartfelt ' 
+    + 'proposal, and she said yes! In the City of Love, he put a ring on her finger, marking a beautiful milestone in their relationship filled with ' 
+    + 'love, adventure, and a promising future together.',
     image: '/images/header.jpg'
   },
   {
-    year: 2022,
-    title: '',
-    place: '',
-    content: 'After realizing that they are the one in each other\'s lives, in a romantic gesture, Duy traveled to Paris to surprise Dien with a heartfelt proposal, and she said yes. In the City of Love, he put a ring on her ' 
-    + 'finger, marking a beautiful milestone in their relationship filled with love, adventure, and a promising future together.',
-    image: '/images/header.jpg'
-  },
-  {
-    year: 2024,
-    title: '',
-    place: '',
-    content: 'Now, after thirteen years since their first encounter and a decade of love, they choose forever, knowing their love was meant to last a lifetime. ' 
-    + 'Join Dien and Duy as they take you on their journey of everlasting love and true companionship!',
+    year: 'Chapter 5',
+    title: 'Happily ever after',
+    content: 'Now, after thirteen years since their first encounter and a decade of love, they choose forever, knowing their love was meant to last a lifetime.',
+    content2: 'Join Dien and Duy as they take you on their journey of everlasting love and true companionship!',
     image: '/images/header.jpg'
   }
 ]
@@ -117,7 +115,7 @@ export default function OurStory() {
                               {stories[index].year}
                             </h1>
                             <h2 className='text-xl text-black my-4'>
-                              {stories[index].place.toUpperCase()}
+                              {stories[index].title.toUpperCase()}
                             </h2>
                             <div className='w-[150px] h-[1px] bg-black mt-4 '></div>
                             <p
@@ -127,6 +125,9 @@ export default function OurStory() {
                               )}
                             >
                               {stories[index].content}
+                              {stories[index].content2 ? <br/> : ''}
+                              {stories[index].content2 ? <br/> : ''}
+                              {stories[index].content2 ? stories[index].content2 : ''}
                             </p>
                           </div>
                         </div>
