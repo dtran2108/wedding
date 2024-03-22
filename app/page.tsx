@@ -3,7 +3,14 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className='min-h-screen w-screen flex items-center justify-center flex-col space-y-3 p-3'>
+    <main
+      className='min-h-screen w-screen flex items-center justify-center flex-col space-y-3 p-3'
+      style={{
+        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <h1 className='text-4xl text-center'>
         Vui lòng điều hướng đến một trong các trang sau
       </h1>
