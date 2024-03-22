@@ -37,7 +37,7 @@ const stories = [
     + 'in their lives brought them closer and sparked a romantic connection between them. He was captivated by her through a song, and she found herself ' 
     + 'drawn to him because of an umbrella. As people always say - the rest is history. They navigated college life, studying and enjoying parties together. ' 
     + 'Their bond strengthened with each passing day, culminating in a heartfelt love story filled with growth, companionship and mutual support.',
-    image: '/images/header.jpg'
+    image: '/images/stories/Story2.jpg'
   },
   {
     year: 'Chapter 3',
@@ -57,14 +57,14 @@ const stories = [
     content: 'After realizing that they are the one in each other’s lives, in a blissful summer day in 2022, Duy traveled to Paris to surprise Dien with a heartfelt ' 
     + 'proposal, and she said yes! In the City of Love, he put a ring on her finger, marking a beautiful milestone in their relationship filled with ' 
     + 'love, adventure, and a promising future together.',
-    image: '/images/header.jpg'
+    image: '/images/stories/Story4.jpg'
   },
   {
     year: 'Chapter 5',
     title: 'Happily ever after',
     content: 'Now, after thirteen years since their first encounter and a decade of love, they choose forever, knowing their love was meant to last a lifetime.',
     content2: 'Join Dien and Duy as they take you on their journey of everlasting love and true companionship!',
-    image: '/images/header.jpg'
+    image: '/images/stories/Story5.jpg'
   }
 ]
 
