@@ -27,13 +27,19 @@ export default function Home() {
       >
         <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/60 z-10'></div>
         <div className='my-auto text-center w-9/12 md:w-6/12 relative z-20' style={{top: -60}}>
-          <h1 className='text-4xl'>
-            LĐ <span className={allura.className}>&</span> TD
-          </h1>
+          <div
+              className='h-[128px] aspect-square rounded-full relative w-full'
+              style={{
+                backgroundImage: "url('/images/logo_white.png')",
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+          ></div>
           <Divider>
             <span className='text-md md:text-2xl'>20.04.2024</span>
           </Divider>
-          <h1 className={cn(allura.className, 'text-6xl md:text-7xl my-8')}>
+          <h1 className={cn(allura.className, 'text-6xl md:text-7xl my md:my-8')}>
             Lam Điền
             <br />& 
             <br />Thanh Duy
