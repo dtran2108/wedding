@@ -113,32 +113,43 @@ export default function Festivities() {
           </Carousel>
         </motion.div>
       </div>
-      <Button
+      <div
         className={cn(
-          'absolute z-30 bottom-12 left-[47%] rounded-full w-[70px] h-[70px]',
-          showMap
-            ? 'bg-black text-white hover:bg-black'
-            : 'bg-[#b3a192] text-black hover:bg-[#b3a192]'
+          'absolute z-30 bottom-12 rounded-full w-full h-[70px]'
         )}
-        onClick={() => setShowMap(!showMap)}
-      >
-        <span
-          className={cn(
-            'py-0.5 border-t border-b font-bold text-sm',
-            showMap
-              ? 'border-t-white border-b-white'
-              : 'border-t-black border-b-black'
-          )}
+        style = {{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
         >
-          {showMap ? (
-            'CLOSE'
-          ) : (
-            <span>
-              LIVE <br /> MAP
-            </span>
+        <Button
+          className={cn(
+            'absolute z-30 bottom-12 rounded-full w-[70px] h-[70px]',
+            showMap
+              ? 'bg-black text-white hover:bg-black'
+              : 'bg-[#b3a192] text-black hover:bg-[#b3a192]'
           )}
-        </span>
-      </Button>
+          onClick={() => setShowMap(!showMap)}
+        >
+          <span
+            className={cn(
+              'py-0.5 border-t border-b font-bold text-sm',
+              showMap
+                ? 'border-t-white border-b-white'
+                : 'border-t-black border-b-black'
+            )}
+          >
+            {showMap ? (
+              'CLOSE'
+            ) : (
+              <span>
+                LIVE <br /> MAP
+              </span>
+            )}
+          </span>
+        </Button>
+      </div>
     </div>
   )
 }
