@@ -24,7 +24,7 @@ const Grid = ({
   return isPopUp ? (
     <Dialog>
       <DialogTrigger asChild>{popUpTrigger}</DialogTrigger>
-      <DialogContent className='max-h-[80vh] overflow-y-scroll rounded-lg'>
+      <DialogContent className='max-h-[80vh] overflow-y-scroll rounded-lg no-scrollbar'>
         {popUpContent}
       </DialogContent>
     </Dialog>

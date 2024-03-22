@@ -3,11 +3,15 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { DEFAULT_BOX_SHADOW, agendaContent, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Button } from './ui/button'
+import { useScroll } from 'react-use'
+import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react'
 
 export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
   const [currentAgenda, setCurrentAgenda] = useState(agendaContent[0])
+  const mobileListWrap = useRef<HTMLDivElement>(null)
+  const { x: currentListXPos, y } = useScroll(mobileListWrap)
 
   return (
     <div
@@ -58,10 +62,29 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
           )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
-          <h1 className={cn(titleFont.className, 'text-2xl text-secondary')}>
-            LỊCH TRÌNH
-          </h1>
-          <div className='flex items-center space-x-3 mt-4 w-full overflow-scroll'>
+          <div className='flex items-center space-x-2'>
+            <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+              LỊCH TRÌNH
+            </h1>
+            {currentListXPos > 0 && (
+              <ChevronLeftCircle
+                className='w-4 h-4 bg-white rounded-full text-gray'
+                strokeWidth={1.5}
+              />
+            )}
+            {currentListXPos <
+              (mobileListWrap.current?.scrollWidth || 1) -
+                (mobileListWrap.current?.offsetWidth || 0) && (
+              <ChevronRightCircle
+                className='w-4 h-4 bg-white rounded-full text-gray'
+                strokeWidth={1.5}
+              />
+            )}
+          </div>
+          <div
+            className='flex items-center space-x-3 mt-4 w-full overflow-scroll no-scrollbar'
+            ref={mobileListWrap}
+          >
             {agendaContent.map((event, i) => (
               <Button
                 onClick={() => setCurrentAgenda(event)}

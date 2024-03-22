@@ -40,10 +40,10 @@ export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
               </span>
               <div>
                 <p className='text-secondary/70'>Địa chỉ</p>
-                <h1 className='text-secondary'>
+                <p className='text-secondary'>
                   1-3-5, Ngô Thời Nhiệm, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí
                   Minh, Việt Nam
-                </h1>
+                </p>
               </div>
             </div>
             <div className='rounded-lg p-4 py-6 flex items-center space-x-4 bg-primary/5'>

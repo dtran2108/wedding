@@ -22,7 +22,7 @@ export default function AvenueGrid() {
       <h1 className={cn(titleFont.className, 'text-lg md:text-xl')}>
         “Nếu tôi biết tình yêu là gì, là nhờ có em”
       </h1>
-      <h2 className='text-[12px] md:text-lg max-w-[150px] md:max-w-full'>
+      <h2 className='text-[12px] md:text-md max-w-[150px] md:max-w-full'>
         Khách sạn Mai House Saigon. <br />
         1-3-5, Ngô Thời Nhiệm, Võ Thị Sáu, Quận 3 <br />
         Thành phố Hồ Chí Minh, Việt Nam

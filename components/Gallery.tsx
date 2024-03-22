@@ -10,7 +10,7 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
         isPopUp && 'p-4 md:p-4'
       )}
     >
-      <div className='flex items-center flex-wrap'>
+      <div className='flex items-center flex-wrap space-x-3'>
         <h1 className={cn(titleFont.className, 'text-5xl')}>KHO ẢNH</h1>
         <span
           className={cn(
@@ -22,7 +22,7 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
           <MoveRight strokeWidth={1} />
         </span>
       </div>
-      <div className='snap-x snap-mandatory flex-1 flex items-center space-x-8 min-w-full overflow-scroll'>
+      <div className='snap-x snap-mandatory flex-1 flex items-center space-x-8 min-w-full overflow-scroll no-scrollbar'>
         {Array.from({ length: 10 }).map((_, i) => (
           <div
             key={i}

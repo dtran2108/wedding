@@ -3,11 +3,15 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { DEFAULT_BOX_SHADOW, titleFont, storiesContent } from '@/const'
 import { cn } from '@/lib/utils'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Button } from './ui/button'
+import { useScroll } from 'react-use'
+import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react'
 
 export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
   const [currentStory, setCurrentStory] = useState(storiesContent[0])
+  const mobileStoryListWrap = useRef<HTMLDivElement>(null)
+  const { x: currentStoryListXPos, y } = useScroll(mobileStoryListWrap)
 
   return (
     <div className='min-h-screen grid grid-cols-4 gap-4 p-4 md:p-8'>
@@ -24,10 +28,29 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
           )}
           style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
-          <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
-            CÂU CHUYỆN
-          </h1>
-          <div className='flex items-center space-x-3 mt-4 w-full overflow-scroll'>
+          <div className='flex items-center space-x-2'>
+            <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+              CÂU CHUYỆN
+            </h1>
+            {currentStoryListXPos > 0 && (
+              <ChevronLeftCircle
+                className='w-4 h-4 bg-white rounded-full text-gray'
+                strokeWidth={1.5}
+              />
+            )}
+            {currentStoryListXPos <
+              (mobileStoryListWrap.current?.scrollWidth || 1) -
+                (mobileStoryListWrap.current?.offsetWidth || 0) && (
+              <ChevronRightCircle
+                className='w-4 h-4 bg-white rounded-full text-gray'
+                strokeWidth={1.5}
+              />
+            )}
+          </div>
+          <div
+            className='flex items-center space-x-3 mt-4 w-full overflow-scroll no-scrollbar relative'
+            ref={mobileStoryListWrap}
+          >
             {storiesContent.map((story, i) => (
               <Button
                 onClick={() => setCurrentStory(story)}

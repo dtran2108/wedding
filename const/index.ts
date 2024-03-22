@@ -1,13 +1,15 @@
-import { Brygada_1918, Playfair_Display } from 'next/font/google'
+import { Merriweather } from 'next/font/google'
+import localFont from 'next/font/local'
 
 export const DEFAULT_BOX_SHADOW = '0px 8px 24px 0px #AE585240'
 export const SECTION_STYLE = 'w-full h-full rounded-lg'
 
-export const contentFont = Playfair_Display({
+export const contentFont = Merriweather({
   subsets: ['latin', 'vietnamese'],
+  weight: '400',
 })
 
-export const titleFont = Brygada_1918({ subsets: ['latin', 'vietnamese'] })
+export const titleFont = localFont({ src: './fonts/fz-aghita.ttf' })
 
 export const scrollToHash = function (element_id: string) {
   const element = document.getElementById(element_id)

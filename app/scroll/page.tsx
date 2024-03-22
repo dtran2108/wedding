@@ -6,7 +6,7 @@ import OurStory from '@/components/OurStory'
 
 export default function Page() {
   return (
-    <main className='snap-y snap-mandatory h-screen overflow-scroll'>
+    <main className='snap-y snap-mandatory h-screen overflow-scroll no-scrollbar'>
       <div className='snap-start min-h-screen'>
         <HomeSection />
       </div>
