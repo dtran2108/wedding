@@ -3,8 +3,8 @@ import './globals.css'
 import { contentFont } from '@/const'
 
 export const metadata: Metadata = {
-  title: 'Mai & Tuấn',
-  description: 'Mai & Tuấn',
+  title: 'Retro',
+  description: 'Retro',
 }
 
 export default function RootLayout({

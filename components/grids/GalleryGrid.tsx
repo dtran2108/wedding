@@ -31,10 +31,17 @@ export default function GalleryGrid() {
   return (
     <div className={cn(SECTION_STYLE, 'bg-orange p-4 flex flex-col space-y-2')}>
       <Carousel setApi={setApi} className='w-full h-full flex-1'>
-        <CarouselContent className=''>
-          {Array.from({ length: 5 }).map((_, index) => (
+        <CarouselContent className='w-full h-56'>
+          {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className='w-full h-[200px] rounded-lg bg-white'></div>
+              <div
+                className='w-full h-full rounded-lg bg-white'
+                style={{
+                  backgroundImage: `url('/images/gallery-${index + 1}.jpeg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -42,6 +49,7 @@ export default function GalleryGrid() {
       <div className='py-2 flex items-center justify-center space-x-1'>
         {Array.from({ length: count }).map((_, index) => (
           <span
+            key={index}
             onClick={() => api?.scrollTo(index)}
             className={cn(
               current == index + 1 ? 'bg-[#3E3232]' : 'bg-white',

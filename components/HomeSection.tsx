@@ -5,12 +5,8 @@ import AgendaGrid from './grids/AgendaGrid'
 import OurJourneyGrid from './grids/OurJourneyGrid'
 import GalleryGrid from './grids/GalleryGrid'
 import QuoteGrid from './grids/QuoteGrid'
-import AvenueGrid from './grids/AvenueGrid'
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog'
 import OurStory from './OurStory'
-import Agenda from './Agenda'
-import Gallery from './Gallery'
-import Avenue from './Avenue'
 import RSVPGrid from './grids/RSVPGrid'
 import CountDownGrid from './grids/CountDownGrid'
 import QuestionGrid from './grids/QuestionGrid'
@@ -126,66 +122,6 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
         }
         popUpContent={<OurStory isPopUp={isPopUp} />}
       />
-
-      {/* <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='col-span-2 md:col-span-1 row-span-1'>
-            <OurJourneyGrid />
-          </div>
-        }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
-      />
-
-      <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='col-span-2 md:col-span-1 row-span-1'>
-            <GalleryGrid />
-          </div>
-        }
-        popUpContent={<Gallery isPopUp={isPopUp} />}
-      />
-
-      <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='block md:hidden col-span-4 md:col-span-2 row-span-1'>
-            <QuoteGrid />
-          </div>
-        }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
-      />
-
-      <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='hidden md:block col-span-4 row-span-2 md:col-span-2 md:row-span-1'>
-            <AvenueGrid />
-          </div>
-        }
-        popUpContent={<Avenue isPopUp={isPopUp} />}
-      />
-
-      <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='hidden md:block col-span-4 row-span-2 md:col-span-2 md:row-span-1'>
-            <QuoteGrid />
-          </div>
-        }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
-      />
-
-      <Grid
-        isPopUp={isPopUp}
-        popUpTrigger={
-          <div className='block md:hidden col-span-4 row-span-2 md:col-span-2 md:row-span-1'>
-            <AvenueGrid />
-          </div>
-        }
-        popUpContent={<Avenue isPopUp={isPopUp} />}
-      /> */}
     </div>
   )
 }
