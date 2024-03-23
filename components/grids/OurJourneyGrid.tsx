@@ -1,36 +1,25 @@
 'use client'
 
-import {
-  DEFAULT_BOX_SHADOW,
-  SECTION_STYLE,
-  titleFont,
-  scrollToHash,
-} from '@/const'
+import { SECTION_STYLE, titleFont, scrollToHash } from '@/const'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 
 export default function OurJourneyGrid() {
   return (
     <div
       onClick={() => scrollToHash('our-story')}
-      className={cn(
-        SECTION_STYLE,
-        'bg-secondary text-secondary-foreground p-4 aspect-square md:aspect-auto flex flex-col items-center justify-start overflow-hidden relative cursor-pointer'
-      )}
-      style={{ boxShadow: DEFAULT_BOX_SHADOW }}
+      className={cn(SECTION_STYLE, 'bg-red text-white p-6 cursor-pointer')}
     >
-      <h1
-        className={cn(titleFont.className, 'text-xl md:text-3xl text-center')}
-      >
+      <h1 className={cn(titleFont.className, 'text-xl md:text-3xl mb-8')}>
         Hành trình
       </h1>
-      <Image
-        className='absolute top-12 md:top-16'
-        src={'/images/journey-decoration.svg'}
-        alt='decoration'
-        width={100}
-        height={70}
-      />
+      <div className='flex flex-col justify-center space-y-4'>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Molestie vel ut libero in eu amet nibh sollicitudin.</p>
+        <p>
+          Volutpat vulputate viverra placerat egestas scelerisque eget
+          vestibulum.
+        </p>
+      </div>
     </div>
   )
 }

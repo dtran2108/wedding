@@ -11,6 +11,9 @@ import OurStory from './OurStory'
 import Agenda from './Agenda'
 import Gallery from './Gallery'
 import Avenue from './Avenue'
+import RSVPGrid from './grids/RSVPGrid'
+import CountDownGrid from './grids/CountDownGrid'
+import QuestionGrid from './grids/QuestionGrid'
 
 const Grid = ({
   isPopUp,
@@ -37,7 +40,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
   return (
     <div
       id='home'
-      className='min-h-screen md:h-screen w-screen grid grid-cols-4 grid-rows-3 gap-4 md:gap-8 p-4 md:p-8'
+      className='min-h-screen md:h-screen w-screen grid grid-cols-12 grid-rows-12 gap-4 md:gap-6 p-4 md:p-8'
       style={{
         backgroundImage: `url('/images/paper-bg.png')`,
         backgroundSize: 'cover',
@@ -47,7 +50,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-4 row-span-2 md:col-span-2 md:row-span-2 w-full h-full'>
+          <div className='col-span-4 row-span-2 md:col-span-4 md:row-span-10 w-full h-full'>
             <MainGrid />
           </div>
         }
@@ -57,14 +60,74 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-4 md:col-span-2 row-span-1'>
-            <AgendaGrid />
+          <div className='col-span-4 md:col-span-2 md:row-span-4'>
+            <RSVPGrid />
           </div>
         }
-        popUpContent={<Agenda isPopUp={isPopUp} />}
+        popUpContent={<></>}
       />
 
       <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-6 row-span-4'>
+            <AgendaGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-4 row-span-5'>
+            <OurJourneyGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-4 row-span-3'>
+            <QuoteGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-4 row-span-5'>
+            <GalleryGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-4 row-span-3'>
+            <QuestionGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      <Grid
+        isPopUp={isPopUp}
+        popUpTrigger={
+          <div className='col-span-2 md:col-span-4 row-span-2'>
+            <CountDownGrid />
+          </div>
+        }
+        popUpContent={<OurStory isPopUp={isPopUp} />}
+      />
+
+      {/* <Grid
         isPopUp={isPopUp}
         popUpTrigger={
           <div className='col-span-2 md:col-span-1 row-span-1'>
@@ -122,7 +185,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
           </div>
         }
         popUpContent={<Avenue isPopUp={isPopUp} />}
-      />
+      /> */}
     </div>
   )
 }

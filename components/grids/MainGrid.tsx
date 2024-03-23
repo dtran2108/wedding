@@ -17,22 +17,23 @@ export default function MainGrid() {
         'cursor-pointer flex flex-col items-between justify-between p-8'
       )}
       style={{
-        backgroundImage: "url('/images/laura-keith.jpeg')",
+        backgroundImage: "url('/images/man-kissing-woman.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        boxShadow: DEFAULT_BOX_SHADOW,
       }}
     >
       <div className='flex items-center justify-end'>
-        <span className='border-[4px] border-white border-double rounded-[50%] p-6'>
-          <h2 className={'text-white text-xl text-center'}>
-            Mai & <br /> Tuấn
-          </h2>
-        </span>
+        <h2
+          className={cn(titleFont.className, 'text-white text-3xl text-center')}
+        >
+          Thái Sơn
+          <br /> Thùy An
+        </h2>
       </div>
       <h1 className={cn(titleFont.className, 'uppercase text-white text-3xl')}>
-        Đối với chúng tôi, <br />
-        nhà không phải là một nơi
+        12
+        <br />
+        03
       </h1>
     </div>
   )

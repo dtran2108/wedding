@@ -19,10 +19,16 @@ const config = {
     },
     extend: {
       colors: {
-        blue: '#B1BEC7',
-        yellow: '#EDD1A1',
-        gold: '#BDAB96',
-        white: '#FAFAFA',
+        pink: '#D37676',
+        yellow: '#ECB159',
+        red: '#9B4444',
+        green: {
+          DEFAULT: '#7F9F80',
+          500: '#607274',
+        },
+        orange: '#B67352',
+        blue: '#192655',
+        white: '#FFFFFF',
         gray: {
           default: '#D9D9D9',
           50: '#4F4F4F',
