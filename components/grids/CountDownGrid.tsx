@@ -1,9 +1,10 @@
 'use client'
 
-import { SECTION_STYLE, titleFont } from '@/const'
+import { SECTION_STYLE, getMotionProps, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function CountDownGrid() {
   const calculateTimeLeft = () => {
@@ -44,11 +45,12 @@ export default function CountDownGrid() {
   }>(calculateTimeLeft())
 
   return (
-    <div
+    <motion.div
       className={cn(
         SECTION_STYLE,
-        'bg-green text-white p-4 relative overflow-hidden flex flex-col items-center justify-center'
+        'bg-green text-white p-4 relative overflow-hidden flex flex-col items-center justify-center cursor-pointer'
       )}
+      {...getMotionProps('#1C251C')}
     >
       <Image
         className='absolute top-0 left-0'
@@ -59,7 +61,8 @@ export default function CountDownGrid() {
       />
       <p className='text-center'>Hãy sẵn sàng với chúng tôi</p>
       <h1 className={cn(titleFont.className, 'text-2xl text-center')}>
-        {timeLeft.days} Ngày, {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+        {timeLeft.days} Ngày, {timeLeft.hours}:{timeLeft.minutes}:
+        {timeLeft.seconds}
       </h1>
       <Image
         className='absolute top-0 right-0'
@@ -68,6 +71,6 @@ export default function CountDownGrid() {
         height={100}
         alt='decoration'
       />
-    </div>
+    </motion.div>
   )
 }

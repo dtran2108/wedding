@@ -1,16 +1,12 @@
 'use client'
 
-import {
-  DEFAULT_BOX_SHADOW,
-  SECTION_STYLE,
-  titleFont,
-  scrollToHash,
-} from '@/const'
+import { SECTION_STYLE, titleFont, scrollToHash, getMotionProps } from '@/const'
 import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 
 export default function MainGrid() {
   return (
-    <div
+    <motion.div
       onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
@@ -21,6 +17,7 @@ export default function MainGrid() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
+      {...getMotionProps('#3D1F11')}
     >
       <div className='flex items-center justify-end'>
         <h2
@@ -35,6 +32,6 @@ export default function MainGrid() {
         <br />
         03
       </h1>
-    </div>
+    </motion.div>
   )
 }

@@ -1,16 +1,18 @@
 'use client'
 
-import { SECTION_STYLE, titleFont } from '@/const'
+import { SECTION_STYLE, getMotionProps, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function QuestionGrid() {
   return (
-    <div
+    <motion.div
       className={cn(
         SECTION_STYLE,
-        'bg-blue text-white p-4 relative overflow-hidden'
+        'bg-blue text-white p-4 relative overflow-hidden flex flex-col space-y-2 cursor-pointer'
       )}
+      {...getMotionProps('#040A1E')}
     >
       <Image
         className='absolute -top-6 right-1'
@@ -22,9 +24,11 @@ export default function QuestionGrid() {
       <h1 className={cn(titleFont.className, 'text-2xl text-white')}>
         Câu hỏi thường gặp
       </h1>
-      <p className='my-2'>Địa điểm tổ chức lễ cưới ở đâu ?</p>
-      <p className='my-2'>Dresscode là gì ?</p>
-      <p>Thực đơn tiệc cưới gồm những món nào ?</p>
-    </div>
+      <div className='flex-1 flex flex-col justify-center space-y-1'>
+        <p>Địa điểm tổ chức lễ cưới ở đâu ?</p>
+        <p>Dresscode là gì ?</p>
+        <p>Thực đơn tiệc cưới gồm những món nào ?</p>
+      </div>
+    </motion.div>
   )
 }

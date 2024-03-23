@@ -1,19 +1,24 @@
 'use client'
 
-import { SECTION_STYLE, titleFont } from '@/const'
+import { SECTION_STYLE, getMotionProps, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function RSVPGrid() {
   return (
-    <div
-      className={cn(SECTION_STYLE, 'bg-yellow p-4 relative overflow-hidden')}
+    <motion.div
+      className={cn(
+        SECTION_STYLE,
+        'bg-yellow p-4 relative overflow-hidden cursor-pointer'
+      )}
+      {...getMotionProps('#422802')}
     >
       <h1 className={cn(titleFont.className, 'text-lg text-right text-white')}>
         RSVP
         <br />
         Vui lòng xác nhận tham dự trước
-        <br /> Ngày 8 tháng 3<br />
+        <br /> Ngày 12 tháng 3<br />
         Rất mong đón tiếp quý vị.
       </h1>
       <Image
@@ -23,6 +28,6 @@ export default function RSVPGrid() {
         height={100}
         alt='decoration'
       />
-    </div>
+    </motion.div>
   )
 }

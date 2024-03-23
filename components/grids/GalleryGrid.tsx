@@ -1,6 +1,6 @@
 'use client'
 
-import { SECTION_STYLE } from '@/const'
+import { SECTION_STYLE, getMotionProps } from '@/const'
 import { cn } from '@/lib/utils'
 import {
   Carousel,
@@ -9,6 +9,7 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function GalleryGrid() {
   const [api, setApi] = useState<CarouselApi>()
@@ -26,16 +27,30 @@ export default function GalleryGrid() {
     api.on('select', () => {
       setCurrent(api.selectedScrollSnap() + 1)
     })
+
+    setInterval(() => {
+      if (api.canScrollNext()) {
+        api.scrollNext()
+      } else {
+        api.scrollTo(0)
+      }
+    }, 2000)
   }, [api])
 
   return (
-    <div className={cn(SECTION_STYLE, 'bg-orange p-4 flex flex-col space-y-2')}>
+    <motion.div
+      className={cn(
+        SECTION_STYLE,
+        'bg-orange p-4 flex flex-col space-y-2 cursor-pointer'
+      )}
+      {...getMotionProps('#3D1F11')}
+    >
       <Carousel setApi={setApi} className='w-full h-full flex-1'>
-        <CarouselContent className='w-full h-56'>
+        <CarouselContent className='w-full'>
           {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index}>
               <div
-                className='w-full h-full rounded-lg bg-white'
+                className='w-full h-[calc(100dvh/4.3)] rounded-lg bg-white'
                 style={{
                   backgroundImage: `url('/images/gallery-${index + 1}.jpeg')`,
                   backgroundSize: 'cover',
@@ -58,6 +73,6 @@ export default function GalleryGrid() {
           ></span>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }

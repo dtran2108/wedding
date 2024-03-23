@@ -56,7 +56,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-4 md:col-span-2 md:row-span-4'>
+          <div className='col-span-4 md:col-span-2 md:row-span-5'>
             <RSVPGrid />
           </div>
         }
@@ -66,7 +66,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-2 md:col-span-6 row-span-4'>
+          <div className='col-span-2 md:col-span-6 row-span-5'>
             <AgendaGrid />
           </div>
         }
@@ -76,7 +76,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-2 md:col-span-4 row-span-5'>
+          <div className='col-span-2 md:col-span-4 row-span-4'>
             <OurJourneyGrid />
           </div>
         }
@@ -106,7 +106,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-2 md:col-span-4 row-span-3'>
+          <div className='col-span-2 md:col-span-4 row-span-4'>
             <QuestionGrid />
           </div>
         }
@@ -116,7 +116,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       <Grid
         isPopUp={isPopUp}
         popUpTrigger={
-          <div className='col-span-2 md:col-span-4 row-span-2'>
+          <div className='col-span-2 md:col-span-4 row-span-3'>
             <CountDownGrid />
           </div>
         }

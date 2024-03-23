@@ -20,14 +20,28 @@ const config = {
     extend: {
       colors: {
         pink: '#D37676',
-        yellow: '#ECB159',
-        red: '#9B4444',
+        yellow: {
+          DEFAULT: '#ECB159',
+          500: '#422802',
+        },
+        red: {
+          DEFAULT: '#9B4444',
+          500: '#351212',
+        },
         green: {
           DEFAULT: '#7F9F80',
           500: '#607274',
+          700: '#1C251C',
+          900: '#1E2627',
         },
-        orange: '#B67352',
-        blue: '#192655',
+        orange: {
+          DEFAULT: '#B67352',
+          500: '#3D1F11',
+        },
+        blue: {
+          DEFAULT: '#192655',
+          500: '#040A1E',
+        },
         white: '#FFFFFF',
         gray: {
           default: '#D9D9D9',

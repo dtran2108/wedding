@@ -114,3 +114,11 @@ export const agendaContent = [
     image: '/images/agenda-6.jpeg',
   },
 ]
+
+export const getMotionProps = (shadowColor: string) => {
+  return {
+    whileHover: { boxShadow: `12px 12px ${shadowColor}`, x: -2, y: -2 },
+    whileTap: { scale: 0.99, boxShadow: `8px 8px ${shadowColor}` },
+    transition: { duration: 0.1 },
+  }
+}

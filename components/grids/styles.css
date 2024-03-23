@@ -1,0 +1,24 @@
+.main-agenda-wrap,
+.side-agenda-wrap {
+  position: relative;
+}
+
+.main-agenda-wrap::after {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  outline: #607274 solid 8px;
+}
+
+.side-agenda-wrap::after {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  content: '';
+  width: 100%;
+  height: 10px;
+  background-color: #7f9f80;
+}
