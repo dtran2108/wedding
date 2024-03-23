@@ -1,10 +1,6 @@
 'use client'
 
-import {
-  SECTION_STYLE,
-  titleFont,
-  scrollToHash,
-} from '@/const'
+import { SECTION_STYLE, titleFont, scrollToHash } from '@/const'
 import { cn } from '@/lib/utils'
 
 export default function AgendaGrid() {
@@ -15,7 +11,7 @@ export default function AgendaGrid() {
     >
       <div className='flex items-center space-x-3'>
         <h1 className={cn(titleFont.className, 'text-3xl')}>Lịch trình</h1>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lễ đính hôn. Lễ cưới chính. Tiệc cưới. Đón khách.</p>
       </div>
     </div>
   )

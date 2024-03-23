@@ -10,9 +10,11 @@ export default function RSVPGrid() {
       className={cn(SECTION_STYLE, 'bg-yellow p-4 relative overflow-hidden')}
     >
       <h1 className={cn(titleFont.className, 'text-lg text-right text-white')}>
-        Lorem ipsum
-        <br /> dolor sit amet consectetur. Sed ornare nisl egestas nulla
-        hendrerit nisl varius justo convallis.
+        RSVP
+        <br />
+        Vui lòng xác nhận tham dự trước
+        <br /> Ngày 8 tháng 3<br />
+        Rất mong đón tiếp quý vị.
       </h1>
       <Image
         className='absolute -bottom-4 left-1'
