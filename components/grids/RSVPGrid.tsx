@@ -14,7 +14,7 @@ export default function RSVPGrid() {
       )}
       {...getMotionProps('#422802')}
     >
-      <h1 className={cn(titleFont.className, 'text-lg text-right text-white')}>
+      <h1 className={cn(titleFont.className, 'text-sm md:text-lg text-right text-white')}>
         RSVP
         <br />
         Vui lòng xác nhận tham dự trước

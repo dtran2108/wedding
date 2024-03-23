@@ -41,7 +41,7 @@ export default function GalleryGrid() {
     <motion.div
       className={cn(
         SECTION_STYLE,
-        'bg-orange p-4 flex flex-col space-y-2 cursor-pointer'
+        'bg-orange p-2 lg:p-4 flex flex-col space-y-2 cursor-pointer'
       )}
       {...getMotionProps('#3D1F11')}
     >
@@ -50,7 +50,7 @@ export default function GalleryGrid() {
           {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index}>
               <div
-                className='w-full h-[calc(100dvh/4.3)] rounded-lg bg-white'
+                className='w-full h-[200px] lg:h-[calc(100dvh/4.3)] rounded-lg bg-white'
                 style={{
                   backgroundImage: `url('/images/gallery-${index + 1}.jpeg')`,
                   backgroundSize: 'cover',

@@ -10,23 +10,23 @@ export default function OurJourneyGrid() {
       onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
-        'bg-red text-white p-6 cursor-pointer flex flex-col'
+        'bg-red text-white p-2 md:p-6 cursor-pointer flex flex-col space-y-6'
       )}
       {...getMotionProps('#351212')}
     >
-      <h1 className={cn(titleFont.className, 'text-xl md:text-3xl')}>
+      <h1 className={cn(titleFont.className, 'text-lg md:text-2xl')}>
         Hành trình
       </h1>
-      <div className='flex flex-1 flex-col justify-center space-y-4 relative'>
-        <div className='flex items-center space-x-8'>
+      <div className='flex flex-1 flex-col justify-between space-y-2 md:space-y-4 relative text-sm md:text-lg'>
+        <div className='flex items-center md:space-x-8 space-x-4'>
           <span className='w-[16px] aspect-square bg-[#D37676] rotate-45'></span>
           <p>Thảm họa cà phê</p>
         </div>
-        <div className='flex items-center space-x-8'>
+        <div className='flex items-center md:space-x-8 space-x-4'>
           <span className='w-[16px] aspect-square bg-[#D37676] rotate-45'></span>
           <p>Mối quan hệ hỗn loạn</p>
         </div>
-        <div className='flex items-center space-x-8'>
+        <div className='flex items-center md:space-x-8 space-x-4'>
           <span className='w-[16px] aspect-square bg-[#D37676] rotate-45'></span>
           <p>Tối hậu thư của mèo</p>
         </div>
