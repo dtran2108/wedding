@@ -11,7 +11,7 @@ export default function AgendaGrid() {
       onClick={() => scrollToHash('agenda')}
       className={cn(
         SECTION_STYLE,
-        'bg-green-500 text-white p-4 cursor-pointer'
+        'bg-green-500 text-white p-4 cursor-pointer overflow-hidden'
       )}
       {...getMotionProps('#1E2627')}
     >

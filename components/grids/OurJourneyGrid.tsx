@@ -10,7 +10,7 @@ export default function OurJourneyGrid() {
       onClick={() => scrollToHash('our-story')}
       className={cn(
         SECTION_STYLE,
-        'bg-red text-white p-2 md:p-6 cursor-pointer flex flex-col space-y-6'
+        'bg-red text-white p-2 md:p-6 cursor-pointer flex flex-col space-y-6 overflow-hidden'
       )}
       {...getMotionProps('#351212')}
     >
