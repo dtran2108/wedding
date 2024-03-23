@@ -39,7 +39,7 @@ export default function Home() {
           <Divider>
             <span className='text-md md:text-2xl'>20.04.2024</span>
           </Divider>
-          <h1 className={cn(allura.className, 'text-6xl md:text-7xl my md:my-8')}>
+          <h1 className={cn(allura.className, 'text-6xl md:text-7xl my md:my-4')}>
             Lam Điền
             <br />& 
             <br />Thanh Duy
