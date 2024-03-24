@@ -84,7 +84,7 @@ export default function Festivities() {
                   <CarouselItem key={0}>
                     <div className='w-full flex items-center justify-center'>
                       <div className='relative w-[360px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20'>
-                        <div className='w-[330px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
+                        <div className='w-[340px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-2'>
                         <p className='text-gold'>RECEPTION, 6PM</p>
                           <h3
                             className={cn(
@@ -122,7 +122,7 @@ export default function Festivities() {
                     <div className='w-full flex items-center justify-center'>
                       <div className='relative z-30 w-[360px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
                         <div
-                          className='w-[330px] aspect-square rounded-full'
+                          className='w-[340px] aspect-square rounded-full'
                           style={{
                             backgroundImage: "url('/images/hotel.png')",
                             backgroundSize: 'cover',
@@ -137,7 +137,7 @@ export default function Festivities() {
             </div>
           </MobileView>
           <BrowserView className='w-full'>
-            <Carousel>
+            <Carousel className='mt-10'>
               <CarouselContent>
                 {Array.from({ length: 1 }).map((_, index) => (
                   <CarouselItem key={index}>
@@ -169,8 +169,8 @@ export default function Festivities() {
                                 'text-black text-center px-4'
                               )}
                             >
-                              The intimate wedding celebration is at <strong>6pm</strong> at <strong>Ery Hall</strong>, the Myst Dong Khoi hotel. 
-          <br />Guests are invited to come as they are with no dress code required. Be comfortable or be fancy, yet, most importantly, <strong>be yourself!</strong>
+                              The intimate wedding celebration is at 6pm at Ery Hall, the Myst Dong Khoi hotel. 
+          <br />Guests are invited to come as they are with no dress code required. Be comfortable or be fancy, yet, most importantly, be yourself!
           <br />Parking lot is available at the hotel. However, you are encouraged to embrace the party spirit by using taxi services for a night of festivities and drinks.<br />Cheers!
                             </p>
                             <a
@@ -195,7 +195,7 @@ export default function Festivities() {
       </div>
       <div
         className={cn(
-          'absolute z-30 bottom-10 rounded-full w-full h-[70px]'
+          'absolute z-10 bottom-10 rounded-full w-full h-[70px]'
         )}
         style = {{
           display: 'flex',
@@ -205,7 +205,7 @@ export default function Festivities() {
         >
         <Button
           className={cn(
-            'z-30 rounded-full w-[70px] h-[70px]',
+            'rounded-full w-[70px] h-[70px]',
             showMap
               ? 'bg-black text-white hover:bg-black'
               : 'bg-[#b3a192] text-black hover:bg-[#b3a192]'

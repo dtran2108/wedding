@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       <div
         id='add-to-our-story'
-        className='relative w-full min-h-[1280px] flex justify-center py-4 lg:min-h-[1380px] 2xl:min-h-[1680px]'
+        className='relative w-full min-h-[1380px] sm:min-h-[1420px] md:min-h-[1480px] flex justify-center py-4 lg:min-h-[1560px] xl:min-h-[1520px] 2xl:min-h-[1680px]'
         style={{
           backgroundImage: "url('/images/footer.jpg')",
           backgroundSize: 'cover',
