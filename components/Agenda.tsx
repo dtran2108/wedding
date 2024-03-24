@@ -19,16 +19,20 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
         'min-h-screen grid grid-cols-4 gap-4 p-4 md:p-8',
         isPopUp && 'p-4 md:p-4'
       )}
+      style={{
+        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
       <motion.div
         initial={{ opacity: 1 }}
         className={cn(
-          'hidden md:block col-span-1 py-8 px-6 text-secondary rounded-lg',
+          'hidden md:block col-span-1 py-8 px-6 text-secondary rounded-lg bg-white',
           isPopUp && 'hidden md:hidden'
         )}
-        style={{ boxShadow: DEFAULT_BOX_SHADOW }}
       >
-        <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+        <h1 className={cn(titleFont.className, 'text-3xl text-orange')}>
           LỊCH TRÌNH
         </h1>
         <div className='ml-2'>
@@ -40,7 +44,7 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
               key={i}
               className={cn(
                 'my-6 cursor-pointer',
-                currentAgenda.time == event.time && 'text-primary font-bold'
+                currentAgenda.time == event.time && 'text-orange font-bold'
               )}
               onClick={() => setCurrentAgenda(event)}
             >
@@ -57,13 +61,12 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
       >
         <div
           className={cn(
-            'block md:hidden p-6 rounded-lg',
+            'block md:hidden p-6 rounded-lg bg-white',
             isPopUp && 'block md:block'
           )}
-          style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
           <div className='flex items-center space-x-2'>
-            <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
+            <h1 className={cn(titleFont.className, 'text-3xl text-orange')}>
               LỊCH TRÌNH
             </h1>
             {currentListXPos > 0 && (
@@ -98,10 +101,7 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
             ))}
           </div>
         </div>
-        <div
-          className='flex items-center justify-between flex-wrap rounded-lg bg-secondary text-secondary-foreground py-8 px-6'
-          style={{ boxShadow: DEFAULT_BOX_SHADOW }}
-        >
+        <div className='flex items-center justify-between flex-wrap rounded-lg bg-secondary text-secondary-foreground py-8 px-6'>
           <AnimatePresence mode='wait'>
             <motion.h1
               key={currentAgenda ? currentAgenda.time : 'empty'}
@@ -131,16 +131,14 @@ export default function Agenda({ isPopUp }: { isPopUp?: boolean }) {
                 backgroundImage: `url('${currentAgenda.image}')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'top',
-                boxShadow: DEFAULT_BOX_SHADOW,
               }}
             ></motion.div>
           </AnimatePresence>
           <div
             className={cn(
-              'col-span-5 sm:col-span-2 rounded-lg w-full py-8 px-6',
+              'col-span-5 sm:col-span-2 rounded-lg w-full py-8 px-6 bg-white',
               isPopUp && 'col-span-5 sm:col-span-5'
             )}
-            style={{ boxShadow: DEFAULT_BOX_SHADOW }}
           >
             <AnimatePresence mode='wait'>
               <motion.p
