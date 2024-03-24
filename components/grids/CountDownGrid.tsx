@@ -48,7 +48,7 @@ export default function CountDownGrid() {
     <motion.div
       className={cn(
         SECTION_STYLE,
-        'bg-green text-white p-4 relative overflow-hidden flex flex-col items-center justify-center cursor-pointer'
+        'bg-green text-white p-2 lg:p-4 relative overflow-hidden flex flex-col items-center justify-center cursor-pointer'
       )}
       {...getMotionProps('#1C251C')}
     >
@@ -59,8 +59,8 @@ export default function CountDownGrid() {
         height={100}
         alt='decoration'
       />
-      <p className='text-center'>Hãy sẵn sàng với chúng tôi</p>
-      <h1 className={cn(titleFont.className, 'text-2xl text-center')}>
+      <p className='text-center text-sm lg:text-md'>Hãy sẵn sàng với chúng tôi</p>
+      <h1 className={cn(titleFont.className, 'text-lg lg:text-2xl text-center')}>
         {timeLeft.days} Ngày, {timeLeft.hours}:{timeLeft.minutes}:
         {timeLeft.seconds}
       </h1>

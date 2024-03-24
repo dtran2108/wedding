@@ -21,10 +21,10 @@ export default function QuestionGrid() {
         height={100}
         alt='decoration'
       />
-      <h1 className={cn(titleFont.className, 'text-2xl text-white')}>
+      <h1 className={cn(titleFont.className, 'text-lg lg:text-2xl text-white')}>
         Câu hỏi thường gặp
       </h1>
-      <div className='flex-1 flex flex-col justify-center space-y-1'>
+      <div className='flex-1 flex flex-col justify-center space-y-1 text-sm lg:text-md'>
         <p>Địa điểm tổ chức lễ cưới ở đâu ?</p>
         <p>Dresscode là gì ?</p>
         <p>Thực đơn tiệc cưới gồm những món nào ?</p>

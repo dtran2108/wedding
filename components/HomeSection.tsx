@@ -36,7 +36,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
   return (
     <div
       id='home'
-      className='min-h-screen lg:h-screen w-screen grid grid-cols-12 grid-rows-12 gap-4 lg:gap-6 p-4 md:p-8'
+      className='h-screen w-screen grid grid-cols-12 grid-rows-12 lg:grid-rows-12 gap-2 lg:gap-6 p-2 lg:p-8'
       style={{
         backgroundImage: `url('/images/paper-bg.png')`,
         backgroundSize: 'cover',

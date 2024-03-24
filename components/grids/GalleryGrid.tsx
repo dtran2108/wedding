@@ -50,7 +50,7 @@ export default function GalleryGrid() {
           {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index}>
               <div
-                className='w-full h-[200px] lg:h-[calc(100dvh/4.3)] rounded-lg bg-white'
+                className='relative left-2 w-full h-[125px] lg:h-[calc(100dvh/4.3)] rounded-lg bg-white'
                 style={{
                   backgroundImage: `url('/images/gallery-${index + 1}.jpeg')`,
                   backgroundSize: 'cover',

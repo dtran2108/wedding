@@ -42,7 +42,7 @@ export default function AgendaGrid() {
             ></div>
             <div>
               <h1 className={cn(titleFont.className)}>09:30</h1>
-              <p className='text-sm'>
+              <p className='text-sm line-clamp-2'>
                 Lễ tân bắt đầu.Bữa tối được phục vụ, bánh mì nướng, khiêu vũ đầu
                 tiên, cắt bánh và quăng bó hoa.
               </p>
@@ -62,13 +62,13 @@ export default function AgendaGrid() {
         <div className='flex space-x-2 flex-1'>
           <div className='flex-1 w-full h-full bg-green rounded-b-sm rounded-tr-sm pt-3 pb-1 px-4'>
             <h1 className={cn(titleFont.className)}>07:30</h1>
-            <p className='text-sm'>
+            <p className='text-sm line-clamp-2'>
               Cô dâu và chú rể cảm ơn khách và làm tròn cho mỗi bàn.
             </p>
           </div>
           <div className='flex-1 w-full h-full bg-green rounded-b-sm rounded-tl-sm pt-3 pb-1 px-4'>
             <h1 className={cn(titleFont.className)}>11:30</h1>
-            <p className='text-sm'>
+            <p className='text-sm line-clamp-2'>
               Khiêu vũ và Mingling tiếp tục.Gian hàng hình ảnh và đồ ăn nhẹ đêm
               khuya có sẵn.
             </p>
