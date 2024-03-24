@@ -49,7 +49,7 @@ const stories = [
     + 'make it easier for them, especially due to its extended duration and the added complication of the pandemic. Despite all the challenges of being ' 
     + 'separated, their dedication and commitment transcended borders, strengthening their bond and deepening their connection. It was a love that ' 
     + 'distance defied. And they clearly saw that they should never be apart again.',
-    image: '/images/header.jpg'
+    image: '/images/stories/Story3.jpg'
   },
   {
     year: 'Chapter 4',
@@ -80,7 +80,7 @@ export default function OurStory() {
                 style={{
                   backgroundImage: "url('" + stories[index].image + "')",
                   backgroundSize: 'cover',
-                  backgroundPosition: 'bottom',
+                  backgroundPosition: 'center',
                 }}
               >
                 <div className='absolute w-full h-[100vh] top-0 left-0 bg-black/50 z-10'></div>
