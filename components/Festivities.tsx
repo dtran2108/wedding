@@ -92,16 +92,16 @@ export default function Festivities() {
 <br />Guests are invited to come as they are. You are welcomed to dress either comfortably or fancily at the celebration. Your presence is what truly matters!
 <br />Guests may park at the parking lot available at the hotel. However, you are encouraged to embrace the party spirit by utilizing public transportation for a night of festivities and drinks. Cheers!
                         </p>
-                        <p
+                        <a
                           className={cn(
                             neuton.className,
                             'text-gold text-center'
                           )}
+                          href='https://www.google.com/maps/dir//the%20myst%20dong%20khoi%20hotel'
+                          target='_blank'
                         >
                           Download Directions
-                          <br />
-                          Map of Events
-                        </p>
+                        </a>
                       </div>
                     </div>
                   </div>
