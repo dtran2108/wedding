@@ -108,8 +108,6 @@ export default function Festivities() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
         </motion.div>
       </div>
