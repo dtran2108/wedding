@@ -24,18 +24,18 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <title>We are getting married</title>
         <meta name="title" content="We are getting married" />
-        <meta name="description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+        <meta name="description" content="Join Lam Dien and Thanh Duy's wedding on April 20th, 2024" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dienle.duydao.org/" />
         <meta property="og:title" content="We are getting married" />
-        <meta property="og:description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+        <meta property="og:description" content="Join Lam Dien and Thanh Duy's wedding on April 20th, 2024" />
         <meta property="og:image" content="https://dienle.duydao.org/images/NAU_1700.jpeg" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dienle.duydao.org/" />
         <meta property="twitter:title" content="We are getting married" />
-        <meta property="twitter:description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+        <meta property="twitter:description" content="Join Lam Dien and Thanh Duy's wedding on April 20th, 2024" />
         <meta property="twitter:image" content="https://dienle.duydao.org/images/NAU_1700.jpeg" />
       </head>
       <body className={raleway.className}>

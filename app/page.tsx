@@ -19,7 +19,7 @@ const neuton = Neuton({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: "We are getting married",
-  description: "Join Lam Dien and Thanh Duy wedding on April 20th, 2024",
+  description: "Join Lam Dien and Thanh Duy's wedding on April 20th, 2024",
 }
 
 export default function Home() {
