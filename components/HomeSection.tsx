@@ -11,6 +11,8 @@ import RSVPGrid from './grids/RSVPGrid'
 import CountDownGrid from './grids/CountDownGrid'
 import QuestionGrid from './grids/QuestionGrid'
 import Gallery from './Gallery'
+import Agenda from './Agenda'
+import Avenue from './Avenue'
 
 const Grid = ({
   isPopUp,
@@ -71,7 +73,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <AgendaGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Agenda isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -121,7 +123,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <QuestionGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Avenue isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -131,7 +133,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <CountDownGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Agenda isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -141,7 +143,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <QuestionGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Avenue isPopUp={isPopUp} />}
       />
     </div>
   )

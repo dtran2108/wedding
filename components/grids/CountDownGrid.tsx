@@ -1,6 +1,6 @@
 'use client'
 
-import { SECTION_STYLE, getMotionProps, titleFont } from '@/const'
+import { SECTION_STYLE, getMotionProps, scrollToHash, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -46,6 +46,7 @@ export default function CountDownGrid() {
 
   return (
     <motion.div
+      onClick={() => scrollToHash('agenda')}
       className={cn(
         SECTION_STYLE,
         'bg-green text-white p-2 lg:p-4 relative overflow-hidden flex flex-col items-center justify-center cursor-pointer'
@@ -59,8 +60,12 @@ export default function CountDownGrid() {
         height={100}
         alt='decoration'
       />
-      <p className='text-center text-sm lg:text-md'>Hãy sẵn sàng với chúng tôi</p>
-      <h1 className={cn(titleFont.className, 'text-lg lg:text-2xl text-center')}>
+      <p className='text-center text-sm lg:text-md'>
+        Hãy sẵn sàng với chúng tôi
+      </p>
+      <h1
+        className={cn(titleFont.className, 'text-lg lg:text-2xl text-center')}
+      >
         {timeLeft.days} Ngày, {timeLeft.hours}:{timeLeft.minutes}:
         {timeLeft.seconds}
       </h1>

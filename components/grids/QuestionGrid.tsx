@@ -1,6 +1,6 @@
 'use client'
 
-import { SECTION_STYLE, getMotionProps, titleFont } from '@/const'
+import { SECTION_STYLE, getMotionProps, scrollToHash, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 export default function QuestionGrid() {
   return (
     <motion.div
+      onClick={() => scrollToHash('avenue')}
       className={cn(
         SECTION_STYLE,
         'bg-blue text-white p-4 py-2 relative overflow-hidden flex flex-col space-y-2 cursor-pointer'
