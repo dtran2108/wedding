@@ -11,7 +11,7 @@ export default function AgendaGrid() {
       onClick={() => scrollToHash('agenda')}
       className={cn(
         SECTION_STYLE,
-        'bg-green-500 text-white p-4 cursor-pointer overflow-hidden'
+        'bg-green-500 text-white p-4 py-2 cursor-pointer overflow-hidden flex flex-col'
       )}
       {...getMotionProps('#1E2627')}
     >
@@ -19,7 +19,7 @@ export default function AgendaGrid() {
         <h1 className={cn(titleFont.className, 'text-3xl')}>Lịch trình</h1>
         <p>Lễ đính hôn. Lễ cưới chính. Tiệc cưới. Đón khách.</p>
       </div>
-      <div className='mt-2 flex flex-col'>
+      <div className='mt-2 flex flex-col flex-1'>
         <div className='flex items-center space-x-2 w-full'>
           <div className='rounded-t-sm bg-green p-2 side-agenda-wrap'>
             <div
@@ -62,13 +62,13 @@ export default function AgendaGrid() {
         <div className='flex space-x-2 flex-1'>
           <div className='flex-1 w-full h-full bg-green rounded-b-sm rounded-tr-sm pt-3 pb-1 px-4'>
             <h1 className={cn(titleFont.className)}>07:30</h1>
-            <p className='text-sm line-clamp-1'>
+            <p className='text-sm line-clamp-2'>
               Cô dâu và chú rể cảm ơn khách và làm tròn cho mỗi bàn.
             </p>
           </div>
           <div className='flex-1 w-full h-full bg-green rounded-b-sm rounded-tl-sm pt-3 pb-1 px-4'>
             <h1 className={cn(titleFont.className)}>11:30</h1>
-            <p className='text-sm line-clamp-1'>
+            <p className='text-sm line-clamp-2'>
               Khiêu vũ và Mingling tiếp tục.Gian hàng hình ảnh và đồ ăn nhẹ đêm
               khuya có sẵn.
             </p>

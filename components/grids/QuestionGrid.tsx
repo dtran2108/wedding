@@ -10,7 +10,7 @@ export default function QuestionGrid() {
     <motion.div
       className={cn(
         SECTION_STYLE,
-        'bg-blue text-white p-4 relative overflow-hidden flex flex-col space-y-2 cursor-pointer'
+        'bg-blue text-white p-4 py-2 relative overflow-hidden flex flex-col space-y-2 cursor-pointer'
       )}
       {...getMotionProps('#040A1E')}
     >
