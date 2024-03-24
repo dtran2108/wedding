@@ -90,7 +90,7 @@ We are over the moon to share this important day with all of you. For us, we are
           <p className={cn(neuton.className, 'text-left text-black mt-4 md:text-lg 2xl:text-xl')}>
 We look forward to having you join us to celebrate our special milestone. Without the support of each one of you, we would not be who we are today, or have found one another. Having you as witnesses as we step into this journey together means the world to us and for that we are truly grateful.
           </p>
-          <p className={cn(allura.className, 'text-right text-black text-xl mt-4 md:text-xl 2xl:text-xl')}>
+          <p className={cn(allura.className, 'text-right text-black text-xl mt-4 md:text-xl 2xl:text-2xl')}>
             With love,
           </p>
           <p className={cn(neuton.className, 'text-right text-black md:text-lg 2xl:text-xl')}>
