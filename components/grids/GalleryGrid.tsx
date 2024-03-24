@@ -1,6 +1,6 @@
 'use client'
 
-import { SECTION_STYLE, getMotionProps } from '@/const'
+import { SECTION_STYLE, getMotionProps, scrollToHash } from '@/const'
 import { cn } from '@/lib/utils'
 import {
   Carousel,
@@ -39,6 +39,7 @@ export default function GalleryGrid() {
 
   return (
     <motion.div
+      onClick={() => scrollToHash('gallery')}
       className={cn(
         SECTION_STYLE,
         'bg-orange p-2 lg:p-4 flex flex-col space-y-2 cursor-pointer'

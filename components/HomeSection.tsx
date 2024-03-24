@@ -10,6 +10,7 @@ import OurStory from './OurStory'
 import RSVPGrid from './grids/RSVPGrid'
 import CountDownGrid from './grids/CountDownGrid'
 import QuestionGrid from './grids/QuestionGrid'
+import Gallery from './Gallery'
 
 const Grid = ({
   isPopUp,
@@ -23,7 +24,7 @@ const Grid = ({
   return isPopUp ? (
     <Dialog>
       <DialogTrigger asChild>{popUpTrigger}</DialogTrigger>
-      <DialogContent className='max-h-[80vh] overflow-y-scroll rounded-lg no-scrollbar'>
+      <DialogContent className='max-h-[90vh] overflow-y-scroll rounded-lg no-scrollbar'>
         {popUpContent}
       </DialogContent>
     </Dialog>
@@ -90,7 +91,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <GalleryGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Gallery isPopUp={isPopUp} />}
       />
 
       <Grid
@@ -110,7 +111,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
             <GalleryGrid />
           </div>
         }
-        popUpContent={<OurStory isPopUp={isPopUp} />}
+        popUpContent={<Gallery isPopUp={isPopUp} />}
       />
 
       <Grid
