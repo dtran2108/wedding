@@ -1,170 +1,114 @@
 'use client'
 
-import { AnimatePresence, motion } from 'framer-motion'
-import { DEFAULT_BOX_SHADOW, titleFont, storiesContent } from '@/const'
+import { titleFont, storiesContent, getMotionProps } from '@/const'
 import { cn } from '@/lib/utils'
 import { useRef, useState } from 'react'
-import { Button } from './ui/button'
 import { useScroll } from 'react-use'
-import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
-  const [currentStory, setCurrentStory] = useState(storiesContent[0])
   const mobileStoryListWrap = useRef<HTMLDivElement>(null)
-  const { x: currentStoryListXPos, y } = useScroll(mobileStoryListWrap)
 
   return (
-    <div className='min-h-screen grid grid-cols-4 gap-4 p-4 md:p-8'>
-      <div
-        className={cn(
-          'col-span-4 md:col-span-3 flex flex-col space-y-4',
-          isPopUp && 'col-span-4 md:col-span-4'
-        )}
-      >
+    <div
+      className={cn(
+        'min-h-screen grid grid-cols-1 lg:grid-cols-5 gap-4 p-4 md:p-8',
+        isPopUp && 'grid-cols-1 lg:grid-cols-1'
+      )}
+      style={{
+        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className='flex flex-col space-y-4'>
         <div
           className={cn(
-            'block md:hidden p-6 rounded-lg',
-            isPopUp && 'block md:block'
+            'bg-blue p-4 rounded-lg w-full text-white text-3xl text-center',
+            titleFont.className
           )}
-          style={{ boxShadow: DEFAULT_BOX_SHADOW }}
         >
-          <div className='flex items-center space-x-2'>
-            <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
-              CÂU CHUYỆN
-            </h1>
-            {currentStoryListXPos > 0 && (
-              <ChevronLeftCircle
-                className='w-4 h-4 bg-white rounded-full text-gray'
-                strokeWidth={1.5}
-              />
-            )}
-            {currentStoryListXPos <
-              (mobileStoryListWrap.current?.scrollWidth || 1) -
-                (mobileStoryListWrap.current?.offsetWidth || 0) && (
-              <ChevronRightCircle
-                className='w-4 h-4 bg-white rounded-full text-gray'
-                strokeWidth={1.5}
-              />
-            )}
-          </div>
-          <div
-            className='flex items-center space-x-3 mt-4 w-full overflow-scroll no-scrollbar relative'
-            ref={mobileStoryListWrap}
-          >
-            {storiesContent.map((story, i) => (
-              <Button
-                onClick={() => setCurrentStory(story)}
-                variant={
-                  currentStory.title == story.title ? 'default' : 'outline'
-                }
-                key={i}
-              >
-                {i + 1}. {story.title}
-              </Button>
-            ))}
-          </div>
+          CÂU CHUYỆN
         </div>
-        <div
-          className='flex items-center justify-between flex-wrap rounded-lg bg-primary text-primary-foreground py-8 px-6'
-          style={{ boxShadow: DEFAULT_BOX_SHADOW }}
-        >
-          <AnimatePresence mode='wait'>
-            <motion.h1
-              key={currentStory ? currentStory.title : 'empty'}
-              initial={{ x: 10, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className={cn(titleFont.className, 'text-4xl')}
-            >
-              {currentStory?.title}
-            </motion.h1>
-          </AnimatePresence>
-          <AnimatePresence mode='wait'>
-            <motion.p
-              key={currentStory ? currentStory.title : 'empty'}
-              initial={{ x: -10, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className={cn(
-                titleFont.className,
-                'text-xl text-primary-foreground/80'
-              )}
-            >
-              {currentStory.date}
-            </motion.p>
-          </AnimatePresence>
-        </div>
-        <div className='flex-1 grid grid-cols-5 gap-4'>
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={currentStory ? currentStory.title : 'empty'}
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className={cn(
-                'col-span-5 sm:col-span-3 rounded-lg h-full w-full min-h-[200px]',
-                isPopUp && 'col-span-5 sm:col-span-5'
-              )}
-              style={{
-                backgroundImage: `url('${currentStory.image}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'top',
-                boxShadow: DEFAULT_BOX_SHADOW,
-              }}
-            ></motion.div>
-          </AnimatePresence>
-          <div
-            className={cn(
-              'col-span-5 sm:col-span-2 rounded-lg w-full py-8 px-6',
-              isPopUp && 'col-span-5 sm:col-span-5'
-            )}
-            style={{ boxShadow: DEFAULT_BOX_SHADOW }}
-          >
-            <AnimatePresence mode='wait'>
-              <motion.p
-                key={currentStory ? currentStory.title : 'empty'}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -10, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {currentStory.content}
-              </motion.p>
-            </AnimatePresence>
-          </div>
+        <div className='flex-1 w-full rounded-lg h-full bg-red p-4 text-white'>
+          <h1 className={cn(titleFont.className, 'text-xl mb-4')}>
+            Giới thiệu cô dâu chú rể
+          </h1>
+          <p className='text-sm text-white/80'>
+            Ngày hôm nay, cô dâu Mai xinh đẹp, tài năng và chú rể Tuấn thông
+            minh, thành đạt trong lĩnh vực công nghệ kết hôn sau nhiều năm hẹn
+            hò. Họ gặp nhau trong chuyến du lịch và nhanh chóng hấp dẫn lẫn
+            nhau.
+          </p>
         </div>
       </div>
       <motion.div
-        initial={{ opacity: 1 }}
-        className={cn(
-          'hidden md:block col-span-1 py-8 px-6 text-secondary rounded-lg',
-          isPopUp && 'hidden md:hidden'
-        )}
-        style={{ boxShadow: DEFAULT_BOX_SHADOW }}
+        className='group w-full h-full rounded-lg bg-green p-4 text-white'
+        {...getMotionProps('#1C251C')}
       >
-        <h1 className={cn(titleFont.className, 'text-2xl text-primary')}>
-          CÂU CHUYỆN
+        <p>Tháng Tư 2010</p>
+        <h1 className={cn(titleFont.className, 'text-xl mb-4')}>
+          Thảm họa cà phê
         </h1>
-        <div className='ml-2'>
-          {storiesContent.map((story, i) => (
-            <motion.p
-              whileHover={{
-                translateX: 10,
-              }}
-              key={i}
-              className={cn(
-                'my-6 cursor-pointer',
-                currentStory.title == story.title && 'text-primary font-bold'
-              )}
-              onClick={() => setCurrentStory(story)}
-            >
-              {i}. {story.title}
-            </motion.p>
-          ))}
-        </div>
+        <AnimatePresence mode='wait'>
+          <motion.p
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className='text-sm text-white/80 hidden group-hover:block'
+          >
+            Mai nhầm bộ đồ mới của Tuấn cho một người giữ khăn ăn, vô tình làm
+            đổ cà phê của cô lên khắp anh ta tại một quán cà phê nhộn nhịp.Cuộc
+            gặp gỡ đầu tiên của họ liên quan đến một máy giặt khô, rất nhiều lời
+            xin lỗi và một trái phiếu bất ngờ đối với các sản phẩm may mặc màu.
+          </motion.p>
+        </AnimatePresence>
+      </motion.div>
+      <motion.div
+        className='group w-full h-full rounded-lg bg-green-500 p-4 text-white'
+        {...getMotionProps('#1C251C')}
+      >
+        <p>Tháng Tám 2012</p>
+        <h1 className={cn(titleFont.className, 'text-xl mb-4')}>
+          Mối quan hệ hỗn loạn
+        </h1>
+        <p className='text-sm text-white/80 hidden group-hover:block'>
+          Mai, dễ bị say tàu xe, kết thúc trong lòng Tuấn trong một chuyến bay
+          gập ghềnh đến Paris.Tuấn, cố gắng trở thành người đàn ông, nhầm lẫn
+          nắm bắt sự kìm kẹp của cô ấy về một cử chỉ tình cảm, dẫn đến một hành
+          trình ấm cúng nhưng lúng túng trên Đại Tây Dương.
+        </p>
+      </motion.div>
+      <motion.div
+        className='group w-full h-full rounded-lg bg-green-700 p-4 text-white'
+        {...getMotionProps('#1C251C')}
+      >
+        <p>Tháng Năm 2013</p>
+        <h1 className={cn(titleFont.className, 'text-xl mb-4')}>
+          Hài kịch ẩm thực
+        </h1>
+        <p className='text-sm text-white/80 hidden group-hover:block'>
+          Nỗ lực của Tuấn trong một bữa tối lãng mạn kết thúc bằng một chuông
+          báo cháy, một lasagna bị cháy và lời thề sẽ không bao giờ chạm vào bếp
+          lò nữa.Cuộc hẹn đầu tiên của họ đã trở thành một bữa tiệc khiêu vũ nhà
+          bếp đầy ngẫu hứng, hoàn thành với pizza và tiếng cười.
+        </p>
+      </motion.div>
+      <motion.div
+        className='group w-full h-full rounded-lg bg-green-900 p-4 text-white'
+        {...getMotionProps('#1C251C')}
+      >
+        <p>Tháng Một 2020</p>
+        <h1 className={cn(titleFont.className, 'text-xl mb-4')}>
+          Tai ương đám cưới
+        </h1>
+        <p className='text-sm text-white/80 hidden group-hover:block'>
+          Từ vật lộn với những người bán hoa bướng bỉnh đến vô tình gửi lời mời
+          với ngày sai, hành trình lập kế hoạch đám cưới của Mai và Tuấn giống
+          như một kịch bản sitcom.Mỗi tai nạn chỉ đưa họ lại gần nhau hơn giữa
+          sự hỗn loạn.
+        </p>
       </motion.div>
     </div>
   )

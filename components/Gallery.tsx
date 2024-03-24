@@ -1,9 +1,9 @@
 'use client'
 
-import { DEFAULT_BOX_SHADOW, getMotionProps, titleFont } from '@/const'
+import { getMotionProps, titleFont } from '@/const'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowLeft, MoveLeft, MoveRight } from 'lucide-react'
+import { MoveLeft, MoveRight } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
@@ -13,7 +13,7 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
     <div
       className={cn(
         'p-4 py-8 md:p-8 h-screen flex flex-col',
-        isPopUp && 'p-4 md:p-4'
+        isPopUp && 'p-4 md:p-8'
       )}
       style={{
         backgroundImage: `url('/images/paper-bg.png')`,
@@ -21,8 +21,8 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
         backgroundPosition: 'center',
       }}
     >
-      <div className='flex items-center flex-wrap space-x-3 h-[10vh]'>
-        <h1 className={cn(titleFont.className, 'text-6xl')}>KHO ẢNH</h1>
+      <div className='bg-red rounded-lg p-4 text-white my-4'>
+        <h1 className={cn(titleFont.className, 'text-3xl')}>KHO ẢNH</h1>
       </div>
       <div
         className={cn(
@@ -36,21 +36,23 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
             isPopUp && 'col-span-5 md:col-span-5'
           )}
         >
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={currentImage}
-              initial={{ x: 10, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className='rounded-lg h-full w-full'
-              style={{
-                backgroundImage: `url('images/gallery-${currentImage}.jpeg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            ></motion.div>
-          </AnimatePresence>
+          <div className='p-4 h-full w-full bg-white rounded-lg'>
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={currentImage}
+                initial={{ x: 10, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -10, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className='rounded-lg h-full w-full'
+                style={{
+                  backgroundImage: `url('images/gallery-${currentImage}.jpeg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></motion.div>
+            </AnimatePresence>
+          </div>
         </div>
         <div
           className={cn(
