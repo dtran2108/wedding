@@ -17,6 +17,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>We are getting married</title>
+        <meta name="title" content="We are getting married" />
+        <meta name="description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dienle.duydao.org/" />
+        <meta property="og:title" content="We are getting married" />
+        <meta property="og:description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+        <meta property="og:image" content="https://dienle.duydao.org/images/NAU_1700.jpeg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://dienle.duydao.org/" />
+        <meta property="twitter:title" content="We are getting married" />
+        <meta property="twitter:description" content="Join Lam Dien and Thanh Duy wedding on April 20th, 2024" />
+        <meta property="twitter:image" content="https://dienle.duydao.org/images/NAU_1700.jpeg" />
+      </head>
       <body className={raleway.className}>
         {children}
         <div className='fixed top-16 right-12 z-50'>

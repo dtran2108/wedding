@@ -11,9 +11,16 @@ import FinestCity from '@/components/FinestCity'
 import Festivities from '@/components/Festivities'
 import BridalParty from '@/components/BridalParty'
 import { AlignHorizontalDistributeEndIcon } from '@/node_modules/lucide-react/dist/lucide-react'
+import type { Metadata } from 'next'
+
 
 const allura = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
+
+export const metadata: Metadata = {
+  title: "We are getting married",
+  description: "Join Lam Dien and Thanh Duy wedding on April 20th, 2024",
+}
 
 export default function Home() {
   return (
@@ -21,13 +28,13 @@ export default function Home() {
       <div
         className='relative w-full h-[720px] flex items-center flex-col justify-between 2xl:h-[100vh]'
         style={{
-          backgroundImage: "url('/images/NAU_1700.jpeg')",
+          backgroundImage: "url('https://dienle.duydao.org/images/NAU_1700.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
           overflow: 'hidden'
         }}
       >
-        <div className='absolute w-full h-[720px] bg-black/60 z-10 2xl:h-[100vh]'></div>
+        <div className='absolute w-full h-[720px] bg-black/20 z-10 2xl:h-[100vh]'></div>
         <div className='my-auto text-center w-9/12 2xl:w-6/12 relative z-20 -top-28'>
           <div
               className='h-[128px] aspect-square rounded-full relative w-full'
