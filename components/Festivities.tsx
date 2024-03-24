@@ -13,6 +13,7 @@ import {
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import {BrowserView, MobileView} from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 
 const allura = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
@@ -33,7 +34,10 @@ export default function Festivities() {
   }
 
   return (
-    <div className='w-full min-h-[700px] md:min-h-[800px] relative'>
+    <div className={cn('w-full relative', {
+      ['h-[700px]']: isMobile,
+      ['h-[800px]']: !isMobile
+    })}>
       <div className='absolute z-10 top-0 left-0 w-full'>
         <BrowserView>
           <iframe
@@ -48,7 +52,7 @@ export default function Festivities() {
         </BrowserView>
         <MobileView>
           <iframe
-            src="https://maps.google.com/maps?width=100%25&amp;height=800&amp;hl=en&amp;q=The%20Myst%20Dong%20Khoi,%20hotel,%20Ho%20Chi%20Minh%20City,%20Vietnam+(Duy%20&amp;%20Dien's%20Wedding)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://maps.google.com/maps?width=100%25&amp;height=700&amp;hl=en&amp;q=The%20Myst%20Dong%20Khoi,%20hotel,%20Ho%20Chi%20Minh%20City,%20Vietnam+(Duy%20&amp;%20Dien's%20Wedding)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             width='100%'
             height='700px'
             style={{ border: 0 }}
@@ -60,7 +64,10 @@ export default function Festivities() {
         <motion.div
           animate={showMap ? hide : show}
           className={cn(
-            'absolute w-full h-[700px] md:h-[800px] top-0 left-0 bg-black/80 z-20 flex flex-col items-center pt-8 space-y-4'
+            'absolute w-full top-0 left-0 bg-black/80 z-20 flex flex-col items-center pt-8 space-y-4', {
+              ['h-[700px]'] : isMobile,
+              ['h-[800px]'] : !isMobile,
+            }
           )}
         >
           <h1 className={cn(allura.className, 'text-6xl text-center')}>
@@ -70,71 +77,15 @@ export default function Festivities() {
             SATURDAY <br />
             APRIL 20, 2024
           </p>
-          <MobileView>
-            <div className='w-full flex items-center justify-center'>
-              {/* <div className='relative left-8 z-30 w-[500px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
-                <div
-                  className='w-[450px] aspect-square rounded-full'
-                  style={{
-                    backgroundImage: "url('/images/hotel.png')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'bottom',
-                  }}
-                ></div>
-              </div> */}
-              <div className='relative w-[360px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20 top-4'>
-                <div className='w-[330px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
-                  <h3
-                    className={cn(
-                      allura.className,
-                      'text-2xl text-black'
-                    )}
-                  >
-                    The Myst Dong Khoi
-                  </h3>
-                  <p
-                    className={cn(
-                      neuton.className,
-                      'text-black text-center px-4 text-sm'
-                    )}
-                  >
-                    The intimate wedding celebration is at <strong>6pm</strong> at <strong>Ery Hall</strong>, the Myst Dong Khoi hotel. 
-  <br />Guests are invited to come as they are with no dress code required. Be comfortable or be fancy, yet, most importantly, <strong>be yourself!</strong>
-  <br />Parking lot is available at the hotel. However, you are encouraged to embrace the party spirit by using taxi services for a night of festivities and drinks.<br />Cheers!
-                  </p>
-                  <a
-                    className={cn(
-                      neuton.className,
-                      'text-gold text-center'
-                    )}
-                    href='https://www.google.com/maps/dir//the%20myst%20dong%20khoi%20hotel'
-                    target='_blank'
-                  >
-                    Show directions
-                  </a>
-                </div>
-              </div>
-            </div>
-          </MobileView>
-          <BrowserView className='w-9/12'>
-          <Carousel>
-            <CarouselContent>
-              {Array.from({ length: 1 }).map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className='w-full flex items-center justify-center'>
-                      <div className='relative left-8 z-30 w-[500px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
-                        <div
-                          className='w-[450px] aspect-square rounded-full'
-                          style={{
-                            backgroundImage: "url('/images/hotel.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'bottom',
-                          }}
-                        ></div>
-                      </div>
-                      <div className='relative right-8 w-[500px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20'>
-                        <div className='w-[450px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
-                          <p className='text-gold'>RECEPTION, 6PM</p>
+          <MobileView className='w-full'>
+            <div className='w-full h-[700px] flex justify-center'>
+              <Carousel className='w-full top-4'>
+                <CarouselContent>
+                  <CarouselItem key={0}>
+                    <div className='w-full flex items-center justify-center'>
+                      <div className='relative w-[360px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20'>
+                        <div className='w-[330px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
+                        <p className='text-gold'>RECEPTION, 6PM</p>
                           <h3
                             className={cn(
                               allura.className,
@@ -146,12 +97,12 @@ export default function Festivities() {
                           <p
                             className={cn(
                               neuton.className,
-                              'text-black text-center px-4'
+                              'text-black text-center px-4 text-sm'
                             )}
                           >
-                            The intimate wedding celebration is at <strong>6pm</strong> at <strong>Ery Hall</strong>, the Myst Dong Khoi hotel.
-  <br /><br />Guests are invited to come as they are. You are welcomed to dress either comfortably or fancily at the celebration. Your presence is what truly matters!
-  <br /><br />Guests may park at the parking lot available at the hotel. However, you are encouraged to embrace the party spirit by using taxi services for a night of festivities and drinks.<br />Cheers!
+                            The intimate wedding celebration is at <strong>6pm</strong> at <strong>Ery Hall</strong>, the Myst Dong Khoi hotel. 
+          <br />Guests are invited to come as they are with no dress code required. Be comfortable or be fancy, yet, most importantly, <strong>be yourself!</strong>
+          <br />Parking lot is available at the hotel. However, you are encouraged to embrace the party spirit by using taxi services for a night of festivities and drinks.<br />Cheers!
                           </p>
                           <a
                             className={cn(
@@ -166,16 +117,85 @@ export default function Festivities() {
                         </div>
                       </div>
                     </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+                  </CarouselItem>
+                  <CarouselItem key={1}>
+                    <div className='w-full flex items-center justify-center'>
+                      <div className='relative z-30 w-[360px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
+                        <div
+                          className='w-[330px] aspect-square rounded-full'
+                          style={{
+                            backgroundImage: "url('/images/hotel.png')",
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'bottom',
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+              </Carousel>
+            </div>
+          </MobileView>
+          <BrowserView className='w-full'>
+            <Carousel>
+              <CarouselContent>
+                {Array.from({ length: 1 }).map((_, index) => (
+                  <CarouselItem key={index}>
+                    <div className='w-full flex items-center justify-center'>
+                        <div className='relative left-8 z-10 w-[420px] aspect-square rounded-full bg-white/10 flex items-center justify-center'>
+                          <div
+                            className='w-[380px] aspect-square rounded-full'
+                            style={{
+                              backgroundImage: "url('/images/hotel.png')",
+                              backgroundSize: 'cover',
+                              backgroundPosition: 'bottom',
+                            }}
+                          ></div>
+                        </div>
+                        <div className='relative right-8 w-[420px] aspect-square rounded-full bg-white/10 flex items-center justify-center z-20'>
+                          <div className='w-[380px] aspect-square rounded-full bg-white flex flex-col space-y-4 justify-center items-center p-4'>
+                            <p className='text-gold'>RECEPTION, 6PM</p>
+                            <h3
+                              className={cn(
+                                allura.className,
+                                'text-2xl text-black'
+                              )}
+                            >
+                              The Myst Dong Khoi
+                            </h3>
+                            <p
+                              className={cn(
+                                neuton.className,
+                                'text-black text-center px-4'
+                              )}
+                            >
+                              The intimate wedding celebration is at <strong>6pm</strong> at <strong>Ery Hall</strong>, the Myst Dong Khoi hotel. 
+          <br />Guests are invited to come as they are with no dress code required. Be comfortable or be fancy, yet, most importantly, <strong>be yourself!</strong>
+          <br />Parking lot is available at the hotel. However, you are encouraged to embrace the party spirit by using taxi services for a night of festivities and drinks.<br />Cheers!
+                            </p>
+                            <a
+                              className={cn(
+                                neuton.className,
+                                'text-gold text-center'
+                              )}
+                              href='https://www.google.com/maps/dir//the%20myst%20dong%20khoi%20hotel'
+                              target='_blank'
+                            >
+                              Show directions
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </BrowserView>
         </motion.div>
       </div>
       <div
         className={cn(
-          'absolute z-30 bottom-0 rounded-full w-full h-[70px]'
+          'absolute z-30 bottom-10 rounded-full w-full h-[70px]'
         )}
         style = {{
           display: 'flex',
@@ -185,7 +205,7 @@ export default function Festivities() {
         >
         <Button
           className={cn(
-            'absolute z-30 bottom-12 rounded-full w-[70px] h-[70px]',
+            'z-30 rounded-full w-[70px] h-[70px]',
             showMap
               ? 'bg-black text-white hover:bg-black'
               : 'bg-[#b3a192] text-black hover:bg-[#b3a192]'

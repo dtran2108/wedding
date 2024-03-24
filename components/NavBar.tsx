@@ -14,7 +14,7 @@ export default function NavBar() {
   }
 
   return (
-    <nav className='flex px-8 items-center space-x-16 justify-start md:justify-center bg-black/70 py-3 sticky top-0 text-[#b2b2b2] z-30 text-sm overflow-x-scroll w-full no-scrollbar'>
+    <nav className='flex px-8 items-center space-x-16 justify-start sm:justify-center bg-black/70 py-3 sticky top-0 text-[#b2b2b2] z-30 text-sm overflow-x-scroll w-full no-scrollbar'>
       <motion.span
         onClick={() => scrollToHash('our-story')}
         whileHover={{ scale: 1.1 }}
