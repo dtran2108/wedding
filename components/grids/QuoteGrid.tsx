@@ -22,7 +22,7 @@ export default function QuoteGrid() {
         height={30}
         alt='quote mark'
       />
-      <p className='text-center text-sm lg:text-lg'>
+      <p className='text-center text-sm lg:text-md'>
         Anh ơi đừng buồn tình yêu như một dặm đường
         <br /> Đến lúc ta mỏi rồi thì đành nghỉ chân
       </p>
