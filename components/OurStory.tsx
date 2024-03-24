@@ -16,7 +16,7 @@ export default function OurStory({ isPopUp }: { isPopUp?: boolean }) {
         isPopUp && 'grid-cols-1 lg:grid-cols-1'
       )}
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

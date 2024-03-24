@@ -42,7 +42,7 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       id='home'
       className='h-screen w-screen grid grid-cols-12 grid-rows-12 lg:grid-rows-12 gap-2 lg:gap-6 p-2 lg:p-8'
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

@@ -6,7 +6,7 @@ export default function Home() {
     <main
       className='min-h-screen w-screen flex items-center justify-center flex-col space-y-3 p-3'
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

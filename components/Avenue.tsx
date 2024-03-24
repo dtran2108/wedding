@@ -9,7 +9,7 @@ export default function Avenue({ isPopUp }: { isPopUp?: boolean }) {
         isPopUp ? 'min-h-screen' : 'lg:h-screen min-h-screen'
       )}
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

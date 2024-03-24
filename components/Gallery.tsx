@@ -16,7 +16,7 @@ export default function Gallery({ isPopUp }: { isPopUp?: boolean }) {
         isPopUp && 'p-4 md:p-8'
       )}
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

@@ -13,7 +13,7 @@ export default function RSVPForm() {
     <div
       className='p-4'
       style={{
-        backgroundImage: `url('/images/paper-bg.png')`,
+        backgroundImage: `url('/images/paper-bg.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
