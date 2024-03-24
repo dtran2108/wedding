@@ -13,6 +13,7 @@ import QuestionGrid from './grids/QuestionGrid'
 import Gallery from './Gallery'
 import Agenda from './Agenda'
 import Avenue from './Avenue'
+import RSVPForm from './RSVPForm'
 
 const Grid = ({
   isPopUp,
@@ -57,13 +58,13 @@ export default function HomeSection({ isPopUp }: { isPopUp?: boolean }) {
       />
 
       <Grid
-        isPopUp={isPopUp}
+        isPopUp={true}
         popUpTrigger={
           <div className='col-span-12 row-span-2 lg:col-span-2 lg:row-span-5'>
             <RSVPGrid />
           </div>
         }
-        popUpContent={<></>}
+        popUpContent={<RSVPForm />}
       />
 
       <Grid
