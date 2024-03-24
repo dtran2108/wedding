@@ -14,12 +14,16 @@ export default function RSVPGrid() {
       )}
       {...getMotionProps('#422802')}
     >
-      <h1 className={cn(titleFont.className, 'text-sm lg:text-lg text-right text-white')}>
+      <h1
+        className={cn(
+          titleFont.className,
+          'text-sm lg:text-lg text-right text-white'
+        )}
+      >
         RSVP
         <br />
         Vui lòng xác nhận tham dự trước
-        <br /> Ngày 12 tháng 3<br />
-        Rất mong đón tiếp quý vị.
+        <br /> Ngày 12 tháng 3
       </h1>
       <Image
         className='absolute -bottom-4 left-1'
