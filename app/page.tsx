@@ -5,12 +5,7 @@ import { Fleur_De_Leah, Neuton } from 'next/font/google'
 import OurStory from '@/components/OurStory'
 import Gallery from '@/components/Gallery'
 import Quote from '@/components/Quote'
-import Registry from '@/components/Registry'
-import RestYourHead from '@/components/RestYourHead'
-import FinestCity from '@/components/FinestCity'
 import Festivities from '@/components/Festivities'
-import BridalParty from '@/components/BridalParty'
-import { AlignHorizontalDistributeEndIcon } from '@/node_modules/lucide-react/dist/lucide-react'
 import type { Metadata } from 'next'
 
 
@@ -26,7 +21,7 @@ export default function Home() {
   return (
     <main className='min-h-screen'>
       <div
-        className='relative w-full h-[720px] flex items-center flex-col justify-between 2xl:h-[100vh]'
+        className='relative w-full h-[720px] flex items-center flex-col justify-between 2xl:h-[1200px]'
         style={{
           backgroundImage: "url('https://dienle.duydao.org/images/NAU_1700.jpeg')",
           backgroundSize: 'cover',
@@ -34,7 +29,7 @@ export default function Home() {
           overflow: 'hidden'
         }}
       >
-        <div className='absolute w-full h-[720px] bg-black/20 z-10 2xl:h-[100vh]'></div>
+        <div className='absolute w-full h-[720px] bg-black/20 z-10 2xl:h-[1200px]'></div>
         <div className='my-auto text-center w-9/12 2xl:w-6/12 relative z-20 -top-28'>
           <div
               className='h-[128px] aspect-square rounded-full relative w-full'

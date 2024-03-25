@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import { Fleur_De_Leah, Neuton } from 'next/font/google'
-import Image from 'next/image'
 
 const allura = Fleur_De_Leah({ subsets: ['latin'], weight: '400' })
 const neuton = Neuton({ subsets: ['latin'], weight: '400' })
